@@ -32,3 +32,6 @@
         <br />
     </div>
 @endsection
+ @push('js')
+    @include('partials.alerts')
+ @endpush

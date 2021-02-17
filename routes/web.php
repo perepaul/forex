@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::group(['prefix'=>'admin'], function(){
+
+
+// });
+
+
+// Route::post('/logout',\App\Http\Controllers\LogoutController::class)->name('logout')->middleware('auth:web');
 Route::get('/', function () {
     return view('user.front.index');
 })->name('index');
@@ -22,9 +29,10 @@ Route::get('about',fn () => view('user.front.about'))->name('about');
 Route::get('contact',fn () => view('user.front.contact'))->name('contact');
 Route::get('faq',fn () => view('user.front.faq'))->name('faq');
 
-Route::get('admin',fn()=>view('admin.index'));
+// Route::get('admin',fn()=>view('admin.index'))->name('admin');
 
 Route::resource('currency',CurrencyController::class);
+
 
 Route::middleware('verified')->group(function (){
     Route::get('home',function() {

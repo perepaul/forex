@@ -5,10 +5,10 @@ namespace App\Repository;
 use Illuminate\Database\Eloquent\Model;
 
 class BaseRepository {
-    
+
     /**
      * @property Model $model
-     * 
+     *
      *  Model property on class instances
     */
     protected $model;
@@ -16,14 +16,14 @@ class BaseRepository {
     /**
      * Constructor to find model to repo
      */
-    public function __construct(Model $model)
+    public function __construct(?Model $model = null)
     {
         $this->model = $model;
     }
 
     /**
      * @method mixed all()
-     * 
+     *
      * Get all the instaces of the model
      */
     public function all()
@@ -33,9 +33,9 @@ class BaseRepository {
 
     /**
      * @method mixed create()
-     * 
+     *
      * Creates a new record in the database.
-     * 
+     *
      * @param array $data The data needed to create the record.
      */
     public function create(array $data)
@@ -45,27 +45,26 @@ class BaseRepository {
 
     /**
      * @method mixed update()
-     * 
+     *
      * Update record in the database
-     * 
+     *
      * @param array $data The data needed to update the record
-     * 
+     *
      * @param int $id The ID of the data on the database.
-     * 
+     *
      */
     public function update(array $data, int $id)
     {
-        $record = $this->find($id);
-        return $record->update($data);
+        return $this->find($id)->update($data);
     }
 
     /**
      * @method mixed find()
-     * 
+     *
      * Finds a record from the database using the record's ID
-     * 
+     *
      * @param int $id The ID of the record/model
-     * 
+     *
      * @return Model
     */
 
@@ -76,11 +75,11 @@ class BaseRepository {
 
     /**
      * @method mixed delete()
-     * 
+     *
      * Delete a record from the database
-     * 
+     *
      * @param int $id ID of the record to be deleted
-     * 
+     *
     */
 
     public function delete(int $id)
@@ -90,9 +89,9 @@ class BaseRepository {
 
     /**
      * @method Model getModel()
-     * 
+     *
      * Gets the associated model
-     * 
+     *
      * @return Model
      */
 
@@ -103,11 +102,11 @@ class BaseRepository {
 
     /**
      * @method mixed setModel()
-     * 
+     *
      * Associate a model to the repository
-     * 
+     *
      * @param Model $model Model to be binded to repository
-     * 
+     *
     */
 
     public function setModel($model)
@@ -118,10 +117,10 @@ class BaseRepository {
 
     /**
      * @method mixed  with()
-     * 
+     *
      * Eager loads method relationships
-     * 
-     * @param array|string $relations 
+     *
+     * @param array|string $relations
      */
 
      public function with($relations)
@@ -132,12 +131,21 @@ class BaseRepository {
 
      /**
       * @method mixed paginate()
-      * 
+      *
       * Paginates model results
       */
 
-     public function paginate(int $perPage = 20, int|null $currentPage =  null, array $options = [])
+     public function paginate(int $perPage = 10, array $options = [])
      {
-         $this->model->paginate($perPage, $currentPage,$options);
+        if(count($options)){
+            $query =  $this->model;
+            foreach($options as $option)
+            {
+                $query->where($option);
+            }
+            return $query->paginate($perPage);
+
+        }
+       return $this->model->paginate($perPage);
      }
 }

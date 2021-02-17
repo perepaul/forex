@@ -26,6 +26,7 @@
     </div>
     @yield('modals')
     <script src="{{ mix('js/user/app.js') }}"></script>
+    @stack('js')
 </body>
 
 </html>

@@ -1,67 +1,120 @@
 <!DOCTYPE html>
-<!--
-Template Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-Author: PixInvent
-Website: http://www.pixinvent.com/
-Contact: hello@pixinvent.com
-Follow: www.twitter.com/pixinvents
-Like: www.facebook.com/pixinvents
-Purchase: https://1.envato.market/vuexy_admin
-Renew Support: https://1.envato.market/vuexy_admin
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
-
--->
-<html class="loading" lang="en" data-textdirection="ltr">
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description"
-        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords"
-        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <title>Dashboard ecommerce - Vuexy - Bootstrap HTML admin template</title>
-    <link rel="apple-touch-icon"
-        href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon"
-        href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
-        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://www.multipurposethemes.com/admin/joblly-admin-template-dashboard/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+        integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag=="
+        crossorigin="anonymous" />
 
-    <!-- BEGIN: Vendor CSS-->
 
-    <!-- END: Page CSS-->
+    <title>@yield('title')</title>
 
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ mix('css/admin/app.css') }}">
-    <!-- END: Custom CSS-->
+    <!-- Vendors Style-->
+    <link rel="stylesheet" href="css/admin/vendors_css.css">
+
+    <!-- Style-->
+    <link rel="stylesheet" href="css/admin/style.css">
+    <link rel="stylesheet" href="css/admin/skin_color.css">
+    @livewireStyles
 
 </head>
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
-    data-menu="vertical-menu-modern" data-col="">
+<body class="hold-transition light-skin sidebar-mini theme-primary">
 
-    @include('partials.admin.header')
-    @include('partials.admin.sidebar')
-    @yield('content')
-    
-    @include('partials.admin.footer')
+    <div class="wrapper">
+        <div id="loader"></div>
+        @include('partials.admin.header')
+        @include('partials.admin.sidebar')
+        <div class="content-wrapper" style="height:100%; min-height: 100vh">
+            @yield('content')
+        </div>
+        @include('partials.admin.footer')
+    </div>
 
-    <script src="{{mix('js/admin/app.js')}}"></script>
+    @livewireScripts
 
-    {{-- <script>
+    <script src="js/admin/vendors.min.js"></script>
+    <script>
         $(window).on('load', function() {
-            if (feather) {
-                feather.replace({
-                    width: 14,
-                    height: 14
-                });
+            if (localStorage.getItem('theme') == 'dark') {
+                // alert('lol');
+                $('body').removeClass('light-skin').addClass('dark-skin')
             }
         })
 
-    </script> --}}
+    </script>
+    <script src="js/admin/pages/chat-popup.js"></script>
+    <script src="js/admin/vendor/feather.js"></script>
+
+    <script src="js/admin/vendor/apexcharts.js"></script>
+    <script src="js/admin/vendor/moment.js"></script>
+    <script src="js/admin/vendor/fullcalendar.js"></script>
+
+    <!-- Joblly App -->
+    <script src="js/admin/template.js"></script>
+    {{-- <script src="js/admin/pages/dashboard.js"></script> --}}
+    <script src="js/admin/pages/calendar-dash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
+        integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
+        crossorigin="anonymous"></script>
+
+
+    @include('partials.alerts')
+    @stack('modals')
+
+    <script>
+        $(window).on('load', function() {
+            var theme = localStorage.getItem('theme') || 'light';
+            var el = $('.change-theme.' + theme);
+            el.removeClass('d-none').siblings().addClass('d-none')
+            $('body').removeClass(['dark-skin', 'light-skin']).addClass(theme + '-skin')
+
+        })
+        $(function() {
+            $('.change-theme').on('click', function() {
+                var el = $(this);
+                el.addClass('d-none');
+                el.siblings().removeClass('d-none')
+                if (el.hasClass('dark')) {
+                    $('body').removeClass('dark-skin').addClass('light-skin')
+                    localStorage.setItem('theme', 'light')
+                } else {
+                    $('body').removeClass('light-skin').addClass('dark-skin')
+                    localStorage.setItem('theme', 'dark')
+                }
+            })
+        })
+        window.livewire.on('toggle-modal', e => {
+            $('#' + e.id).modal('toggle');
+        })
+
+        window.livewire.on('success', e => {
+            successMessage(e.message);
+        })
+
+
+        window.livewire.on('error', e => {
+            for (error in e.errors) {
+                errorMessage(e.errors[error]);
+            }
+        })
+
+        window.livewire.on('warn', e => {
+            for (warn in e.warns) {
+                errorMessage(e.warns[error]);
+            }
+        })
+
+    </script>
+
+    @stack('js')
+
 </body>
 
 </html>

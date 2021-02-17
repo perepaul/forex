@@ -19,6 +19,8 @@
     @yield('content')
 
     <script src="{{ mix('js/user/app.js') }}"></script>
+    @stack('js')
 </body>
+
 
 </html>

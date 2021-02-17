@@ -52,7 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://forex.test'),
+    'base_url' => env('BASE_URL','forex.test'),
+    'admin_subdomain' => env('ADMIN_SUBDOMAIN','admin'),
 
     'asset_url' => env('ASSET_URL', null),
 

@@ -1,551 +1,414 @@
- <!-- BEGIN: Main Menu-->
-    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-        <div class="navbar-header">
-            <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand" href="index-2.html"><span class="brand-logo">
-              <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
-                <defs>
-                  <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
-                    <stop stop-color="#000000" offset="0%"></stop>
-                    <stop stop-color="#FFFFFF" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%" x2="37.373316%" y2="100%">
-                    <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
-                    <stop stop-color="#FFFFFF" offset="100%"></stop>
-                  </lineargradient>
-                </defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Artboard" transform="translate(-400.000000, -178.000000)">
-                    <g id="Group" transform="translate(400.000000, 178.000000)">
-                      <path class="text-primary" id="Path"
-                        d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z"
-                        style="fill:currentColor"></path>
-                      <path id="Path1"
-                        d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z"
-                        fill="url(#linearGradient-1)" opacity="0.2"></path>
-                      <polygon id="Path-2" fill="#000000" opacity="0.049999997"
-                        points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"></polygon>
-                      <polygon id="Path-21" fill="#000000" opacity="0.099999994"
-                        points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"></polygon>
-                      <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.099999994"
-                        points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"></polygon>
-                    </g>
-                  </g>
-                </g>
-              </svg></span>
-            <h2 class="brand-text">Vuexy</h2>
-          </a></li>
-                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i
-              class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
-              class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc"
-              data-ticon="disc"></i></a></li>
-            </ul>
-        </div>
-        <div class="shadow-bottom"></div>
-        <div class="main-menu-content">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item"><a class="d-flex align-items-center" href="index-2.html"><i data-feather="home"></i><span
-              class="menu-title text-truncate" data-i18n="Dashboards">Dashboards</span><span
-              class="badge badge-light-warning badge-pill ml-auto mr-1">2</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="dashboard-analytics.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
-                        </li>
-                        <li class="active"><a class="d-flex align-items-center" href="dashboard-ecommerce.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="eCommerce">eCommerce</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Apps &amp; Pages</span><i data-feather="more-horizontal"></i>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i
-              data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Email</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-chat.html"><i
-              data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Chat</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-todo.html"><i
-              data-feather="check-square"></i><span class="menu-title text-truncate" data-i18n="Todo">Todo</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-calendar.html"><i
-              data-feather="calendar"></i><span class="menu-title text-truncate"
-              data-i18n="Calendar">Calendar</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-kanban.html"><i
-              data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="Kanban">Kanban</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span
-              class="menu-title text-truncate" data-i18n="Invoice">Invoice</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="app-invoice-list.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="List">List</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-invoice-preview.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Preview">Preview</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-invoice-edit.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Edit">Edit</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-invoice-add.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Add">Add</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-file-manager.html"><i
-              data-feather="save"></i><span class="menu-title text-truncate" data-i18n="File Manager">File
-              Manager</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shopping-cart"></i><span
-              class="menu-title text-truncate" data-i18n="eCommerce">eCommerce</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="app-ecommerce-shop.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Shop">Shop</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-ecommerce-details.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Details">Details</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-ecommerce-wishlist.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Wish List">Wish
-                  List</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-ecommerce-checkout.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="Checkout">Checkout</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span
-              class="menu-title text-truncate" data-i18n="User">User</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="app-user-list.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="List">List</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-user-view.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="View">View</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-user-edit.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Edit">Edit</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span
-              class="menu-title text-truncate" data-i18n="Pages">Pages</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Authentication">Authentication</span></a>
-                            <ul class="menu-content">
-                                <li><a class="d-flex align-items-center" href="page-auth-login-v1.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="LoginV1">Login v1</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-login-v2.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="LoginV2">Login v2</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-register-v1.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="RegisterV1">Register v1</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-register-v2.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="RegisterV2">Register v2</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-forgot-password-v1.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="ForgotPasswordV1">Forgot Password v1</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-forgot-password-v2.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="ForgotPasswordV2">Forgot Password v2</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-reset-password-v1.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="ResetPasswordV1">Reset Password v1</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-auth-reset-password-v2.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="ResetPasswordV2">Reset Password v2</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="page-account-settings.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">Account
-                  Settings</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="page-profile.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Profile">Profile</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="page-faq.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="FAQ">FAQ</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="page-knowledge-base.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Knowledge Base">Knowledge Base</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="page-pricing.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Pricing">Pricing</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Blog">Blog</span></a>
-                            <ul class="menu-content">
-                                <li><a class="d-flex align-items-center" href="page-blog-list.html"><span
-                      class="menu-item text-truncate" data-i18n="List">List</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-blog-detail.html"><span
-                      class="menu-item text-truncate" data-i18n="Detail">Detail</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-blog-edit.html"><span
-                      class="menu-item text-truncate" data-i18n="Edit">Edit</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Mail Template">Mail Template</span></a>
-                            <ul class="menu-content">
-                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-welcome.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Welcome">Welcome</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-reset-password.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Reset Password">Reset Password</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-verify-email.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Verify Email">Verify Email</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-deactivate-account.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Deactivate
-                      Account</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-invoice.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Invoice">Invoice</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-promotional.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Promotional">Promotional</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Miscellaneous">Miscellaneous</span></a>
-                            <ul class="menu-content">
-                                <li><a class="d-flex align-items-center" href="page-misc-coming-soon.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Coming Soon">Coming Soon</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-misc-not-authorized.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Not Authorized">Not Authorized</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-misc-under-maintenance.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Maintenance">Maintenance</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="page-misc-error.html" target="_blank"><span
-                      class="menu-item text-truncate" data-i18n="Error">Error</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" navigation-header"><span data-i18n="User Interface">User Interface</span><i data-feather="more-horizontal"></i>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="ui-typography.html"><i
-              data-feather="type"></i><span class="menu-title text-truncate"
-              data-i18n="Typography">Typography</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="ui-colors.html"><i
-              data-feather="droplet"></i><span class="menu-title text-truncate" data-i18n="Colors">Colors</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="ui-feather.html"><i
-              data-feather="eye"></i><span class="menu-title text-truncate" data-i18n="Feather">Feather</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="credit-card"></i><span
-              class="menu-title text-truncate" data-i18n="Card">Card</span><span
-              class="badge badge-light-success badge-pill ml-auto mr-1">New</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="card-basic.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="card-advance.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Advance">Advance</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="card-statistics.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Statistics">Statistics</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="card-analytics.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="card-actions.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Card Actions">Card Actions</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="briefcase"></i><span
-              class="menu-title text-truncate" data-i18n="Components">Components</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="component-alerts.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Alerts">Alerts</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-avatar.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Avatar">Avatar</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-badges.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Badges">Badges</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-breadcrumbs.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="Breadcrumbs">Breadcrumbs</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-buttons.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Buttons">Buttons</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-carousel.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Carousel">Carousel</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-collapse.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Collapse">Collapse</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-divider.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Divider">Divider</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-dropdowns.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Dropdowns">Dropdowns</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-list-group.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="List Group">List Group</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-media-objects.html"><i
-                  data-feather="circle"></i><span class="menu-item">Media Objects</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-modals.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Modals">Modals</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-navs-component.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Navs Component">Navs
-                  Component</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-pagination.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Pagination">Pagination</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-pill-badges.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pill Badges">Pill
-                  Badges</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-pills-component.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pills Component">Pills
-                  Component</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-popovers.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Popovers">Popovers</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-progress.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Progress">Progress</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-spinner.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Spinner">Spinner</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-tabs-component.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Tabs Component">Tabs
-                  Component</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-timeline.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Timeline">Timeline</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-bs-toast.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Toasts">Toasts</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="component-tooltips.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Tooltips">Tooltips</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="box"></i><span
-              class="menu-title text-truncate" data-i18n="Extensions">Extensions</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="ext-component-sweet-alerts.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Sweet Alert">Sweet
-                  Alert</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-blockui.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="Block UI">BlockUI</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-toastr.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Toastr">Toastr</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-sliders.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Sliders">Sliders</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-drag-drop.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Drag &amp; Drop">Drag &amp;
-                  Drop</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-tour.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Tour">Tour</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-clipboard.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="Clipboard">Clipboard</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-media-player.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Media player">Media
-                  Player</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-context-menu.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Context Menu">Context
-                  Menu</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-swiper.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="swiper">Swiper</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-tree.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Tree">Tree</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-ratings.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Ratings">Ratings</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="ext-component-i18n.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="l18n">l18n</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="layout"></i><span
-              class="menu-title text-truncate" data-i18n="Page Layouts">Page Layouts</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="layout-collapsed-menu.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Collapsed
-                  Menu</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="layout-boxed.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Layout Boxed">Layout Boxed</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="layout-without-menu.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Without Menu">Without Menu</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="layout-empty.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Layout Empty">Layout Empty</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="layout-blank.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Layout Blank">Layout Blank</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" navigation-header"><span data-i18n="Forms &amp; Tables">Forms &amp; Tables</span><i data-feather="more-horizontal"></i>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="copy"></i><span
-              class="menu-title text-truncate" data-i18n="Form Elements">Form Elements</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="form-input.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Input">Input</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-input-groups.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Input Groups">Input Groups</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-input-mask.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Input Mask">Input Mask</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-textarea.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Textarea">Textarea</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-checkbox.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Checkbox">Checkbox</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-radio.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Radio">Radio</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-switch.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Switch">Switch</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-select.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Select">Select</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-number-input.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Number Input">Number Input</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-file-uploader.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="File Uploader">File Uploader</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-quill-editor.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Quill Editor">Quill Editor</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="form-date-time-picker.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="Date &amp; Time Picker">Date &amp; Time Picker</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="form-layout.html"><i
-              data-feather="box"></i><span class="menu-title text-truncate" data-i18n="Form Layout">Form
-              Layout</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="form-wizard.html"><i
-              data-feather="package"></i><span class="menu-title text-truncate" data-i18n="Form Wizard">Form
-              Wizard</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="form-validation.html"><i
-              data-feather="check-circle"></i><span class="menu-title text-truncate" data-i18n="Form Validation">Form
-              Validation</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="form-repeater.html"><i
-              data-feather="rotate-cw"></i><span class="menu-title text-truncate" data-i18n="Form Repeater">Form
-              Repeater</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="table-bootstrap.html"><i
-              data-feather="server"></i><span class="menu-title text-truncate" data-i18n="Table">Table</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="grid"></i><span
-              class="menu-title text-truncate" data-i18n="Datatable">Datatable</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="table-datatable-basic.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="table-datatable-advanced.html"><i
-                  data-feather="circle"></i><span class="menu-item text-truncate"
-                  data-i18n="Advanced">Advanced</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="table-ag-grid.html"><i
-              data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="ag-grid">agGrid Table</span></a>
-                </li>
-                <li class=" navigation-header"><span data-i18n="Charts &amp; Maps">Charts &amp; Maps</span><i data-feather="more-horizontal"></i>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="pie-chart"></i><span
-              class="menu-title text-truncate" data-i18n="Charts">Charts</span><span
-              class="badge badge-light-danger badge-pill ml-auto mr-2">2</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="chart-apex.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Apex">Apex</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="chart-chartjs.html"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Chartjs">Chartjs</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="maps-leaflet.html"><i
-              data-feather="map"></i><span class="menu-title text-truncate" data-i18n="Leaflet Maps">Leaflet
-              Maps</span></a>
-                </li>
-                <li class=" navigation-header"><span data-i18n="Misc">Misc</span><i data-feather="more-horizontal"></i>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="menu"></i><span
-              class="menu-title text-truncate" data-i18n="Menu Levels">Menu Levels</span></a>
-                    <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Second Level">Second Level 2.1</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
-                  class="menu-item text-truncate" data-i18n="Second Level">Second Level 2.2</span></a>
-                            <ul class="menu-content">
-                                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate"
-                      data-i18n="Third Level">Third Level 3.1</span></a>
-                                </li>
-                                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate"
-                      data-i18n="Third Level">Third Level 3.2</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="disabled nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="eye-off"></i><span
-              class="menu-title text-truncate" data-i18n="Disabled Menu">Disabled Menu</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation"><i
-              data-feather="folder"></i><span class="menu-title text-truncate"
-              data-i18n="Documentation">Documentation</span></a>
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.ticksy.com/"><i
-              data-feather="life-buoy"></i><span class="menu-title text-truncate" data-i18n="Raise Support">Raise
-              Support</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- END: Main Menu-->
+<aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar">
+
+        <!-- sidebar menu-->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li>
+                <a href="{{ route('admin.index') }}">
+                    <i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.users')}}">
+                    <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.trades')}}">
+                    <i class="icon-Credit-card"><span class="path1"></span><span class="path2"></span><span
+                            class="path3"></span></i>
+                    <span>Trades</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.deposits')}}">
+                    <i class="icon-Money"><span class="path1"></span><span class="path2"></span><span
+                            class="path3"></span></i>
+                    <span>Deposits</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.withdrawals')}}">
+                    <i class="icon-Wallet"><span class="path1"></span><span class="path2"></span><span
+                            class="path3"></span></i>
+                    <span>Withdrawals</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.tickets')}}">
+                    <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Tickets</span>
+                </a>
+            </li>
+            {{-- <li class="header">Apps & Widgets</li>
+            <li class="treeview">
+                <a href="#">
+                    <i span class="icon-Layout-grid"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Apps</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="mailbox.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Mailbox</a></li>
+                    <li><a href="extra_calendar.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Calendar</a></li>
+                    <li><a href="contact_app.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Contact List</a></li>
+                    <li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Chat</a></li>
+                    <li><a href="extra_taskboard.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Todo</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Library"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Widgets</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="widgets_blog.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Blog</a></li>
+                    <li><a href="widgets_chart.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Chart</a></li>
+                    <li><a href="widgets_list.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>List</a></li>
+                    <li><a href="widgets_social.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Social</a></li>
+                    <li><a href="widgets_statistic.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Statistic</a></li>
+                    <li><a href="widgets_weather.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Weather</a></li>
+                    <li><a href="widgets.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Widgets</a></li>
+                    <li><a href="email_index.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Emails</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Cart"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Ecommerce</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="ecommerce_products.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Products</a></li>
+                    <li><a href="ecommerce_cart.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Products Cart</a></li>
+                    <li><a href="ecommerce_products_edit.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Products Edit</a></li>
+                    <li><a href="ecommerce_details.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Product Details</a></li>
+                    <li><a href="ecommerce_orders.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Product Orders</a></li>
+                    <li><a href="ecommerce_checkout.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Products Checkout</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Page</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="sample_blank.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Blank</a></li>
+                    <li><a href="sample_coming_soon.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Coming Soon</a></li>
+                    <li><a href="sample_custom_scroll.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Custom Scrolls</a></li>
+                    <li><a href="sample_gallery.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Gallery</a></li>
+                    <li><a href="sample_lightbox.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Lightbox Popup</a></li>
+                    <li><a href="sample_pricing.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Pricing</a></li>
+                    <li><a href="invoice.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Invoice</a></li>
+                    <li><a href="invoicelist.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Invoice List</a></li>
+                    <li><a href="contact_userlist.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Userlist</a></li>
+                    <li><a href="sample_faq.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>FAQs</a></li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Authentication
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="auth_login.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Login</a></li>
+                            <li><a href="auth_register.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Register</a></li>
+                            <li><a href="auth_lockscreen.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Lockscreen</a></li>
+                            <li><a href="auth_user_pass.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Recover password</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Miscellaneous
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="error_404.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Error 404</a></li>
+                            <li><a href="error_500.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Error 500</a></li>
+                            <li><a href="error_maintenance.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Maintenance</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="header">Components </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Brush"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Components</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="component_bootstrap_switch.html"><i class="icon-Commit"><span
+                                    class="path1"></span><span class="path2"></span></i>Bootstrap Switch</a></li>
+                    <li><a href="component_date_paginator.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Date Paginator</a></li>
+                    <li><a href="component_media_advanced.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Advanced Medias</a></li>
+                    <li><a href="component_rangeslider.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Range Slider</a></li>
+                    <li><a href="component_rating.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Ratings</a></li>
+                    <li><a href="component_animations.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Animations</a></li>
+                    <li><a href="extension_fullscreen.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Fullscreen</a></li>
+                    <li><a href="extension_pace.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Pace</a></li>
+                    <li><a href="component_nestable.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Nestable</a></li>
+                    <li><a href="component_portlet_draggable.html"><i class="icon-Commit"><span
+                                    class="path1"></span><span class="path2"></span></i>Draggable Portlets</a></li>
+                    <li><a href="component_modals.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Modals</a></li>
+                    <li><a href="component_sweatalert.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Sweet Alert</a></li>
+                    <li><a href="component_notification.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Toastr</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Write"><span class="path1"></span><span class="path2"></span></i>
+                    <span>User Interface </span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="ui_grid.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Grid System</a></li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Card
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="box_cards.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>User Card</a></li>
+                            <li><a href="box_advanced.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Advanced Card</a></li>
+                            <li><a href="box_basic.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Basic Card</a></li>
+                            <li><a href="box_color.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Card Color</a></li>
+                            <li><a href="box_group.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Card Group</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ui_badges.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Badges</a></li>
+                    <li><a href="ui_border_utilities.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Border</a></li>
+                    <li><a href="ui_buttons.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Buttons</a></li>
+                    <li><a href="ui_color_utilities.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Color</a></li>
+                    <li><a href="ui_dropdown.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Dropdown</a></li>
+                    <li><a href="ui_dropdown_grid.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Dropdown Grid</a></li>
+                    <li><a href="ui_progress_bars.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Progress Bars</a></li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Icons
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="icons_fontawesome.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Font Awesome</a></li>
+                            <li><a href="icons_glyphicons.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Glyphicons</a></li>
+                            <li><a href="icons_material.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Material Icons</a></li>
+                            <li><a href="icons_themify.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Themify Icons</a></li>
+                            <li><a href="icons_simpleline.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Simple Line Icons</a></li>
+                            <li><a href="icons_cryptocoins.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Cryptocoins Icons</a></li>
+                            <li><a href="icons_flag.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Flag Icons</a></li>
+                            <li><a href="icons_weather.html"><i class="icon-Commit"><span class="path1"></span><span
+                                            class="path2"></span></i>Weather Icons</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ui_ribbons.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Ribbons</a></li>
+                    <li><a href="ui_sliders.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Sliders</a></li>
+                    <li><a href="ui_typography.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Typography</a></li>
+                    <li><a href="ui_tab.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Tabs</a></li>
+                    <li><a href="ui_timeline.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Timeline</a></li>
+                    <li><a href="ui_timeline_horizontal.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Horizontal Timeline</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-File"><span class="path1"></span><span class="path2"></span><span
+                            class="path3"></span></i>
+                    <span>Forms</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="forms_advanced.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Form Elements</a></li>
+                    <li><a href="forms_general.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Form Layout</a></li>
+                    <li><a href="forms_wizard.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Form Wizard</a></li>
+                    <li><a href="forms_validation.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Form Validation</a></li>
+                    <li><a href="forms_mask.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Formatter</a></li>
+                    <li><a href="forms_xeditable.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Xeditable Editor</a></li>
+                    <li><a href="forms_dropzone.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Dropzone</a></li>
+                    <li><a href="forms_code_editor.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Code Editor</a></li>
+                    <li><a href="forms_editors.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Editor</a></li>
+                    <li><a href="forms_editor_markdown.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Markdown</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Layout-top-panel-1"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Tables</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="tables_simple.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Simple tables</a></li>
+                    <li><a href="tables_data.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Data tables</a></li>
+                    <li><a href="tables_editable.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Editable Tables</a></li>
+                    <li><a href="tables_color.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Table Color</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Charts</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="charts_chartjs.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>ChartJS</a></li>
+                    <li><a href="charts_flot.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Flot</a></li>
+                    <li><a href="charts_inline.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Inline charts</a></li>
+                    <li><a href="charts_morris.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Morris</a></li>
+                    <li><a href="charts_peity.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Peity</a></li>
+                    <li><a href="charts_chartist.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Chartist</a></li>
+                    <li><a href="charts_c3_axis.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Axis Chart</a></li>
+                    <li><a href="charts_c3_bar.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Bar Chart</a></li>
+                    <li><a href="charts_c3_data.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Data Chart</a></li>
+                    <li><a href="charts_c3_line.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Line Chart</a></li>
+                    <li><a href="charts_echarts_basic.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Basic Charts</a></li>
+                    <li><a href="charts_echarts_bar.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Bar Chart</a></li>
+                    <li><a href="charts_echarts_pie_doughnut.html"><i class="icon-Commit"><span
+                                    class="path1"></span><span class="path2"></span></i>Pie & Doughnut Chart</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Marker"></i>
+
+                    <span>Maps</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="map_google.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Google Map</a></li>
+                    <li><a href="map_vector.html"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Vector Map</a></li>
+                </ul>
+            </li> --}}
+        </ul>
+    </section>
+</aside>
