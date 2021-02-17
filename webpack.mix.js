@@ -12,10 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix
-// .js('resources/js/app.js', 'public/js')
-// .postCss('resources/css/app.css', 'public/css', [
-//     //
-// ]);
+    // .js('resources/js/app.js', 'public/js')
+    // .postCss('resources/css/app.css', 'public/css', [
+    //     //
+    // ]);
     .autoload({
         jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]
     })
@@ -24,9 +24,11 @@ mix
     .copy('resources/icons', 'public/icons')
     .copy('resources/images', 'public/images')
 
-/**
- * admin assets here
- */
-.js('resources/js/admin/app.js', 'public/js/admin/app.js')
-    .postCss('resources/css/admin/app.css', 'public/css/admin/app.css', [])
-    .copy('resources/css/admin/fonts', 'public/css/admin/fonts')
+    /**
+     * admin assets here
+     */
+    .copy('resources/css/admin', 'public/css/admin')
+    .copy('resources/js/admin', 'public/js/admin')
+    .copy('resources/js/izitoast.js', 'public/js/izitoast.js')
+    .copy('resources/js/alert.js', 'public/js/alert.js')
+    .copy('resources/js/izitoast.js', 'public/css/izitoast.css')
