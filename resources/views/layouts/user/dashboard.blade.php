@@ -12,6 +12,7 @@
 
 
     <link rel="stylesheet" href="{{mix('css/user/app.css')}}">
+    @laravelPWA
 </head>
 
 <body class="dashboard">

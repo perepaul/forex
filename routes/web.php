@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::get('about',fn () => view('user.front.about'))->name('about');
 Route::get('contact',fn () => view('user.front.contact'))->name('contact');
 Route::get('faq',fn () => view('user.front.faq'))->name('faq');
+Route::get('offline',fn()=>view('vendor.laravelpwa.offline'))->name('offline');
 
 // Route::get('admin',fn()=>view('admin.index'))->name('admin');
 
