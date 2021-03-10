@@ -15,6 +15,7 @@ Route::get('deposits',fn()=>view('admin.deposits'))->name('admin.deposits');
 Route::get('withdrawals',fn()=>view('admin.withdrawals'))->name('admin.withdrawals');
 Route::get('tickets',fn()=>view('admin.tickets'))->name('admin.tickets');
 Route::get('login-as/{id}',function($id){
-   auth('web')->loginUsingId($id);
+    // dd($id);
+   auth()->guard('web')->loginUsingId($id);
    return redirect()->to(route('dashboard'));
 })->name('admin.login-as');

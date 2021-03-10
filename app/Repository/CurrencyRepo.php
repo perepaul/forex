@@ -2,6 +2,9 @@
 
 namespace App\Repository;
 
-class CurrencyRepo extends BaseRepository {
+use App\Models\Currency;
 
+class CurrencyRepo extends BaseRepository
+{
+    protected $modelClass = Currency::class;
 }

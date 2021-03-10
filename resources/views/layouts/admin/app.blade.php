@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <script>
+        window.addEventListener('load',()=>{
+
+            if (localStorage.getItem('theme') == 'dark') {
+                var element = document.querySelector('body');
+                element.classList.replace('light-skin','dark-skin');
+            }
+        })
+
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,15 +50,7 @@
     @livewireScripts
 
     <script src="js/admin/vendors.min.js"></script>
-    <script>
-        $(window).on('load', function() {
-            if (localStorage.getItem('theme') == 'dark') {
-                // alert('lol');
-                $('body').removeClass('light-skin').addClass('dark-skin')
-            }
-        })
 
-    </script>
     <script src="js/admin/pages/chat-popup.js"></script>
     <script src="js/admin/vendor/feather.js"></script>
 
@@ -58,24 +60,15 @@
 
     <!-- Joblly App -->
     <script src="js/admin/template.js"></script>
-    {{-- <script src="js/admin/pages/dashboard.js"></script> --}}
     <script src="js/admin/pages/calendar-dash.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
         integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
         crossorigin="anonymous"></script>
 
 
-    @include('partials.alerts')
     @stack('modals')
 
     <script>
-        $(window).on('load', function() {
-            var theme = localStorage.getItem('theme') || 'light';
-            var el = $('.change-theme.' + theme);
-            el.removeClass('d-none').siblings().addClass('d-none')
-            $('body').removeClass(['dark-skin', 'light-skin']).addClass(theme + '-skin')
-
-        })
         $(function() {
             $('.change-theme').on('click', function() {
                 var el = $(this);
@@ -90,28 +83,9 @@
                 }
             })
         })
-        window.livewire.on('toggle-modal', e => {
-            $('#' + e.id).modal('toggle');
-        })
-
-        window.livewire.on('success', e => {
-            successMessage(e.message);
-        })
-
-
-        window.livewire.on('error', e => {
-            for (error in e.errors) {
-                errorMessage(e.errors[error]);
-            }
-        })
-
-        window.livewire.on('warn', e => {
-            for (warn in e.warns) {
-                errorMessage(e.warns[error]);
-            }
-        })
 
     </script>
+    @include('partials.alerts')
 
     @stack('js')
 

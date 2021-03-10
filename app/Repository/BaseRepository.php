@@ -14,11 +14,17 @@ class BaseRepository {
     protected $model;
 
     /**
-     * Constructor to find model to repo
+     * @property Model $modelClass
+     * Model class to be atteched to the repository
      */
-    public function __construct(?Model $model = null)
+    protected $modelClass = Model::class;
+
+    /**
+     * Constructor to bind model to repo
+     */
+    public function __construct()
     {
-        $this->model = $model;
+        $this->model = new $this->modelClass;
     }
 
     /**

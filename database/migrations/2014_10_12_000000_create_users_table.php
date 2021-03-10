@@ -24,11 +24,12 @@ class CreateUsersTable extends Migration
             $table->string('country')->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
+            $table->enum('gender',['male','female'])->nullable();
+            $table->string('date_of_birth')->nullable();
             $table->unsignedDouble('balance',15,2)->default(0);
             $table->unsignedDouble('demo_balance',15,2)->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('vissible_password');
             $table->rememberToken();
             $table->tinyInteger('status')->default(0);
             $table->timestamps();

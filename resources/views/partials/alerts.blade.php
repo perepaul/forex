@@ -24,23 +24,47 @@ iziToast.settings({
             iziToast.error({message})
     }
 
+    window.livewire.on('toggle-modal', e => {
+            $('#' + e.id).modal('toggle');
+        })
+    window.livewire.on('close-modal',e=>{
+        $('#' + e.id).modal('close');
+    })
+
+        window.livewire.on('success', e => {
+            successMessage(e.message);
+        })
+
+
+        window.livewire.on('error', e => {
+            for (error in e.errors) {
+                errorMessage(e.errors[error]);
+            }
+        })
+
+        window.livewire.on('warn', e => {
+            for (warn in e.warns) {
+                warnMessage(e.warns[warn]);
+            }
+        })
+
 </script>
 
 @if($errors->any())
 {{-- @dd($errors->all()) --}}
 <script>
     @foreach($errors->all() as $error)
-    error('{{$error}}')
+    errorMessage('{{$error}}')
     @endforeach
 </script>
 
 @elseif(session()->has('message'))
 <script>
-    success('{{session()->get("message")}}')
+    successMessage('{{session()->get("message")}}')
 </script>
 @elseif(session()->has('warning'))
 <script>
-    warn('{{session()->get("message")}}')
+    warnMessage('{{session()->get("message")}}')
 </script>
 @endif
 

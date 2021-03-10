@@ -12,6 +12,7 @@ class Users extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
+
     protected $user;
     public $search, $data;
     public $modal = false, $id;
@@ -32,7 +33,7 @@ class Users extends Component
 
     public function __construct()
     {
-        $this->user = new UserRepository(new \App\Models\User());
+        $this->user = new UserRepository();
     }
 
     public function updated($field)
@@ -46,14 +47,9 @@ class Users extends Component
         $this->resetPage();
     }
 
-    public function updatingName($val)
-    {
-    }
-
     public function changeStatus($id)
     {
-        $user = $this->user->find($id);
-        $user->update(['status'=>!!$user->status]);
+        $this->user->updateStatus($id);
         $this->emit('success',['message'=>'sucess: status updated']);
     }
 
@@ -67,7 +63,9 @@ class Users extends Component
 
     public function update($id)
     {
-        $this->user->update($this->data, $id);
+        $user = $this->validate();
+
+        $this->user->update($user['data'], $id);
         $this->emit('toggle-modal', ['id' => 'updat-user-modal']);
         $this->emit('success', ['message' => 'User data updated successfully']);
     }

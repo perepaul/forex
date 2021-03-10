@@ -1,4 +1,4 @@
-<div>
+<div >
     <div class="container-full">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -115,7 +115,7 @@
         <!-- /.content -->
     </div>
 
-    <div @if($modal) wire:ignore.self @endif id="updat-user-modal" class="modal fade in" tabindex="-1" role="dialog"
+    <div wire:ignore.self id="updat-user-modal" class="modal fade in" tabindex="-1" role="dialog"
         aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -144,7 +144,7 @@
                             </div>
                             <label class="col-md-12">Balance</label>
                             <div class="col-md-12">
-                                <input type="number" wire:model='data.balance' class="form-control" placeholder="Phone">
+                                <input type="number" wire:model='data.balance' class="form-control" placeholder="Balance">
                                 @error('data.balance') <span class="error">{{ $message }}</span> @enderror
 
                             </div>

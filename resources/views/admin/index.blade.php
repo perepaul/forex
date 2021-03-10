@@ -358,3 +358,6 @@
     </main>
     <!-- END: Content-->
 @endsection
+@push('js')
+<script src="js/admin/pages/dashboard.js"></script>
+@endpush
