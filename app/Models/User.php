@@ -56,4 +56,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->status == 1;
     }
+
+    public function currency()
+    {
+        return $this->belongsTo(AccountCurrency::class);
+    }
 }

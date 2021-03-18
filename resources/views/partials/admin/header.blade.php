@@ -36,11 +36,11 @@
 			</a>
 		  </li>
           <!-- Control Sidebar Toggle Button -->
-		  <li class="btn-group nav-item d-inline-flex">
+		  {{-- <li class="btn-group nav-item d-inline-flex">
 			<a href="#" data-toggle="control-sidebar" class="waves-effect waves-light nav-link full-screen" title="Setting">
 				<i data-feather="settings"></i>
 			</a>
-		  </li>
+		  </li> --}}
 		  <!-- Notifications -->
 		  <li class="dropdown notifications-menu">
 			<a href="#" class="waves-effect waves-light dropdown-toggle" title="Change theme">
@@ -57,7 +57,7 @@
               <li class="user-body">
 				 <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
-				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
+				 {{-- <a class="dropdown-item" href="{{route('admin.settings')}}"><i class="ti-settings text-muted mr-2"></i> Settings</a> --}}
 				 <div class="dropdown-divider"></div>
 				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
               </li>

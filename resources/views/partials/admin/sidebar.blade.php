@@ -43,6 +43,21 @@
                     <span>Tickets</span>
                 </a>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon-Settings"><span class="path1"></span><span class="path2"></span></i>
+                    <span>Settings</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('admin.settings','trade_currency')}}"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Trade Currency</a></li>
+                    <li><a href="{{route('admin.settings','account_currency')}}"><i class="icon-Commit"><span class="path1"></span><span
+                                    class="path2"></span></i>Account Currency</a></li>
+                </ul>
+            </li>
             {{-- <li class="header">Apps & Widgets</li>
             <li class="treeview">
                 <a href="#">

@@ -5,15 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TradeCurrency extends Model
+class AccountCurrency extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
 
-    protected $guarded=['id'];
-
-    public function trades()
+    public function users()
     {
-        return $this->belongsTo(Trade::class,'currency_id');
+        return $this->hasMany(User::class,'currency_id');
     }
-
 }

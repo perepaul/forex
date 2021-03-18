@@ -86,20 +86,20 @@
                                             <div class="user">
                                                 <span class="thumb"><img src="images/profile/2.png" alt=""></span>
                                                 <div class="user-info">
-                                                    <h5>Jannatul Maowa</h5>
-                                                    <span>Tradee.inc@gmail.com</span>
+                                                    <h5>{{auth('web')->user()->name}}</h5>
+                                                    <span>{{auth('web')->user()->email}}</span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="user-balance">
                                             <div class="available">
-                                                <p>Available</p>
-                                                <span>0.00 BTC</span>
+                                                <p>Demo Balance</p>
+                                                <span>{{format_money(auth('web')->user()->bonus_balance)}}</span>
                                             </div>
                                             <div class="total">
-                                                <p>Total</p>
-                                                <span>0.00 USD</span>
+                                                <p>Balance</p>
+                                                <span>{{format_money(auth('web')->user()->balance)}}</span>
                                             </div>
                                         </div>
                                         <a href="{{route('profile')}}" class="dropdown-item">

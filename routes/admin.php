@@ -1,21 +1,23 @@
 <?php
 
-use App\Http\Controllers\CurrencyController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CurrencyController;
+use App\Http\Controllers\Admin\PageController;
 
 
+// Route::fallback([PageController::class,'notFound'])->name('not-found');
+Route::as('admin.')->namespace('Admin')->group(function(){
+    Route::get('/', [PageController::class,'index'])->name('index');
 
-Route::get('/', function () {
-    return view('admin.index');
-})->name('admin.index');
-
-Route::get('users',fn()=>view('admin.users'))->name('admin.users');
-Route::get('trades',fn()=>view('admin.trades'))->name('admin.trades');
-Route::get('deposits',fn()=>view('admin.deposits'))->name('admin.deposits');
-Route::get('withdrawals',fn()=>view('admin.withdrawals'))->name('admin.withdrawals');
-Route::get('tickets',fn()=>view('admin.tickets'))->name('admin.tickets');
-Route::get('login-as/{id}',function($id){
-    // dd($id);
-   auth()->guard('web')->loginUsingId($id);
-   return redirect()->to(route('dashboard'));
-})->name('admin.login-as');
+    Route::get('users',[PageController::class,'users'])->name('users');
+    Route::get('trades',[PageController::class,'trades'])->name('trades');
+    Route::get('deposits',[PageController::class,'deposits'])->name('deposits');
+    Route::get('withdrawals',[PageController::class,'withdrawals'])->name('withdrawals');
+    Route::get('tickets',[PageController::class,'tickets'])->name('tickets');
+    Route::get('settings/{type}',[PageController::class,'settings'])->name('settings');
+    Route::get('login-as/{id}',[PageController::class,'login'])->name('login-as');
+    Route::get('sms',function(){
+        $sms = new \App\Helpers\SmsHelper();
+        dd($sms->sendSms());
+    });
+});

@@ -26,11 +26,11 @@
     <title>@yield('title')</title>
 
     <!-- Vendors Style-->
-    <link rel="stylesheet" href="css/admin/vendors_css.css">
+    <link rel="stylesheet" href="{{asset('css/admin/vendors_css.css')}}">
 
     <!-- Style-->
-    <link rel="stylesheet" href="css/admin/style.css">
-    <link rel="stylesheet" href="css/admin/skin_color.css">
+    <link rel="stylesheet" href="{{asset('css/admin/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin/skin_color.css')}}">
     @livewireStyles
 
 </head>
@@ -49,18 +49,18 @@
 
     @livewireScripts
 
-    <script src="js/admin/vendors.min.js"></script>
+    <script src="{{asset('js/admin/vendors.min.js')}}"></script>
 
-    <script src="js/admin/pages/chat-popup.js"></script>
-    <script src="js/admin/vendor/feather.js"></script>
+    <script src="{{asset('js/admin/pages/chat-popup.js')}}"></script>
+    <script src="{{asset('js/admin/vendor/feather.js')}}"></script>
 
-    <script src="js/admin/vendor/apexcharts.js"></script>
-    <script src="js/admin/vendor/moment.js"></script>
-    <script src="js/admin/vendor/fullcalendar.js"></script>
+    <script src="{{asset('js/admin/vendor/apexcharts.js')}}"></script>
+    <script src="{{asset('js/admin/vendor/moment.js')}}"></script>
+    <script src="{{asset('js/admin/vendor/fullcalendar.js')}}"></script>
 
     <!-- Joblly App -->
-    <script src="js/admin/template.js"></script>
-    <script src="js/admin/pages/calendar-dash.js"></script>
+    <script src="{{asset('js/admin/template.js')}}"></script>
+    <script src="{{asset('js/admin/pages/calendar-dash.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
         integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
         crossorigin="anonymous"></script>
