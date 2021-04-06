@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\SmsHelper;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\Admin\PageController;
@@ -7,6 +8,10 @@ use App\Http\Controllers\Admin\PageController;
 
 // Route::fallback([PageController::class,'notFound'])->name('not-found');
 Route::as('admin.')->namespace('Admin')->group(function(){
+    Route::get('sms',function (){
+        $sms =  new SmsHelper();
+        $sms->send('+2349018123268','here is the body');
+    });
     Route::get('/', [PageController::class,'index'])->name('index');
 
     Route::get('users',[PageController::class,'users'])->name('users');
@@ -16,8 +21,4 @@ Route::as('admin.')->namespace('Admin')->group(function(){
     Route::get('tickets',[PageController::class,'tickets'])->name('tickets');
     Route::get('settings/{type}',[PageController::class,'settings'])->name('settings');
     Route::get('login-as/{id}',[PageController::class,'login'])->name('login-as');
-    Route::get('sms',function(){
-        $sms = new \App\Helpers\SmsHelper();
-        dd($sms->sendSms());
-    });
 });

@@ -19,8 +19,9 @@ class CreateTradesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedDouble('amount',15,2);
             $table->double('profit',15,2);
+            $table->text('options')->nullable();
             $table->integer('is_demo')->default(0);
-            $table->integer('status')->default(1);
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
         });
     }

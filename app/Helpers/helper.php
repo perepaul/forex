@@ -27,5 +27,10 @@ function generateReference($length = 10)
     return \Illuminate\Support\Str::limit($randomString,$length,'');
 }
 
+function isEmptyOrNullString(string $string)
+{
+    return is_null($string) || $string === '';
+}
+
 
 

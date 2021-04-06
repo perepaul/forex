@@ -2,18 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\Deposit;
+use App\Models\Trade;
+use App\Models\TradeCurrency;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class DepositFactory extends Factory
+class TradeFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Deposit::class;
+    protected $model = Trade::class;
 
     /**
      * Define the model's default state.
@@ -23,12 +24,12 @@ class DepositFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => rand(1,User::all()->count()),
-            'reference' => generateReference(),
-            'currency_id' => 1,
+            'trade_currency_id' => 1,
+            'user_id' => rand(1, User::all()->count()),
             'amount' => $this->faker->randomNumber(),
-            'method' => 'bitcoin',
-            'status' => 'pending',
+            'profit' => $this->faker->randomNumber(),
+            'options'=> ['stop_trade'=>50],
+            'is_demo'=>1,
         ];
     }
 }

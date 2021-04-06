@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Trade extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+    protected $casts = ['options'=>'object'];
 
     public function currency()
     {
-        $this->hasMany(TradeCurrency::class);
+        return $this->belongsTo(TradeCurrency::class,'trade_currency_id');
     }
 
     public function user()

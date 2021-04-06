@@ -6,10 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use MichaelDzjap\TwoFactorAuth\TwoFactorAuthenticable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, TwoFactorAuthenticable;
 
     /**
      * The attributes that are mass assignable.
@@ -55,6 +56,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function isActive()
     {
         return $this->status == 1;
+    }
+
+    public function getMobile(): string
+    {
+        return $this->phone;
     }
 
     public function currency()

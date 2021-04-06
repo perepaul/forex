@@ -95,11 +95,11 @@
                                         <div class="user-balance">
                                             <div class="available">
                                                 <p>Demo Balance</p>
-                                                <span>{{format_money(auth('web')->user()->bonus_balance)}}</span>
+                                                <span style="font-size: .7em">{{format_money(auth('web')->user()->demo_balance)}}</span>
                                             </div>
                                             <div class="total">
                                                 <p>Balance</p>
-                                                <span>{{format_money(auth('web')->user()->balance)}}</span>
+                                                <span style="font-size: .7em">{{format_money(auth('web')->user()->balance)}}</span>
                                             </div>
                                         </div>
                                         <a href="{{route('profile')}}" class="dropdown-item">

@@ -13,7 +13,7 @@ class TradeCurrency extends Model
 
     public function trades()
     {
-        return $this->belongsTo(Trade::class,'currency_id');
+        return $this->hasMany(Trade::class);
     }
 
 }

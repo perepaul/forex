@@ -15,7 +15,7 @@ class CreateAdmin extends Command
      * @var string
      */
     protected $signature = 'make:admin';
-    protected $retries = 3, $pass, $confirm_pass,$email,$tries=1;
+    protected $retries = 3, $pass, $confirm_pass,$email,$tries=0;
 
     /**
      * The console command description.
