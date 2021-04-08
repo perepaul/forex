@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 if(!function_exists('admin_url')){
     function admin_url(){
         return config('app.admin_subdomain').'.'.config('app.base_url');
@@ -24,12 +26,17 @@ function generateReference($length = 10)
     for ($i = 0; $i < 12; $i++) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
-    return \Illuminate\Support\Str::limit($randomString,$length,'');
+    return str_limit($randomString,$length,'');
 }
 
 function isEmptyOrNullString(string $string)
 {
     return is_null($string) || $string === '';
+}
+
+function str_limit($string,$limit,$end = '...')
+{
+    return Str::limit($string, $limit, $end);
 }
 
 

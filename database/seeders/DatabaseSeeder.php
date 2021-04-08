@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             WithdrawalSeeder::class,
             DepositTableSeeder::class,
             TradesTableSeeder::class,
+            PlanAndPlanFeatureSeeder::class,
         ]);
     }
 }

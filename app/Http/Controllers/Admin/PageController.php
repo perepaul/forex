@@ -37,6 +37,9 @@ class PageController extends Controller
             case 'account_currency':
                 $setting = $type;
                 break;
+            case 'plans':
+                $setting = $type;
+                break;
             default:
             abort('404');
         }

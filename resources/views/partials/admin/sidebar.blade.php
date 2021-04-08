@@ -11,34 +11,34 @@
                 </a>
             </li>
             <li>
-                <a href="{{route('admin.users')}}">
+                <a href="{{ route('admin.users') }}">
                     <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
                     <span>Users</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('admin.trades')}}">
+                <a href="{{ route('admin.trades') }}">
                     <i class="icon-Credit-card"><span class="path1"></span><span class="path2"></span><span
                             class="path3"></span></i>
                     <span>Trades</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('admin.deposits')}}">
+                <a href="{{ route('admin.deposits') }}">
                     <i class="icon-Money"><span class="path1"></span><span class="path2"></span><span
                             class="path3"></span></i>
                     <span>Deposits</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('admin.withdrawals')}}">
+                <a href="{{ route('admin.withdrawals') }}">
                     <i class="icon-Wallet"><span class="path1"></span><span class="path2"></span><span
                             class="path3"></span></i>
                     <span>Withdrawals</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('admin.tickets')}}">
+                <a href="{{ route('admin.tickets') }}">
                     <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
                     <span>Tickets</span>
                 </a>
@@ -52,10 +52,12 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('admin.settings','trade_currency')}}"><i class="icon-Commit"><span class="path1"></span><span
-                                    class="path2"></span></i>Trade Currency</a></li>
-                    <li><a href="{{route('admin.settings','account_currency')}}"><i class="icon-Commit"><span class="path1"></span><span
-                                    class="path2"></span></i>Account Currency</a></li>
+                    <li><a href="{{ route('admin.settings', 'trade_currency') }}"><i class="icon-Commit"><span
+                                    class="path1"></span><span class="path2"></span></i>Trade Currency</a></li>
+                    <li><a href="{{ route('admin.settings', 'account_currency') }}"><i class="icon-Commit"><span
+                                    class="path1"></span><span class="path2"></span></i>Account Currency</a></li>
+                    <li><a href="{{ route('admin.settings', 'plans') }}"><i class="icon-Commit"><span
+                                    class="path1"></span><span class="path2"></span></i>Trading Plans</a></li>
                 </ul>
             </li>
             {{-- <li class="header">Apps & Widgets</li>
