@@ -32,26 +32,24 @@
                                 <table class="table table-sm">
                                     <thead>
                                         <tr>
-                                            <th class="col-5">Name</th>
-                                            <th>ISO</th>
-                                            <th>Symbol</th>
+                                            <th class="col-4">Name</th>
+                                            <th>Demo Balance</th>
+                                            <th>Topup Bonus(%)</th>
                                             <th class="col-3">Actions</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse($account_currencies as $currency)
+                                        @forelse($plans as $plan)
                                         <tr>
-                                            <td>{{$currency->name}}</td>
-                                            <td>{{$currency->iso}}</td>
-                                            <td>{{$currency->symbol}}</td>
+                                            <td>{{$plan->name}}</td>
+                                            <td>{{$plan->demo_balance}}</td>
+                                            <td>{{$plan->topup_bonus_percentage}}</td>
                                             <td>
                                                 <div class="d-flex justify-content-end">
-                                                    @if(!$currency->default)
-                                                    <button class="btn btn-sm btn-success" wire:click='activate({{$currency->id}})'><i class="fa fa-check"></i></button>
-                                                    @endif
-                                                    <button class="btn btn-sm btn-default" wire:click='edit({{$currency->id}})'><i class="fa fa-edit"></i></button>
-                                                    <button class="btn btn-sm btn-danger" wire:click='delete({{$currency->id}})'><i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-sm btn-success" wire:click='attachFeatures({{$plan->id}})' ><i class="fa fa-table"></i></button>
+                                                    <button class="btn btn-sm btn-default"><i class="fa fa-edit"></i></button>
+                                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </td>
                                         </tr>
@@ -70,28 +68,53 @@
                 <div class="col-xxxl-5 col-xl-5 col-12">
                     <div class="box">
                         <div class="box-header">
-                            <h5 class="box-title">{{$action}} Currency</h5>
+                            <h5 class="box-title">{{$action}}</h5>
                         </div>
                         <div class="box-body">
-                            <form action="" wire:submit.prevent='createOrUpdate({{$editing}})'>
+                            @if($active == 'plan')
+                            <form action="" wire:submit.prevent='addOrUpdatePlan({{$editing}})'>
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" placeholder="eg. US Dollar" class="form-control" wire:model='name'>
-                                    @error('name') <span class="error">{{$message}}</span> @enderror
+                                    <input type="text" placeholder="eg. Silver" class="form-control" wire:model='data.plan.name'>
+                                    @error('data.plan.name') <span class="error">{{$message}}</span> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="iso">ISO</label>
-                                    <input type="text" placeholder="eg. USD" class="form-control" wire:model='iso'>
-                                    @error('iso') <span class="error">{{$message}}</span> @enderror
+                                    <label for="demo_balance">Demo Balance</label>
+                                    <input type="text" placeholder="eg. 1000" class="form-control" wire:model='data.plan.demo_balance'>
+                                    @error('data.plan.demo_balance') <span class="error">{{$message}}</span> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="symbol">Symbol</label>
-                                    <input type="text" placeholder="eg. $" class="form-control" wire:model='symbol'>
-                                    @error('symbol') <span class="error">{{$message}}</span> @enderror
+                                    <label for="topup_bonus_percentage">Topup Bonus (%)</label>
+                                    <input type="text" placeholder="eg. 10" class="form-control" wire:model='data.plan.topup_bonus_percentage'>
+                                    @error('data.plan.topup_bonus_percentage') <span class="error">{{$message}}</span> @enderror
                                 </div>
                                 <button type="button" class="btn btn-danger pull-left" wire:click='resetForm'>Reset</button>
                                 <button type="submit" class="btn btn-info pull-right">{{$action}}</button>
                             </form>
+                            @else
+                            <form action="" wire:submit.prevent='addorUpdateFeatures({{$editing}})'>
+                                <div class="d-flex justify-content-between p-3">
+                                    <h5>Features</h6>
+                                    <button class="btn btn-sm btn-success" wire:click.prevent='addEntry'><i class="fa fa-plus"></i></button>
+
+                                </div>
+                                <div class="form-group">
+                                @foreach ($data['features'] as $k => $feature)
+                                <div class="form-group">
+                                    <div class="input-group input-group-sm">
+                                        <input @if($loop->first) autofocus='true' @endif type="text" class="form-control" placeholder="eg. Silver" wire:model='data.features.{{$k}}.value'>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-danger text-white" id="basic-addon2" wire:click='removeEntry({{$k}})'><i class="fa fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    @error('data.features.*.value') <span class="error">{{$message}}</span> @enderror
+                                </div>
+                                @endforeach
+
+                                <button type="button" class="btn btn-danger pull-left" wire:click='resetForm'>Reset</button>
+                                <button type="submit" class="btn btn-info pull-right">{{$action}}</button>
+                            </form>
+                            @endif
                         </div>
                     </div>
                 </div>

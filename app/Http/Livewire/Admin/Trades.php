@@ -4,9 +4,11 @@ namespace App\Http\Livewire\Admin;
 
 use App\Repository\TradeRepository;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Trades extends Component
 {
+    use WithPagination;
     protected $trade;
     public $data;
 

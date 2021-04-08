@@ -5,9 +5,11 @@ namespace App\Http\Livewire\Admin;
 use App\Repository\TradeCurrencyRepo;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class TradeCurrency extends Component
 {
+    use WithPagination;
     protected $currency;
     public $action = 'Add', $editing = null;
     public $name;
