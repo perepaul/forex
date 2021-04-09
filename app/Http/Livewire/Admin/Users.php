@@ -81,7 +81,7 @@ class Users extends Component
         }
     }
 
-    private function getData()
+    private function data()
     {
         if (!empty($this->search)) {
             return $this->user->getModel()->where('name', 'like', "%{$this->search}%")->paginate();
@@ -91,7 +91,7 @@ class Users extends Component
     public function render()
     {
         return view('livewire.admin.users', [
-            'users' => $this->user->paginate()
+            'users' => $this->data()
         ]);
     }
 }

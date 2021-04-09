@@ -45,6 +45,7 @@
                                             <th>Name</th>
                                             <th>Phone</th>
                                             <th>Email</th>
+                                            <th>Demo</th>
                                             <th>Balance</th>
                                             <th>Status</th>
                                             <th>Actions</th>
@@ -59,7 +60,8 @@
                                                         href="{{ $user->phone ? 'tel:' . $user->phone : '#' }}">{{ $user->phone }}</a>
                                                 </td>
                                                 <td>{{ $user->email }}</td>
-                                                <td>{{ $user->balance }}</td>
+                                                <td>{{format_money($user->demo_balance)}}</td>
+                                                <td>{{ format_money($user->balance) }}</td>
                                                 <td>
                                                     <span wire:click='changeStatus({{$user->id}})'
                                                         class="badge badge-pill badge-{{ $user->status == 1 ? 'success' : 'danger' }} cursor-pointer">
