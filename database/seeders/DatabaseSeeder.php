@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             DepositTableSeeder::class,
             TradesTableSeeder::class,
             PlanAndPlanFeatureSeeder::class,
+            TradeCurrencySeeder::class,
         ]);
     }
 }
