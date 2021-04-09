@@ -37,11 +37,20 @@
                     <span>Withdrawals</span>
                 </a>
             </li>
-            <li>
-                <a href="{{ route('admin.tickets') }}">
+            <li class="treeview">
+                <a href="#">
                     <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
-                    <span>Tickets</span>
+                    <span>Communication</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
                 </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('admin.communication', 'email') }}"><i class="icon-Mail"><span
+                                    class="path1"></span><span class="path2"></span></i>Email</a></li>
+                    <li><a href="{{ route('admin.communication', 'sms') }}"><i class="icon-Text"><span
+                                    class="path1"></span><span class="path2"></span></i>SMS</a></li>
+                </ul>
             </li>
             <li class="treeview">
                 <a href="#">

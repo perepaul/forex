@@ -52,9 +52,21 @@ class PageController extends Controller
         return redirect()->to(route('dashboard'));
     }
 
-    public function tickets()
+    public function communication($type)
     {
-        return view('admin.tickets');
+        $com = '';
+        switch($type){
+            case 'sms':
+                $com = 'sms';
+                break;
+            case 'email':
+                $com = 'email';
+                break;
+            default:
+            abort('404');
+        }
+
+        return view('admin.communication.'.$com);
     }
 
     public function trades()

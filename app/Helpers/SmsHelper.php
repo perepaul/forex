@@ -2,25 +2,23 @@
 
 namespace App\Helpers;
 
-use Illuminate\Support\Facades\Http;
-use GuzzleHttp\Client;
-use Twilio\Rest\Client as RestClient;
+use MessageBird\Objects\Message;
+use MessageBird\Client;
+
 
 class SmsHelper
 {
-    /**
-     * @param \Twilio\Rest\Client $sms
-     * Twilio instance
-     */
+
     private $sms;
 
-    public function __construct()
+    public function send($to, $body)
     {
-        $this->sms = new RestClient(config('twilio.sid'),config('twilio.token'));
-    }
-    public function send($to,$body)
-    {
-        $data = ['from'=>config('twilio.from'),'body'=>$body];
-        $this->sms->messages->create($to,$data);
+        $MessageBird = new Client(config('messagebird.key'));
+        $Message = new Message();
+        $Message->originator = 'PIPLOTS';
+        $Message->recipients = $to;
+        $Message->body = $body;
+
+        $MessageBird->messages->create($Message);
     }
 }

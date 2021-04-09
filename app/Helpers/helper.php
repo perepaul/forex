@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use App\Helpers\SmsHelper;
 
 if(!function_exists('admin_url')){
     function admin_url(){
@@ -37,6 +38,13 @@ function isEmptyOrNullString(string $string)
 function str_limit($string,$limit,$end = '...')
 {
     return Str::limit($string, $limit, $end);
+}
+
+function sms($to,$body)
+{
+    //+2349018123268
+    $sms = new SmsHelper();
+    $sms->send($to,$body);
 }
 
 
