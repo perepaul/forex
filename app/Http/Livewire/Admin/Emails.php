@@ -57,7 +57,6 @@ class Emails extends Component
             }
         }
 
-        dd($data);
         Mail::to($data['to'])->send(
             new CommunicationMailable(
                 $data['subject'],
