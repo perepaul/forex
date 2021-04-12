@@ -47,5 +47,10 @@ function sms($to,$body)
     $sms->send($to,$body);
 }
 
+function attachment_path($dir='')
+{
+    return public_path('assets/tmp/'.$dir);
+}
+
 
 

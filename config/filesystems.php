@@ -30,6 +30,11 @@ return [
 
     'disks' => [
 
+        'attachement' => [
+            'driver' => 'local',
+            'root' => public_path('assets/tmp')
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
