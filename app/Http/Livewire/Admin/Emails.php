@@ -42,7 +42,7 @@ class Emails extends Component
 
     public function resetForm()
     {
-        $this->reset('user','to','subject');
+        $this->reset('user','to','subject','attachments','message');
     }
 
     public function send()
@@ -66,7 +66,7 @@ class Emails extends Component
                 )
         );
         $this->resetForm();
-        $this->emait('success',['message'=>'Mail sent successfully']);
+        $this->emit('success',['message'=>'Mail sent successfully']);
     }
 
     private function uploadFile($file,$index)

@@ -51,10 +51,10 @@
                                     <span class="error">{{$message}}</span>
                                 @enderror
                             </div>
-                            <div class="form-group" wire:ignore>
+                            <div class="form-group">
                                 <label for="">Message</label>
                                 <textarea
-                                 id="editor"
+                                 id=""
                                  cols="30"
                                  rows="10"
                                  class="form-control"
