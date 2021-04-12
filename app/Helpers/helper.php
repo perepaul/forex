@@ -52,5 +52,10 @@ function attachment_path($dir='')
     return public_path('assets/tmp/'.$dir);
 }
 
+function logo()
+{
+    return asset('images/logo.png');
+}
+
 
 

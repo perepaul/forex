@@ -4,11 +4,11 @@
 			<i data-feather="menu"></i>
 		</a>
 		<!-- Logo -->
-		<a href="index-2.html" class="logo">
+		<a href="{{route('admin.index')}}" class="logo">
 		  <!-- logo-->
 		  <div class="logo-lg">
-			  <span class="light-logo"><img src="https://www.multipurposethemes.com/admin/joblly-admin-template-dashboard/images/logo-dark-text.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="https://www.multipurposethemes.com/admin/joblly-admin-template-dashboard/images/logo-light-text.png" alt="logo"></span>
+			  <span class="light-logo"><img src="{{logo()}}" alt="logo"></span>
+			  <span class="dark-logo"><img src="{{logo()}}" alt="logo"></span>
 		  </div>
 		</a>
 	</div>
