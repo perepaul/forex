@@ -1,5 +1,6 @@
 @extends('layouts.user.auth')
-
+@section('title','Forgot Password');
+@section('page-title','Forgot password');
 @section('page')
 
     <div class="pb-3 text-center">
@@ -10,7 +11,7 @@
         <div class="col-12">
             <input type="email" class="form-control" placeholder="hello@example.com" name="email">
         </div>
-    
+
         <div class="text-center">
             <button type="submit" class="btn btn-primary btn-block">Send Link <i class="fa fa-envelope"></i></button>
         </div>

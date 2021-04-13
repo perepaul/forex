@@ -1,6 +1,6 @@
 @extends('layouts.user.dashboard')
 @section('content')
-    <div class="content-body">
+    <div class="content-body pt-3">
         <div class="container">
             <!-- TradingView Widget BEGIN -->
             <div class="tradingview-widget-container">

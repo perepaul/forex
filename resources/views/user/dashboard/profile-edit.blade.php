@@ -1,7 +1,7 @@
 @extends('layouts.user.dashboard')
 
 @section('content')
-    <div class="content-body">
+    <div class="content-body pt-3">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12 col-xl-12">

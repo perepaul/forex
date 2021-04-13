@@ -57,5 +57,10 @@ function logo()
     return asset('images/logo.png');
 }
 
+function favicon()
+{
+    return asset('images/favicon.png');
+}
+
 
 

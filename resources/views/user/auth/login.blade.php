@@ -1,4 +1,6 @@
 @extends('layouts.user.auth')
+@section('title','Login');
+@section('page-title','Login to continue');
 
 @section('page')
 
@@ -18,7 +20,7 @@
             </div>
         </div>
         <div class="col-6 text-right">
-            <a href="reset.html">Forgot Password?</a>
+            <a href="{{url('/forgot-password')}}">Forgot Password?</a>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary btn-block">Sign in</button>
@@ -27,10 +29,6 @@
     </form>
     <p class="mt-3 mb-0">Don't have an account? <a class="text-primary" href="{{ route('register') }}">Sign
             up</a></p>
-    <div class="privacy-link" style="color:white !important;">
-        <a href="{{url('/forgot-password')}}" class="text-primary">Reset Password</a>
-        <br />
-    </div>
 @endsection
  @push('js')
     @include('partials.alerts')

@@ -1,5 +1,8 @@
 @extends('layouts.user.auth')
 
+@section('title','Verify Email');
+@section('page-title','Verify your email');
+
 @section('page')
 
     <div class="text-center">
