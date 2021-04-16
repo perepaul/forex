@@ -18,9 +18,9 @@
     @include('partials.user.preloader')
 
     @yield('content')
+    @livewireScripts
     <script src="{{ mix('js/user/app.js') }}"></script>
     @include('partials.alerts')
-    @livewireScripts
     @stack('js')
 </body>
 

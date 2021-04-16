@@ -3,14 +3,14 @@
 return [
     'name' => 'LaravelPWA',
     'manifest' => [
-        'name' => env('APP_NAME', 'My PWA App'),
+        'name' => env('APP_NAME', 'Piplots'),
         'short_name' => 'PWA',
-        'start_url' => '/',
+        'start_url' => '/login',
         'background_color' => '#ffffff',
         'theme_color' => '#000000',
         'display' => 'standalone',
-        'orientation'=> 'any',
-        'status_bar'=> 'black',
+        'orientation'=> 'portriat',
+        'status_bar'=> 'brown',
         'icons' => [
             '72x72' => [
                 'path' => '/images/icons/icon-72x72.png',
