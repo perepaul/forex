@@ -13,6 +13,6 @@ class TradesTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Trade::factory(10)->create();
+        \App\Models\Trade::factory(100)->create();
     }
 }

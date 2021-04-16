@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Str;
 use App\Helpers\SmsHelper;
+use App\Models\AccountCurrency;
 
 if(!function_exists('admin_url')){
     function admin_url(){
@@ -14,8 +15,16 @@ function user_url()
     return config('app.base_url');
 }
 
-function format_money($amount,$sign = '$')
+function format_money($amount,$symbol = null)
 {
+    $sign = '$';
+    $s = currency_symbol();
+    if(!is_null($symbol)) {
+        $sign = $symbol;
+    }elseif(!is_null($s)){
+        $sign = $s;
+    }
+
     return $sign.number_format($amount,2);
 }
 
@@ -60,6 +69,24 @@ function logo()
 function favicon()
 {
     return asset('images/favicon.png');
+}
+
+function currency_symbol()
+{
+    $currency = user_currency() ?? default_currency();
+    return $currency?->symbol;
+}
+
+function user_currency()
+{
+    if(!auth('web')->check()){
+        return null;
+    }
+    return auth('web')->user()->currency;
+}
+
+function default_currency(){
+    return AccountCurrency::where('default',1)->first();
 }
 
 

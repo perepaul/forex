@@ -30,6 +30,7 @@ class TradeFactory extends Factory
             'profit' => $this->faker->randomNumber(),
             'options'=> ['stop_trade'=>50],
             'is_demo'=>1,
+            'type' => $this->faker->randomElement(array('buy','sell'))
         ];
     }
 }

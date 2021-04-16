@@ -16,9 +16,9 @@ mix
     // .postCss('resources/css/app.css', 'public/css', [
     //     //
     // ]);
-    .autoload({
-        jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]
-    })
+    // .autoload({
+    //     jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]
+    // })
     .postCss('resources/css/user/style.css', 'public/css/user/app.css', [])
     .js('resources/js/user/scripts.js', 'public/js/user/app.js')
     .copy('resources/icons', 'public/icons')

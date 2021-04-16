@@ -19,4 +19,13 @@ class TradeRepository extends BaseRepository
         $trade->status = 'inactive';
         $trade->save();
     }
+
+    public function placeTrade($data,$balance,$user_id)
+    {
+        $userRepo = new UserRepository();
+        $user = $userRepo->find($user_id);
+        $user->{$balance} = $user->{$balance} - ($data['amount'] + $data['fee']);
+        $user->trades()->save(new Trade($data));
+        $user->save();
+    }
 }

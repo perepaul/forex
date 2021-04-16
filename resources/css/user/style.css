@@ -3,10 +3,10 @@
     Author: Qkit
     Author Portfolio : https://themeforest.net/user/qkit_/portfolio
     Email: qkit.inc@gmail.com
-    Skype: sporsho9 
+    Skype: sporsho9
 
 
-    Table of Content: 
+    Table of Content:
 
     1. Abstract
     2. Bootstrap CSS
@@ -14,7 +14,7 @@
     4. Layout
     5. Component
     6. Pages
-    
+
 */
 
 
@@ -11544,7 +11544,7 @@ body.dashboard {
     transition: all 0.25s ease-in;
     overflow: hidden;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
     margin-top: 80px;
 }
 
@@ -15180,6 +15180,11 @@ label.error {
 
 .intro-demo_img img {
     border-radius: 5px;
+}
+
+.error {
+    font-size:.8em;
+    color: red;
 }
 
 

@@ -18,10 +18,11 @@ class CreateTradesTable extends Migration
             $table->unsignedBigInteger('trade_currency_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedDouble('amount',15,2);
-            $table->double('profit',15,2);
+            $table->double('profit',15,2)->default(0);
             $table->text('options')->nullable();
             $table->integer('is_demo')->default(0);
             $table->enum('status',['active','inactive'])->default('active');
+            $table->enum('type',['buy','sell'])->default('buy');
             $table->timestamps();
         });
     }

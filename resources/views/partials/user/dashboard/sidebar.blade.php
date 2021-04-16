@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="brand-logo">
-        <a href="{{ route('dashboard') }}"><img src="{{favicon()}}" alt="" width="87">
+        <a href="{{ route('dashboard') }}"><img src="{{favicon()}}" alt="" width="50">
         </a>
     </div>
     <div class="menu">

@@ -57,13 +57,18 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->status == 1;
     }
 
-    public function getMobile(): string
-    {
-        return $this->phone;
-    }
-
     public function currency()
     {
         return $this->belongsTo(AccountCurrency::class);
+    }
+
+    public function trades()
+    {
+        return $this->hasMany(Trade::class);
+    }
+
+    public function plan()
+    {
+        return $this->belongsTo(Plan::class);
     }
 }

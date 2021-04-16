@@ -6,7 +6,7 @@
     @include('partials.user.front.header')
 
     @yield('page')
-    
+
     @include('partials.user.front.footer')
 
     </div>

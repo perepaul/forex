@@ -1,17 +1,18 @@
 //jquery first
 
-import jQuery from './0jquery';
+import jQuery from 'jquery';
+
 
 window.$ = window.jquery = window.jQuery = jQuery;
 
 
 
-// import './1jquery.vmap';
+// // import './1jquery.vmap';
 import ApexCharts from './2apexcharts';
 // window.ApexCharts = ApexCharts;
 import './3bootstrap.bundle';
 // import './7apex-price';
-import './5jquery.basictable';
+// import './5jquery.basictable';
 import PerfectScrollbar from './4perfect-scrollbar';
 // import './9pric-btc';
 import './6perfect-scrollbar-init';
@@ -966,3 +967,4 @@ $(function() {
         themeToggle();
     })
 })();
+

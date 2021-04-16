@@ -6,7 +6,7 @@
                             <div class="header-left">
                                 <div class="brand-logo">
                                     <a href="{{route('dashboard')}}">
-                                        <img src="{{logo()}}" alt="" width="180">
+                                        <img src="{{logo()}}" alt="" width="90">
                                     </a>
                                 </div>
                                 {{-- <div class="search">
@@ -24,7 +24,7 @@
                                     <span class="dark"><i class="icofont-moon"></i></span>
                                     <span class="light"><i class="icofont-sun-alt"></i></span>
                                 </div>
-                                <div class="notification dropdown">
+                                {{-- <div class="notification dropdown">
                                     <div class="notify-bell" data-toggle="dropdown">
                                         <span><i class="icofont-alarm"></i></span>
                                     </div>
@@ -74,7 +74,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="profile_log dropdown">
                                     <div class="user" data-toggle="dropdown">
