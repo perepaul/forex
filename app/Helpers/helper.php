@@ -74,7 +74,7 @@ function favicon()
 function currency_symbol()
 {
     $currency = user_currency() ?? default_currency();
-    return $currency?->symbol;
+    return optional($currency)->symbol;
 }
 
 function user_currency()
