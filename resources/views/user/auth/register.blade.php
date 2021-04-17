@@ -1,6 +1,6 @@
 @extends('layouts.user.auth')
-@section('title','Register');
-@section('page-title','Create an account');
+@section('title','Register')
+@section('page-title','Create an account')
 
 @section('page')
     <form method="post" name="myform" class="signin_validate row g-3" action="{{ route('register') }}" autocomplete='off'>
