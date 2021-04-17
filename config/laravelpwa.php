@@ -4,7 +4,7 @@ return [
     'name' => 'LaravelPWA',
     'manifest' => [
         'name' => env('APP_NAME', 'Piplots'),
-        'short_name' => 'PWA',
+        'short_name' => 'Piplots',
         'start_url' => '/login',
         'background_color' => '#ffffff',
         'theme_color' => '#000000',
