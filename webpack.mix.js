@@ -29,6 +29,6 @@ mix
      */
     .copy('resources/css/admin', 'public/css/admin')
     .copy('resources/js/admin', 'public/js/admin')
-    .copy('resources/js/izitoast.js', 'public/js/izitoast.js')
-    .copy('resources/js/alert.js', 'public/js/alert.js')
-    .copy('resources/js/izitoast.js', 'public/css/izitoast.css')
+    // .copy('resources/js/izitoast.js', 'public/js/izitoast.js')
+    // .copy('resources/js/alert.js', 'public/js/alert.js')
+    // .copy('resources/js/izitoast.css', 'public/css/izitoast.css')

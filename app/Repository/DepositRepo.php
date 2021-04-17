@@ -25,4 +25,9 @@ class DepositRepo extends BaseRepository
     {
 
     }
+
+    public function pendingDepositsTotal($id)
+    {
+        return $this->model->where('user_id',$id)->where('status','pending')->groupBy('created_at')->sum('amount');
+    }
 }

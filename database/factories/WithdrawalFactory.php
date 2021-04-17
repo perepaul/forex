@@ -25,7 +25,6 @@ class WithdrawalFactory extends Factory
             'reference' => $this->faker->uuid,
             'user_id' => 1,
             'amount' => $this->faker->randomNumber(),
-            'status' => 1,
         ];
     }
 }

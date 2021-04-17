@@ -25,6 +25,11 @@ function format_money($amount,$symbol = null)
         $sign = $s;
     }
 
+    if($sign == 'none')
+    {
+        return number_format($amount,2);
+    }
+
     return $sign.number_format($amount,2);
 }
 
@@ -87,6 +92,11 @@ function user_currency()
 
 function default_currency(){
     return AccountCurrency::where('default',1)->first();
+}
+
+function currency_iso(){
+    $currency = user_currency() ?? default_currency();
+    return optional($currency)->iso;
 }
 
 

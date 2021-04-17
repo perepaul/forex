@@ -11,29 +11,29 @@
                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="wallet-widget card">
                         <h5>Estimated Balance</h5>
-                        <h2><span class="text-primary">0.000</span> <sub>USD</sub></h2>
-                        <p>= 0.000000 BTC</p>
+                        <h5><span class="text-primary">{{format_money($this->estimatedBalance,'none')}}</span> <sub>USD</sub></h5>
+                        <p>= trade returns + pending deposits - pending withdrawals</p>
                     </div>
                 </div>
                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="wallet-widget card">
                         <h5>Available Balance</h5>
-                        <h2><span class="text-success">0.000</span> <sub>USD</sub></h2>
-                        <p>= 0.000000 BTC</p>
+                        <h5><span class="text-success">{{format_money($this->user->balance,'none')}}</span> <sub>{{currency_iso()}}</sub></h5>
+                        <p> = your current (available) balance</p>
                     </div>
                 </div>
                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="wallet-widget card">
                         <h5>Pending Balance</h5>
-                        <h2><span class="text-warning">0.000</span> <sub>USD</sub></h2>
-                        <p>= 0.000000 BTC</p>
+                        <h5><span class="text-warning">{{format_money($this->pendingWithdrawalTotal + $this->pendingDepositsTotal,'none' )}}</span> <sub>{{currency_iso()}}</sub></h5>
+                        <p>= withdrawals + deposits (pending)</p>
                     </div>
                 </div>
                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="wallet-widget card">
-                        <h5>Locked Balance</h5>
-                        <h2><span class="text-danger">0.000</span> <sub>USD</sub></h2>
-                        <p>= 0.000000 BTC</p>
+                        <h5>Demo Balance</h5>
+                        <h5><span class="text-danger">{{format_money($this->user->demo_balance,'none')}}</span> <sub>{{currency_iso()}}</sub></h5>
+                        <p>= your current (available) demo balance</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
                     </div>
                 </div> --}}
 
-                {{-- <div class="col-xxl-6">
+                <div class="col-xxl-6">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Balance</h4>
@@ -127,55 +127,42 @@
                                 </div>
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
 
-                                    <ul class="balance-widget">
+                                    <ul class="balance-widget text-sm">
                                         <li>
                                             <div class="icon-title">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
+                                                {{-- <i class="cc BTC"></i> --}}
+                                                <span>Available Balance</span>
                                             </div>
                                             <div class="text-right">
-                                                <h5>0.000242 BTC</h5>
-                                                <span>0.125 USD</span>
+                                                <h5>{{format_money($this->user->balance,'none')}}</h5>
+                                                <span>{{currency_iso()}}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="icon-title">
-                                                <i class="cc USDT"></i>
-                                                <span>Tether</span>
+                                                <span>Pending Withdrawals</span>
                                             </div>
                                             <div class="text-right">
-                                                <h5>0.000242 USDT</h5>
-                                                <span>0.125 USD</span>
+                                                <h5>{{format_money($this->pendingWithdrawalTotal,'none')}}</h5>
+                                                <span>{{currency_iso()}}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="icon-title">
-                                                <i class="cc XTZ"></i>
-                                                <span>Tezos</span>
+                                                <span>Active Trades</span>
                                             </div>
                                             <div class="text-right">
-                                                <h5>0.000242 XTZ</h5>
-                                                <span>0.125 USD</span>
+                                                <h5>{{format_money($this->activeTradesTotal,'none')}}</h5>
+                                                <span>{{currency_iso()}}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="icon-title">
-                                                <i class="cc XMR"></i>
-                                                <span>Monero</span>
+                                                <span>Pending Deposit</span>
                                             </div>
                                             <div class="text-right">
-                                                <h5>0.000242 XMR</h5>
-                                                <span>0.125 USD</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon-title">
-                                                <i class="cc XMR"></i>
-                                                <span>Monero</span>
-                                            </div>
-                                            <div class="text-right">
-                                                <h5>0.000242 XMR</h5>
-                                                <span>0.125 USD</span>
+                                                <h5>{{format_money($this->pendingDepositsTotal,'none')}}</h5>
+                                                <span>{{currency_iso()}}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -184,7 +171,7 @@
 
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
                 {{-- <div class="col-xxl-6">
                     <div class="card">
@@ -287,11 +274,23 @@
                         </div>
                     </div>
                 </div> --}}
-
+                {{-- <div class="col-12">
+                    <h4 class="card-title">Deposit History</h4>
+                </div>
                 <div class="col-xxl-6">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Deposit History</h4>
+                            <div class="d-flex d-justify-content-between">
+                                <h4 class="card-title">Deposit History</h4>
+                                <div>
+                                    <div class="form-group">
+                                        <label for="">Type</label>
+                                        <select name="" id="" class="form-control">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -307,173 +306,74 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
+                                        @forelse ($deposits as $deposit)
+                                            <tr>
+                                                <td>12345</td>
+                                                <td class="coin-name">
+                                                    <i class="cc BTC"></i>
+                                                    <span>Bitcoin</span>
+                                                </td>
+                                                <td>
+                                                    0
+                                                </td>
+                                                <td>
+                                                    Jan 01
+                                                </td>
+                                                <td>
+                                                    #1236598745565
+                                                </td>
+                                                <td>
+                                                    Pending
+                                                </td>
+                                            </tr>
+                                        @empty
+
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Withdrawals </h4>
-                        </div>
-                        <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped responsive-table">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Type</th>
+                                            <th>#</th>
                                             <th>Amount</th>
                                             <th>Fee</th>
                                             <th>Date</th>
-                                            <th>Hash</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @forelse ($withdrawals as $withdrawal)
+                                            <tr>
+                                                <td>{{$withdrawal->reference}}</td>
+                                                <td>
+                                                    {{format_money($withdrawal->amount)}}
+                                                </td>
+                                                <td>
+                                                    0.02%
+                                                </td>
+                                                <td>
+                                                    <i class="fa fa-clock"></i>
+                                                    {{$withdrawal->created_at->format('d M, Y')}}
+                                                </td>
+                                                <td>
+                                                    Pending
+                                                </td>
+                                            </tr>
+                                        @empty
+                                            <tr>
+                                                <td colspan="5" class="text-center text-muted">No withdrawals yet.</td>
+                                            </tr>
+                                        @endforelse
                                         <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                0.02%
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                0.02%
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>12345</td>
-                                            <td class="coin-name">
-                                                <i class="cc BTC"></i>
-                                                <span>Bitcoin</span>
-                                            </td>
-                                            <td>
-                                                0
-                                            </td>
-                                            <td>
-                                                0.02%
-                                            </td>
-                                            <td>
-                                                Jan 01
-                                            </td>
-                                            <td>
-                                                #1236598745565
-                                            </td>
-                                            <td>
-                                                Pending
+                                            <td colspan="8" class="">
+                                                <div class="d-flex justify-content-center">
+                                                    <div>
+                                                        {{$withdrawals->links()}}
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -482,7 +382,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -26,7 +26,7 @@
                     <div class="col-xxxl-7 col-xl-7 col-12">
                         <div class="box">
                             <div class="box-header">
-                                <h5 class="box-title">Account Currencies</h5>
+                                <h5 class="box-title">Trade Currencies</h5>
                             </div>
                             <div class="box-body">
                                 <div class="table-responsive">
@@ -44,9 +44,6 @@
                                                 <td>{{$currency->name}}</td>
                                                 <td>
                                                     <div class="d-flex justify-content-end">
-                                                        @if(!$currency->default)
-                                                        <button class="btn btn-sm btn-success" wire:click='activate({{$currency->id}})'><i class="fa fa-check"></i></button>
-                                                        @endif
                                                         <button class="btn btn-sm btn-default" wire:click='edit({{$currency->id}})'><i class="fa fa-edit"></i></button>
                                                         <button class="btn btn-sm btn-danger" wire:click='delete({{$currency->id}})'><i class="fa fa-trash"></i></button>
                                                     </div>

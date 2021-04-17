@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 class Trades extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     protected $trade;
     public $data;
 

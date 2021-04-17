@@ -1,9 +1,9 @@
 //jquery first
 
-import jQuery from 'jquery';
+// let jQuery = require('jquery');
 
 
-window.$ = window.jquery = window.jQuery = jQuery;
+// window.$ = window.jquery = window.jQuery = jQuery;
 
 
 
@@ -19,7 +19,7 @@ import './6perfect-scrollbar-init';
 
 
 //  Preloader
-jQuery(window).on("load", function() {
+$(window).on("load", function() {
     $('#preloader').fadeOut(500);
     $('#main-wrapper').addClass('show');
 });

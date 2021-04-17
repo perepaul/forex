@@ -28,4 +28,10 @@ class TradeRepository extends BaseRepository
         $user->trades()->save(new Trade($data));
         $user->save();
     }
+
+    public function activeTradesTotal($id)
+    {
+        $query = $this->model->where('user_id',$id)->where('is_demo',0)->where('status','active')->groupBy('created_at');
+        return $query->sum('amount') + $query->sum('profit');
+    }
 }

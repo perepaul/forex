@@ -18,8 +18,5 @@
     "/css/admin/style_rtl.css": "/css/admin/style_rtl.css",
     "/css/admin/vendors_css.css": "/css/admin/vendors_css.css",
     "/js/admin/template.js": "/js/admin/template.js",
-    "/js/admin/vendors.min.js": "/js/admin/vendors.min.js",
-    "/js/izitoast.js": "/js/izitoast.js",
-    "/js/alert.js": "/js/alert.js",
-    "/css/izitoast.css": "/css/izitoast.css"
+    "/js/admin/vendors.min.js": "/js/admin/vendors.min.js"
 }
