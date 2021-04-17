@@ -1,10 +1,10 @@
 <div>
     <div class="content-body pt-3">
         <div class="container">
-            <div class="mt-3 mb-3">
+            <div class="mb-3">
                 <div class="d-flex justify-content-between">
-                    <a href="" class="btn btn-primary">Deposit</a>
-                    <a href="" class="btn btn-primary">Withdraw</a>
+                    <a href="" class="btn btn-info">Deposit</a>
+                    <a href="" class="btn btn-info">Withdraw</a>
                 </div>
             </div>
             <div class="row">
