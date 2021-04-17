@@ -1,7 +1,7 @@
 <div>
     <div class="content-body pt-3">
         <div class="container">
-            <div class="m-5">
+            <div class="mt-3 mb-3">
                 <div class="d-flex justify-content-between">
                     <a href="" class="btn btn-primary">Deposit</a>
                     <a href="" class="btn btn-primary">Withdraw</a>
