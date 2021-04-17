@@ -11,7 +11,6 @@
 <script src="{{asset('js/user/bootstrap-bundle.js')}}"></script>
 
 <script>
-    console.log($)
     iziToast.settings({
         timeout: 10000,
         resetOnHover: true,

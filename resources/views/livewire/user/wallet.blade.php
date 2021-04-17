@@ -25,7 +25,7 @@
                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="wallet-widget card">
                         <h5>Pending Balance</h5>
-                        <h5><span class="text-warning">{{format_money($this->pendingWithdrawalTotal + $this->pendingDepositsTotal,'none' )}}</span> <sub>{{currency_iso()}}</sub></h5>
+                        <h5><span class="text-warning">{{format_money($this->activeTradesTotal + $this->pendingDepositsTotal,'none' )}}</span> <sub>{{currency_iso()}}</sub></h5>
                         <p>= withdrawals + deposits (pending)</p>
                     </div>
                 </div>
@@ -121,8 +121,25 @@
                             <div class="row align-items-center">
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                     <div class="balance-chart">
-                                        <div id="balance-chart"></div>
-                                        <h4>Total Balance = $ 5360</h4>
+                                        <div
+                                            id="balance-chart"
+                                            data-info="{{json_encode([
+                                                $this->user->balance,
+                                                $this->pendingWithdrawalTotal,
+                                                $this->activeTradesTotal,
+                                                $this->pendingDepositsTotal
+                                                ])}}",
+                                            data-names ="{{
+                                                json_encode([
+                                                    'Balance',
+                                                    'Withdraw Total',
+                                                    'Active Trades',
+                                                    'Pending Deposits'
+                                                ])
+                                            }}"
+                                            >
+                                        </div>
+                                        <h4>Total Balance => {{format_money($this->estimatedBalance)}}</h4>
                                     </div>
                                 </div>
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">

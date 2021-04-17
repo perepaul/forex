@@ -791,8 +791,13 @@ $(function() {
 
 //dashboard charts
 (function($) {
+    var balance_chart = $('#balance-chart')
+    var info = balance_chart.data('info')
+    var names = balance_chart.data('names')
+
+    if (balance_chart.length) {
     var options = {
-        series: [44, 55, 13, 33],
+        series: info,
         chart: {
             height: 220,
             type: 'donut',
@@ -800,7 +805,7 @@ $(function() {
         dataLabels: {
             enabled: false
         },
-        labels: ['Bitcoin', 'Tether', 'Tezos', 'Monero'],
+        labels: names,
         fill: {
             colors: ['#F7931A', '#2CA07A', '#A6DF00', '#FF6600']
         },
@@ -822,7 +827,6 @@ $(function() {
             height: 150,
         }
     };
-    if ($('#balance-chart').length) {
         var chart = new ApexCharts(document.querySelector("#balance-chart"), options);
         chart.render();
     }

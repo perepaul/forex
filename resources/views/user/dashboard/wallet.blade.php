@@ -1,5 +1,5 @@
 @extends('layouts.user.dashboard')
-@section('title','Trade')
+@section('title','Wallet')
 @section('content')
     @livewire('user.wallet')
 @endsection

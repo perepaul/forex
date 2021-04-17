@@ -20087,39 +20087,43 @@ $(function () {
 
 
 (function ($) {
-  var options = {
-    series: [44, 55, 13, 33],
-    chart: {
-      height: 220,
-      type: 'donut'
-    },
-    dataLabels: {
-      enabled: false
-    },
-    labels: ['Bitcoin', 'Tether', 'Tezos', 'Monero'],
-    fill: {
-      colors: ['#F7931A', '#2CA07A', '#A6DF00', '#FF6600']
-    },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200
-        },
-        legend: {
-          show: false
-        }
-      }
-    }],
-    legend: {
-      show: false,
-      position: 'right',
-      offsetY: 0,
-      height: 150
-    }
-  };
+  var balance_chart = $('#balance-chart');
+  var info = balance_chart.data('info');
+  var names = balance_chart.data('names');
 
-  if ($('#balance-chart').length) {
+  if (balance_chart.length) {
+    var options = {
+      series: info,
+      chart: {
+        height: 220,
+        type: 'donut'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      labels: names,
+      fill: {
+        colors: ['#F7931A', '#2CA07A', '#A6DF00', '#FF6600']
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200
+          },
+          legend: {
+            show: false
+          }
+        }
+      }],
+      legend: {
+        show: false,
+        position: 'right',
+        offsetY: 0,
+        height: 150
+      }
+    };
+    console.log(options);
     var chart = new (_2apexcharts__WEBPACK_IMPORTED_MODULE_0___default())(document.querySelector("#balance-chart"), options);
     chart.render();
   }
