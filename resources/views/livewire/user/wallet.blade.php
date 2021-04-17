@@ -3,8 +3,8 @@
         <div class="container">
             <div class="mb-3">
                 <div class="d-flex justify-content-between">
-                    <a href="" class="btn btn-info">Deposit</a>
-                    <a href="" class="btn btn-info">Withdraw</a>
+                    <a href="{{route('deposit')}}" class="btn btn-info">Deposit</a>
+                    <a href="{{route('withdraw')}}" class="btn btn-info">Withdraw</a>
                 </div>
             </div>
             <div class="row">

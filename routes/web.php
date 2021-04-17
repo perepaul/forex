@@ -44,4 +44,6 @@ Route::middleware('verified')->group(function (){
     Route::get('wallet',fn() => view('user.dashboard.wallet'))->name('wallet');
     Route::get('profile',fn() => view('user.dashboard.profile'))->name('profile');
     Route::get('profile-edit',fn() => view('user.dashboard.profile-edit'))->name('profile-edit');
+    Route::get('withdraw',fn()=>view('user.dashboard.withdraw'))->name('withdraw');
+    Route::get('deposit',fn()=>view('user.dashboard.deposit'))->name('deposit');
 });
