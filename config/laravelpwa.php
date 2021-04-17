@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'name' => 'LaravelPWA',
+    'name' => 'Piplots',
     'manifest' => [
         'name' => env('APP_NAME', 'Piplots'),
         'short_name' => 'Piplots',
         'start_url' => '/login',
         'background_color' => '#ffffff',
-        'theme_color' => '#000000',
+        'theme_color' => '#FFD700',
         'display' => 'standalone',
         'orientation'=> 'portriat',
-        'status_bar'=> 'brown',
+        'status_bar'=> '#FFD700',
         'icons' => [
             '72x72' => [
                 'path' => '/images/icons/icon-72x72.png',
