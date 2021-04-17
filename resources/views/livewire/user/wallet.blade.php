@@ -1,5 +1,5 @@
 <div>
-    <div class="content-body pt-3">
+    <div class="content-body">
         <div class="container">
             <div class="mb-3">
                 <div class="d-flex justify-content-between">
