@@ -1,4 +1,5 @@
 @extends('layouts.user.dashboard')
+@section('title','Dashboard')
 @section('content')
     <div class="content-body pt-3">
         <div class="container">
