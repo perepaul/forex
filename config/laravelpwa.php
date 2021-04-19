@@ -74,7 +74,7 @@ return [
             ]
         ],
         'custom' => [
-            'screeshots' => [
+            'screenshots' => [
                 [
                     "src" => "screenshot1.webp",
                     "sizes" => "1280x720",
