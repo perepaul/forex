@@ -75,6 +75,7 @@ return [
         ],
         'custom' => [
             'lang' =>'en-US',
+            'dir' => 'ltr',
             'screenshots' => [
                 [
                     "src" => "screenshot1.webp",
