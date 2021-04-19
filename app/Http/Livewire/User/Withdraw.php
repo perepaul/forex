@@ -76,7 +76,7 @@ class Withdraw extends Component
     {
         if(!$this->user->plan_id)
         {
-            $this->emit('error', ['errors' => ['You have to subscribe to plan, to make deposit']]);
+            $this->emit('error', ['errors' => ['To withdraw, you have to subscribe to a plan.']]);
             return $this->render();
         }
         $data = $this->validate();
