@@ -60,7 +60,7 @@
 
                                     <div class="form-group mt-2">
                                         <label for="">Proof of payment</label>
-                                        <input type="file" class="form-file-input" id="customFile" wire:model='image'>
+                                        <input type="file" class="form-file-input" id="{{$image_upload_id}}" wire:model='image'>
                                         @error('image')
                                             <span class="error">{{$message}}</span>
                                         @enderror
@@ -72,154 +72,39 @@
                             </div>
                         </div>
                     </div>
-
-                    {{-- <div class="col-xxl-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Deposit History </h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-striped responsive-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Asset</th>
-                                                <th>Balance</th>
-                                                <th>Available</th>
-                                                <th>Locked</th>
-                                                <th>% Gain</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="coin-name">
-                                                    <i class="cc BTC"></i>
-                                                    <span>Bitcoin</span>
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td>
-                                                    >0
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td class="success-arrow">
-                                                    <strong>0.005%</strong>
-                                                    <i class="icofont-arrow-up ml-2"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="coin-name">
-                                                    <i class="cc BTC"></i>
-                                                    <span>Bitcoin</span>
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td>
-                                                    >0
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td class="success-arrow">
-                                                    <strong>0.005%</strong>
-                                                    <i class="icofont-arrow-up ml-2"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="coin-name">
-                                                    <i class="cc BTC"></i>
-                                                    <span>Bitcoin</span>
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td>
-                                                    >0
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td class="success-arrow">
-                                                    <strong>0.005%</strong>
-                                                    <i class="icofont-arrow-up ml-2"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="coin-name">
-                                                    <i class="cc BTC"></i>
-                                                    <span>Bitcoin</span>
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td>
-                                                    >0
-                                                </td>
-                                                <td>
-                                                    0
-                                                </td>
-                                                <td class="success-arrow">
-                                                    <strong>0.005%</strong>
-                                                    <i class="icofont-arrow-up ml-2"></i>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> --}}
-                    <div class="col-12">
-                        <h4 class="card-title">Deposit History</h4>
-                    </div>
                     <div class="col-xxl-6">
                         <div class="card">
                             <div class="card-header">
-                                <div class="d-flex d-justify-content-between">
-                                    <h4 class="card-title">Deposit History</h4>
-                                    <div>
-                                        <div class="form-group">
-                                            <label for="">Type</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <h4 class="card-title">History</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped responsive-table">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
+                                                <th>reference</th>
                                                 <th>Amount</th>
-                                                <th>Fee</th>
+                                                <th>Method</th>
                                                 <th>Date</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @forelse ($withdrawals as $withdrawal)
+                                            @forelse ($this->deposits as $deposit)
                                                 <tr>
-                                                    <td>{{$withdrawal->reference}}</td>
+                                                    <td>{{$deposit->reference}}</td>
                                                     <td>
-                                                        {{format_money($withdrawal->amount)}}
+                                                        {{format_money($deposit->amount)}}
                                                     </td>
                                                     <td>
-                                                        0.02%
+                                                        {{$deposit->method}}
                                                     </td>
                                                     <td>
                                                         <i class="fa fa-clock"></i>
-                                                        {{$withdrawal->created_at->format('d M, Y')}}
+                                                        {{$deposit->created_at->format('d M, Y')}}
                                                     </td>
                                                     <td>
-                                                        Pending
+                                                        {{$deposit->status}}
                                                     </td>
                                                 </tr>
                                             @empty
@@ -231,7 +116,7 @@
                                                 <td colspan="8" class="">
                                                     <div class="d-flex justify-content-center">
                                                         <div>
-                                                            {{$withdrawals->links()}}
+                                                            {{$this->deposits->links()}}
                                                         </div>
                                                     </div>
                                                 </td>

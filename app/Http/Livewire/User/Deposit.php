@@ -9,12 +9,13 @@ use Livewire\WithFileUploads;
 class Deposit extends Component
 {
     use WithFileUploads;
-    public $method,$amount,$image;
+    public $method,$amount,$image,$image_upload_id;
     private $depositRepo;
 
     public function __construct()
     {
         $this->depositRepo = new DepositRepo();
+        $this->image_upload_id = rand();
     }
 
     protected function rules()
@@ -52,6 +53,17 @@ class Deposit extends Component
         }
         return $reference;
     }
+
+    public function getUserProperty()
+    {
+        return auth('web')->user();
+    }
+
+    public function getDepositsProperty()
+    {
+        return $this->depositRepo->getModel()->where('user_id',$this->user->id)->paginate(10);
+    }
+
     public function deposit()
     {
         $data = $this->validate();
@@ -61,9 +73,9 @@ class Deposit extends Component
         $data['status'] = 'paid';
         $this->depositRepo->create($data);
         $this->emit('success',['message'=>'Deposit successful']);
-        $this->reset('method','amount','image');
-
-
+        $this->image = null;
+        $this->reset('method','amount');
+        $this->image_upload_id = rand();
     }
     public function render()
     {

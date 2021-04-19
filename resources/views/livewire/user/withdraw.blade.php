@@ -64,16 +64,16 @@
                     <div class="col-xxl-6">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between">
-                                <h4 class="card-title">Withdrawal History</h4>
+                                <h4 class="card-title">History</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-sm">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
+                                                <th>reference</th>
                                                 <th>Amount</th>
-                                                <th>Fee</th>
+                                                <th>Method</th>
                                                 <th>Date</th>
                                                 <th>Status</th>
                                             </tr>
@@ -86,14 +86,14 @@
                                                         {{ format_money($withdrawal->amount) }}
                                                     </td>
                                                     <td>
-                                                        0.02%
+                                                        {{$withdrawal->method}}
                                                     </td>
                                                     <td>
                                                         <i class="fa fa-clock"></i>
                                                         {{ $withdrawal->created_at->format('d M, Y') }}
                                                     </td>
                                                     <td>
-                                                        Pending
+                                                        {{$withdrawal->status}}
                                                     </td>
                                                 </tr>
                                             @empty
