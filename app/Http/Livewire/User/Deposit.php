@@ -58,6 +58,7 @@ class Deposit extends Component
         $data['image'] = basename($this->image->storePublicly(config('constants.deposit_image'),'custom_public'));
         $data['user_id'] = auth('web')->user()->id;
         $data['reference'] = $this->reference;
+        $data['status'] = 'paid';
         $this->depositRepo->create($data);
         $this->emit('success',['message'=>'Deposit successful']);
         $this->reset('method','amount','image');

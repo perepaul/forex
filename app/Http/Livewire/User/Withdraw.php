@@ -62,6 +62,16 @@ class Withdraw extends Component
         $this->emit('toggle-modal', ['id' => 'payment-help']);
     }
 
+    public function getReferenceProperty()
+    {
+        $reference = generateReference();
+        while($this->withdrawRepo->getModel()->where('reference',$reference)->count())
+        {
+            $reference = generateReference();
+        }
+        return $reference;
+    }
+
     public function withdraw()
     {
         if(!$this->user->plan_id)
@@ -74,7 +84,7 @@ class Withdraw extends Component
             $this->user->update([$this->method . '_address' => $this->address]);
         }
         $data['user_id'] = $this->user->id;
-        $data['reference'] = generateReference();
+        $data['reference'] = $this->reference;
         if ($this->amount > $this->user->balance) {
             $this->emit('error', ['errors' => ['Insufficient Funds']]);
             return $this->render();
