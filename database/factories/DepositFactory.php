@@ -25,7 +25,6 @@ class DepositFactory extends Factory
         return [
             'user_id' => rand(1,User::all()->count()),
             'reference' => generateReference(),
-            'currency_id' => 1,
             'amount' => $this->faker->randomNumber(),
             'method' => 'bitcoin',
             'status' => 'pending',

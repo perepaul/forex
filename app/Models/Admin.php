@@ -8,4 +8,8 @@ use Illuminate\Foundation\Auth\User as Model;
 class Admin extends Model
 {
     use HasFactory;
+
+    protected $hidden = [
+        'password'
+    ];
 }

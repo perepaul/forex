@@ -20123,7 +20123,6 @@ $(function () {
         height: 150
       }
     };
-    console.log(options);
     var chart = new (_2apexcharts__WEBPACK_IMPORTED_MODULE_0___default())(document.querySelector("#balance-chart"), options);
     chart.render();
   }

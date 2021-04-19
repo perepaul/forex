@@ -22,7 +22,7 @@ class WithdrawalFactory extends Factory
     public function definition()
     {
         return [
-            'reference' => $this->faker->uuid,
+            'reference' => generateReference(),
             'user_id' => 1,
             'amount' => $this->faker->randomNumber(),
         ];
