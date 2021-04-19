@@ -4,9 +4,12 @@ namespace App\Http\Livewire\User;
 
 use App\Repository\WithdrawalRepo;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Withdraw extends Component
 {
+    use WithPagination;
+    public $paginationTheme = 'bootstrap';
     public $method, $amount, $address, $save,$message;
     private $withdrawRepo;
 
@@ -70,6 +73,11 @@ class Withdraw extends Component
             $reference = generateReference();
         }
         return $reference;
+    }
+
+    public function getWithdrawalsProperty()
+    {
+        return $this->withdrawRepo->getModel()->where('user_id',$this->user->id)->paginate(10);
     }
 
     public function withdraw()

@@ -15,7 +15,7 @@
                     <div class="col-md-5 col sm-12 m-auto">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Withdrawal </h4>
+                                <h4 class="card-title">Withdrawal History</h4>
                             </div>
                             <div class="card-body">
                                 <form action="#" method="POST" wire:submit.prevent='withdraw'>
@@ -58,6 +58,62 @@
                                     <button type="submit" class="btn btn-success w-100 mt-3 mb-1">Withdraw</button>
                                     <a href="#" wire:click='help' class="float-right">Need help?</a>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4 class="card-title">Withdrawal History</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Amount</th>
+                                                <th>Fee</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse ($this->withdrawals as $withdrawal)
+                                                <tr>
+                                                    <td>{{ $withdrawal->reference }}</td>
+                                                    <td>
+                                                        {{ format_money($withdrawal->amount) }}
+                                                    </td>
+                                                    <td>
+                                                        0.02%
+                                                    </td>
+                                                    <td>
+                                                        <i class="fa fa-clock"></i>
+                                                        {{ $withdrawal->created_at->format('d M, Y') }}
+                                                    </td>
+                                                    <td>
+                                                        Pending
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                                <tr>
+                                                    <td colspan="5" class="text-center text-muted">No withdrawals yet.</td>
+                                                </tr>
+                                            @endforelse
+                                            <tr>
+                                                <td colspan="8" class="">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div>
+                                                            {{ $this->withdrawals->links() }}
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                         </div>
                     </div>

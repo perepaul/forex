@@ -174,7 +174,7 @@
                             </div>
                         </div>
                     </div> --}}
-                    {{-- <div class="col-12">
+                    <div class="col-12">
                         <h4 class="card-title">Deposit History</h4>
                     </div>
                     <div class="col-xxl-6">
@@ -193,46 +193,6 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-striped responsive-table">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Type</th>
-                                                <th>Amount</th>
-                                                <th>Date</th>
-                                                <th>Hash</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @forelse ($deposits as $deposit)
-                                                <tr>
-                                                    <td>12345</td>
-                                                    <td class="coin-name">
-                                                        <i class="cc BTC"></i>
-                                                        <span>Bitcoin</span>
-                                                    </td>
-                                                    <td>
-                                                        0
-                                                    </td>
-                                                    <td>
-                                                        Jan 01
-                                                    </td>
-                                                    <td>
-                                                        #1236598745565
-                                                    </td>
-                                                    <td>
-                                                        Pending
-                                                    </td>
-                                                </tr>
-                                            @empty
-
-                                            @endforelse
-                                        </tbody>
-                                    </table>
-                                </div>
-
                                 <div class="table-responsive">
                                     <table class="table table-striped responsive-table">
                                         <thead>
@@ -282,7 +242,7 @@
 
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
