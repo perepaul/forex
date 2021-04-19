@@ -9,8 +9,8 @@ return [
         'background_color' => '#ffffff',
         'theme_color' => '#FFD700',
         'display' => 'standalone',
-        'orientation'=> 'portriat',
-        'status_bar'=> '#FFD700',
+        'orientation' => 'portrait-primary',
+        'status_bar' => '#FFD700',
         'icons' => [
             '72x72' => [
                 'path' => '/images/icons/icon-72x72.png',
@@ -73,6 +73,14 @@ return [
                 'url' => '/shortcutlink2'
             ]
         ],
-        'custom' => []
+        'custom' => [
+            'screeshots' => [
+                [
+                    "src" => "screenshot1.webp",
+                    "sizes" => "1280x720",
+                    "type" => "image/webp"
+                ]
+            ]
+        ]
     ]
 ];
