@@ -19,8 +19,8 @@
 
     @yield('content')
     @livewireScripts
-    <script src="{{ mix('js/user/app.js') }}"></script>
     @include('partials.alerts')
+    <script src="{{ mix('js/user/app.js') }}"></script>
     @stack('js')
 </body>
 
