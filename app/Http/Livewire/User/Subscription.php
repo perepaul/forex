@@ -35,7 +35,7 @@ class Subscription extends Component
         }
 
         $plan = $this->planRepo->find($id);
-        $this->user->update(['plan_id' => $plan->id]);
+        $this->user->update(['plan_id' => $plan->id,'demo_balance'=>$plan->demo_balance]);
         $this->message = "Yay! Your subscription to $plan->name was successful. Redirecting...";
         $this->emit('toggle-modal', ['id' => 'success-modal']);
         $this->emit('redirect', ['to' => route('profile'), 'timeout' => 3500]);
