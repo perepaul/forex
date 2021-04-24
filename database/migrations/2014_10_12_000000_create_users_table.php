@@ -34,7 +34,7 @@ class CreateUsersTable extends Migration
             $table->double('demo_balance',15,2)->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('two_factor_auth',['active','inactive']);
+            $table->enum('two_factor_auth',['active','inactive'])->default('inactive');
             $table->rememberToken();
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
