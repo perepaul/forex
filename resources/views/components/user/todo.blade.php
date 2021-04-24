@@ -44,7 +44,7 @@
                         Two-factor authentication (2FA)
                     </a>
                     @else
-                    <a href="{{route('subscribe')}}">
+                    <a href="{{route('two-factor-auth')}}">
                         <span class="not-verified"><i class="icofont-close-line"></i></span>
                         Two-factor authentication (2FA)
                     </a>

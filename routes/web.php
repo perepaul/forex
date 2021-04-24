@@ -49,5 +49,5 @@ Route::middleware('verified')->group(function (){
     Route::get('deposit',fn()=>view('user.dashboard.deposit'))->name('deposit');
     Route::get('verify',fn()=>view('user.dashboard.verify'))->name('verify');
     Route::get('subscribe',fn()=>view('user.dashboard.subscription'))->name('subscribe');
-    Route::get('two-factor-auth',fn()=>view('user.dashboard.two-factor-authentication'))->name('two-factor-authentication');
+    Route::get('two-factor-auth',fn()=>view('user.dashboard.two-factor-authentication'))->name('two-factor-auth');
 });

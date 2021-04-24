@@ -7,6 +7,15 @@
 <script src="{{ asset('js/user/bootstrap-bundle.js') }}"></script>
 
 <script>
+    window.matchMedia('(display-mode: standalone)')
+  .addListener(({ matches }) => {
+    if (matches) {
+        alert('app')
+    } else {
+        alert('web')
+    }
+});
+
     iziToast.settings({
         timeout: 10000,
         resetOnHover: true,
