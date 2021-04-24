@@ -67,6 +67,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->status == 0;
     }
 
+    public function is2faEnabled()
+    {
+        return $this->two_factor_auth == 'active';
+    }
+
     public function currency()
     {
         return $this->belongsTo(AccountCurrency::class);

@@ -33,10 +33,10 @@
                                     @endif
                                 </li>
                                 <li>
-                                    @if (auth('web')->user()->plan)
+                                    @if ($plan = auth('web')->user()->plan)
                                     <a href="#">
                                         <span class="verified"><i class="icofont-check-alt"></i></span>
-                                        Subscribe to a plan
+                                        Subscribed to &nbsp; <strong>{{$plan->name}}</strong>
                                     </a>
                                     @else
                                     <a href="{{route('subscribe')}}">
@@ -46,7 +46,7 @@
                                     @endif
                                 </li>
                                 <li>
-                                    @if (auth('web')->user()->plan)
+                                    @if (auth('web')->user()->is2faEnabled())
                                     <a href="#">
                                         <span class="verified"><i class="icofont-check-alt"></i></span>
                                         Two-factor authentication (2FA)

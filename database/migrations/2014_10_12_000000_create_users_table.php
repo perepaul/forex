@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->string('zip_code')->nullable();
-            $table->enum('gender',['male','female'])->nullable();
+            $table->enum('gender',['male','female','rather not say'])->nullable();
             $table->string('date_of_birth')->nullable();
             $table->string('bitcoin_address')->nullable();
             $table->string('ethereum_address')->nullable();
@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration
             $table->double('demo_balance',15,2)->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('two_factor_auth',['active','inactive']);
             $table->rememberToken();
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
