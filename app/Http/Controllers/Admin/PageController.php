@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -48,8 +49,11 @@ class PageController extends Controller
 
     public function login($id)
     {
-        $guard = auth()->guard('web')->loginUsingId($id);
-        return redirect()->to(route('dashboard'));
+        $user = \App\Models\User::findOrFail($id);
+        if(Auth::guard('web')->loginUsingId($id)){
+            return redirect()->route('dashboard');
+        }
+        return redirect()->route('login');
     }
 
     public function communication($type)

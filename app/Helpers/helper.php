@@ -3,6 +3,7 @@
 use Illuminate\Support\Str;
 use App\Helpers\SmsHelper;
 use App\Models\AccountCurrency;
+use Illuminate\Support\Arr;
 
 if(!function_exists('admin_url')){
     function admin_url(){
@@ -97,6 +98,14 @@ function default_currency(){
 function currency_iso(){
     $currency = user_currency() ?? default_currency();
     return optional($currency)->iso;
+}
+
+function array_where($array,$data)
+{
+    return Arr::where($array,function($value,$key) use ($data){
+        return $value['iso2'] == $data;
+
+    });
 }
 
 

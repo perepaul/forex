@@ -53,10 +53,22 @@ class Plans extends Component
     }
 
     private function switch($to = 'feature'){
+        if($to == 'feature' && !isset($this->data['featrues']))
+        {
+            $this->data['features'] = [];
+        }
         $status = $this->editing == null?'Add ':'Edit ';
 
         $this->active = $to == 'feature' ? 'feature':'plan';
         $this->action = $status.ucfirst($this->active);
+    }
+
+    public function edit($id)
+    {
+        $plan = $this->plan->find($id);
+        $this->editing = $plan->id;
+        $this->data['plan'] = $plan->toArray();
+        $this->switch('plan');
     }
 
     public function addOrUpdatePlan($id=null)
@@ -64,15 +76,17 @@ class Plans extends Component
         if($id == null){
             try {
                 $plan = $this->addPlan();
-                $this->emit('success',['message'=>'Plan added successfully']);
                 $this->editing = $plan->id;
-                $this->switch();
+                $this->emit('success',['message'=>'Plan added successfully']);
+                $this->switch('feature');
             } catch (\Throwable $th) {
                 Log::error($th);
                 $this->emit('error',['errors'=>['Oops! an unknown error occured']]);
             }
         }else{
             $this->updatePlan($id);
+            $this->emit('success',['message'=>'Plan Updated!']);
+            $this->resetForm();
         }
     }
 
@@ -80,12 +94,12 @@ class Plans extends Component
     {
         $data = $this->validate()['data']['plan'];
         return $this->plan->create($data);
-
     }
 
     public function updatePlan($id)
     {
-
+        $data = $this->validate()['data']['plan'];
+        $this->plan->update($data,$id);
     }
 
     public function addorUpdateFeatures($id)
@@ -129,6 +143,14 @@ class Plans extends Component
 
         array_unshift($this->data['features']);
 
+    }
+
+    public function delete($id)
+    {
+        $plan = $this->plan->find($id);
+        $plan->features()->delete();
+        $plan->delete();
+        $this->emit('success',['message'=>'Plan deleted!']);
     }
     private function data()
     {

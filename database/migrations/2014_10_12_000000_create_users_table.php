@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('country')->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
+            $table->string('zip_code')->nullable();
             $table->enum('gender',['male','female'])->nullable();
             $table->string('date_of_birth')->nullable();
             $table->string('bitcoin_address')->nullable();

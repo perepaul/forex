@@ -48,8 +48,8 @@
                                             <td>
                                                 <div class="d-flex justify-content-end">
                                                     <button class="btn btn-sm btn-success" wire:click='attachFeatures({{$plan->id}})' ><i class="fa fa-table"></i></button>
-                                                    <button class="btn btn-sm btn-default"><i class="fa fa-edit"></i></button>
-                                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-sm btn-default" wire:click='edit({{$plan->id}})'><i class="fa fa-edit"></i></button>
+                                                    <button class="btn btn-sm btn-danger" wire:click='delete({{$plan->id}})'><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </td>
                                         </tr>

@@ -59,6 +59,12 @@
         successMessage(e.message);
     })
 
+    window.livewire.on('redirect', e => {
+        setTimeout(() => {
+            location.href = e.to
+        }, e.timeout || 2000);
+    })
+
 
     window.livewire.on('error', e => {
         for (error in e.errors) {
@@ -80,7 +86,6 @@
         @foreach ($errors->all() as $error)
             errorMessage('{{ $error }}')
         @endforeach
-
     </script>
 
 @elseif(session()->has('message'))

@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\CountryHelper;
 use App\Http\Controllers\CurrencyController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,4 +47,7 @@ Route::middleware('verified')->group(function (){
     Route::get('profile-edit',fn() => view('user.dashboard.profile-edit'))->name('profile-edit');
     Route::get('withdraw',fn()=>view('user.dashboard.withdraw'))->name('withdraw');
     Route::get('deposit',fn()=>view('user.dashboard.deposit'))->name('deposit');
+    Route::get('verify',fn()=>view('user.dashboard.verify'))->name('verify');
+    Route::get('subscribe',fn()=>view('user.dashboard.subscription'))->name('subscribe');
+    Route::get('two-factor-auth',fn()=>view('user.dashboard.two-factor-authentication'))->name('two-factor-authentication');
 });
