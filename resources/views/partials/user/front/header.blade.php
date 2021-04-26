@@ -6,8 +6,8 @@
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="brand-logo">
                             <a href="{{route('index')}}">
-                                <img src="images/logo.png" alt="" class="logo-primary">
-                                <img src="images/logow.png" alt="" class="logo-white">
+                                <img src="{{logo()}}" alt="" class="logo-primary" width="80">
+                                <img src="{{logo()}}" alt="" class="logo-white" width="80">
                             </a>
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -71,7 +71,7 @@
                             <div class="header-right">
                                 <div class="signin-btn">
                                     @auth('web')
-                                    <a class="btn btn-primary" href="{{url('home')}}">Dashboard</a>
+                                    <a class="btn btn-primary" href="{{route('dashboard')}}">Dashboard</a>
                                     @else
                                     <a class="btn btn-primary" href="{{route('login')}}">Sign in</a>
                                     @endauth

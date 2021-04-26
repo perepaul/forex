@@ -9,20 +9,19 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-xl-6 col-lg-6 col-12">
                     <div class="intro-content">
-                        <h1 class="text-white">Trade with <strong class="text-white">Tradee</strong>. <br> Buy and sell
-                            cryptocurrency
+                        <h1 class="text-white">Instant access to investing, anytime and anywhere
                         </h1>
-                        <p class="text-white">Fast and secure way to purchase or exchange 150+ cryptocurrencies</p>
+                        <p class="text-white">Invest in the world's most popular and sought-after assets. Everything you are looking for in an ultimate investment platform — on the device of your choice.</p>
 
                         <div class="intro-btn">
-                            <a href="#" class="btn btn-primary">Get Started</a>
-                            <a href="#" class="btn btn-outline-primary">Browse Now</a>
+                            <a href="{{route('register')}}" class="btn btn-outline-primary">GET STARTED FOR FREE</a>
+                            {{-- <a href="#" class="btn btn-outline-primary">Browse Now</a> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-12">
+                <div class="col-xl-4 col-lg-6 col-12 d-none d-lg-block">
                     <div class="intro-form-exchange">
-                        <form method="post" name="myform" class="currency_validate trade-form row g-3">
+                        {{-- <form method="post" name="myform" class="currency_validate trade-form row g-3">
                             <div class="col-12">
                                 <label class="form-label">Send</label>
                                 <div class="input-group">
@@ -51,7 +50,8 @@
                                 Buy Now
                             </button>
 
-                        </form>
+                        </form> --}}
+                        <x-user.signal-marquee></x-user.signal-marquee>
                     </div>
                 </div>
             </div>
@@ -77,21 +77,60 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                     <div class="getstart-content">
-                        <span><i class="fas fa-university"></i></span>
-                        <h3>Link your bank account</h3>
+                        <span><i class="fas fa-check"></i></span>
+                        <h3>Get Verified</h3>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                     <div class="getstart-content">
                         <span><i class="fas fa-exchange-alt"></i></span>
-                        <h3>Start buying & selling</h3>
+                        <h3>Start Trading & Earning</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="price-grid section-padding">
+    <div class="section-padding">
+        <div class="container">
+            <div class="text-center p-5 mb-3">
+                <h2>Why invest with {{ucfirst(strtolower(config('app.name')))}}?</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="text-left mb-3">
+                        <i class="fa fa-trophy text-primary fa-2x"></i>
+                    </div>
+                    <h4 class="mb-1">Award-winning platform</h4>
+                    <p>Award-winning software recognized by the industry's most respected experts.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-left mb-3">
+                        <i class="fa fa-cog text-primary fa-2x"></i>
+                    </div>
+                    <h4 class="mb-1">Affordable plans</h4>
+                    <p>Our plans are designed and structured so that everyone can invest and earn with us.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-left mb-3">
+                        <i class="fa fa-lock text-primary fa-2x"></i>
+                    </div>
+                    <h4 class="mb-1">Secure Investments</h4>
+                    <p>Your money is safe with us,deposit, trade and earn profits, withdraw all happening in a very secure place.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-left circle mb-3">
+                        <i class="fa fa-comment-dots text-primary fa-2x"></i>
+                    </div>
+                    <h4 class="mb-1">Support 24/7</h4>
+                    <p>A team of professionals speaking your mother tongue are always here to support you.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    {{-- <div class="price-grid section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
@@ -180,9 +219,9 @@
                 </div> -->
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="portfolio section-padding bg-gradient-primary">
+    {{-- <div class="portfolio section-padding bg-gradient-primary">
         <div class="container">
             <div class="row py-lg-5 justify-content-center">
                 <div class="col-xl-7">
@@ -294,14 +333,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="brand  bg-light section-padding">
+    <div class="brand section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="trusted-business pb-5 text-center">
-                        <h3>Trusted by over <strong>10.000 users</strong></h3>
+                    <div class="pb-5 text-center">
+                        <h3>Trusted by over <strong>10,000 users</strong></h3>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-auto">
@@ -329,11 +368,6 @@
                                 <a href="#"><img class="img-fluid" src="images/brand/5.svg" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <div class="trusted-logo">
-                                <a href="#"><img class="img-fluid" src="images/brand/5.svg" alt=""></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -349,20 +383,22 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-xl-7 col-lg-6 col-md-6">
                     <div class="appss-content">
-                        <h2>The secure app to store crypto yourself</h2>
+                        <h2>Trade anytime, anywhere, with any device</h2>
                         <ul>
-                            <li><i class="la la-check"></i> All your digital assets in one place</li>
-                            <li><i class="la la-check"></i> Use Decentralized Apps</li>
-                            <li><i class="la la-check"></i> Pay friends, not addresses</li>
+                            <li><i class="la la-check"></i> Your information is synchronized to all your devices</li>
+                            <li><i class="la la-check"></i> Night Trader? we've got you covered with night mode 😄</li>
+                            <li><i class="la la-check"></i> Available on all devices</li>
+                            <li><i class="la la-check"></i> Deposit and enjoy bonuses</li>
+                            <li><i class="la la-check"></i> Trade and earn profits with relative ease 👍</li>
                         </ul>
-                        <div class="mt-4">
+                        {{-- <div class="mt-4">
                             <a href="#" class="btn btn-primary my-1 waves-effect">
                                 <img src="images/android.svg" alt="">
                             </a>
                             <a href="#" class="btn btn-primary my-1 waves-effect">
                                 <img src="images/apple.svg" alt="">
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
@@ -379,7 +415,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section-title text-center">
-                        <h2>Blog</h2>
+                        <h2>Our Clients Says</h2>
                     </div>
                 </div>
             </div>
@@ -387,13 +423,12 @@
                 <div class="col-xl-4 col-lg-4 col-md-12">
                     <div class="blog-grid">
                         <div class="card">
-                            <img class="img-fluid card-img-top" src="images/blog/1.jpg" alt="">
                             <div class="card-body">
                                 <a href="blog-single.html">
-                                    <h4 class="card-title">Why does Litecoin need MimbleWimble?</h4>
                                 </a>
-                                <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load of old
-                                    tosh baking cakes.!</p>
+                                <p class="card-text">
+                                    "Fell in love with the platform the moment I saw it. Its clean and simple design was what sealed the deal for me."
+                                </p>
                             </div>
                             <div class="card-footer">
                                 <div class="meta-info">
@@ -407,17 +442,17 @@
                 <div class="col-xl-4 col-lg-4 col-md-12">
                     <div class="blog-grid">
                         <div class="card">
-                            <img class="img-fluid card-img-top" src="images/blog/2.jpg" alt="">
                             <div class="card-body">
                                 <a href="blog-single.html">
-                                    <h4 class="card-title">How to securely store your HD wallet seeds?</h4>
+                                    {{-- <h4 class="card-title">How to securely store your HD wallet seeds?</h4> --}}
                                 </a>
-                                <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load of old
-                                    tosh baking cakes.!</p>
+                                <p class="card-text">
+                                    “As an experienced investor returning after a break of several years, I was recommended to try <strong><em>{{ucfirst(strtolower(config('app.name')))}}</em></strong>. The staff have been extremely helpful.”
+                                </p>
                             </div>
                             <div class="card-footer">
                                 <div class="meta-info">
-                                    <a href="#" class="author"><img src="images/avatar/6.jpg" alt=""> Admin</a>
+                                    <a href="#" class="author"><img src="images/avatar/6.jpg" alt=""> Tim</a>
                                     <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
                                 </div>
                             </div>
@@ -427,17 +462,17 @@
                 <div class="col-xl-4 col-lg-4 col-md-12">
                     <div class="blog-grid">
                         <div class="card">
-                            <img class="img-fluid card-img-top" src="images/blog/3.jpg" alt="">
                             <div class="card-body">
                                 <a href="blog-single.html">
-                                    <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4>
+                                    {{-- <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4> --}}
                                 </a>
-                                <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load of old
-                                    tosh baking cakes.!</p>
+                                <p class="card-text">
+                                    "I’ve learned a lot about the financial markets while working with this company. Now I can invest and earn money."
+                                </p>
                             </div>
                             <div class="card-footer">
                                 <div class="meta-info">
-                                    <a href="#" class="author"><img src="images/avatar/7.jpg" alt=""> Admin</a>
+                                    <a href="#" class="author"><img src="images/avatar/7.jpg" alt=""> Jessica</a>
                                     <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
                                 </div>
                             </div>
@@ -448,7 +483,7 @@
         </div>
     </div>
 
-    <div class="get-touch section-padding">
+    {{-- <div class="get-touch section-padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
@@ -496,5 +531,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

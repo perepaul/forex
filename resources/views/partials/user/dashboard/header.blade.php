@@ -76,7 +76,7 @@
                                     </div>
                                 </div> --}}
 
-                                <div class="profile_log dropdown">
+                                <div class="profile_log dropdown ml-2">
                                     <div class="user" data-toggle="dropdown">
                                         <span class="thumb"><img src="images/profile/2.png" alt=""></span>
                                         <span class="arrow"><i class="icofont-angle-down"></i></span>
@@ -105,17 +105,17 @@
                                         <a href="{{route('profile')}}" class="dropdown-item">
                                             <i class="icofont-ui-user"></i>Profile
                                         </a>
-                                        <a href="accounts.html" class="dropdown-item">
+                                        <a href="{{route('wallet')}}" class="dropdown-item">
                                             <i class="icofont-wallet"></i>Wallet
                                         </a>
-                                        <a href="settings-profile.html" class="dropdown-item">
+                                        <a href="{{route('profile-edit')}}" class="dropdown-item">
                                             <i class="icofont-ui-settings"></i> Setting
                                         </a>
-                                        <a href="settings-activity.html" class="dropdown-item">
+                                        {{-- <a href="settings-activity.html" class="dropdown-item">
                                             <i class="icofont-history"></i> Activity
-                                        </a>
-                                        <a href="lock.html" class="dropdown-item">
-                                            <i class="icofont-lock"></i>Lock
+                                        </a> --}}
+                                        {{-- <a href="lock.html" class="dropdown-item">
+                                            <i class="icofont-lock"></i>Lock --}}
                                         </a>
                                         <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item logout">
                                             <i class="icofont-logout"></i> Logout

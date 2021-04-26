@@ -2,6 +2,7 @@
 
 use App\Helpers\CountryHelper;
 use App\Http\Controllers\CurrencyController;
+use App\Http\Controllers\User\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,39 +16,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::group(['prefix'=>'admin'], function(){
+Route::namespace('User')->group(function(){
+    Route::get('/',[PageController::class,'index'])->name('index');
+    Route::get('about',[PageController::class,'about'])->name('about');
+    Route::get('contact',[PageController::class,'contact'])->name('contact');
+    Route::get('faq',[PageController::class,'faq'])->name('faq');
+    Route::get('terms',[PageController::class,'terms'])->name('terms');
+    Route::get('privacy',[PageController::class,'privacy'])->name('privacy');
+    Route::get('offline',[PageController::class,'offline'])->name('offline');
 
-
-// });
-
-
-// Route::post('/logout',\App\Http\Controllers\LogoutController::class)->name('logout')->middleware('auth:web');
-Route::get('/', function () {
-    return view('user.front.index');
-})->name('index');
-
-Route::get('about',fn () => view('user.front.about'))->name('about');
-Route::get('contact',fn () => view('user.front.contact'))->name('contact');
-Route::get('faq',fn () => view('user.front.faq'))->name('faq');
-Route::get('offline',fn()=>view('vendor.laravelpwa.offline'))->name('offline');
-
-// Route::get('admin',fn()=>view('admin.index'))->name('admin');
-
-Route::resource('currency',CurrencyController::class);
-
-
-Route::middleware('verified')->group(function (){
-    Route::get('home',function() {
-        // auth()->guard('web')->logout();
-        return view('user.dashboard.index');
-    })->name('dashboard');
-    Route::get('trade',fn() => view('user.dashboard.trade'))->name('trade');
-    Route::get('wallet',fn() => view('user.dashboard.wallet'))->name('wallet');
-    Route::get('profile',fn() => view('user.dashboard.profile'))->name('profile');
-    Route::get('profile-edit',fn() => view('user.dashboard.profile-edit'))->name('profile-edit');
-    Route::get('withdraw',fn()=>view('user.dashboard.withdraw'))->name('withdraw');
-    Route::get('deposit',fn()=>view('user.dashboard.deposit'))->name('deposit');
-    Route::get('verify',fn()=>view('user.dashboard.verify'))->name('verify');
-    Route::get('subscribe',fn()=>view('user.dashboard.subscription'))->name('subscribe');
-    Route::get('two-factor-auth',fn()=>view('user.dashboard.two-factor-authentication'))->name('two-factor-auth');
+    Route::middleware(['verified','active'])->group(function (){
+        Route::get('dashboard',[PageController::class,'dashboard'])->name('dashboard');
+        Route::get('trade',[PageController::class,'trade'])->name('trade');
+        Route::get('wallet',[PageController::class,'wallet'])->name('wallet');
+        Route::get('profile',[PageController::class,'profile'])->name('profile');
+        Route::get('profile-edit',[PageController::class,'profileEdit'])->name('profile-edit');
+        Route::get('withdraw',[PageController::class,'withdraw'])->name('withdraw');
+        Route::get('deposit',[PageController::class,'deposit'])->name('deposit');
+        Route::get('verify',[PageController::class,'verify'])->name('verify');
+        Route::get('subscribe',[PageController::class,'subscribe'])->name('subscribe');
+        Route::get('two-factor-auth',[PageController::class,'twoFactorAuth'])->name('two-factor-auth');
+    });
 });

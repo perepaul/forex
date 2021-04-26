@@ -11,6 +11,6 @@ class LogoutResponse implements ContractsLogoutResponse
     {
         return $request->wantsJson()
                 ? new JsonResponse('',204)
-                : redirect('/admin/login');
+                : redirect()->route('login');
     }
 }

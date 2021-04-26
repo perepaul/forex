@@ -19,14 +19,21 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
+        $guard = request()->isAdmin() ?'admin':'web';
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                return $guard == 'web'? $this->redirectUser():$this->redirectAdmin();
             }
-        }
 
         return $next($request);
+    }
+
+    private function redirectAdmin()
+    {
+        return redirect()->route('admin.index');
+    }
+
+    private function redirectUser()
+    {
+        return redirect()->route('dashboard');
     }
 }

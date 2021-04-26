@@ -4,7 +4,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 
-<script src="{{ asset('js/user/bootstrap-bundle.js') }}"></script>
+{{-- <script src="{{ asset('js/user/bootstrap-bundle.js') }}"></script> --}}
 
 <script>
     var match = window.matchMedia('(display-mode: standalone)')

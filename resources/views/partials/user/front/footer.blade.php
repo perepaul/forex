@@ -1,5 +1,5 @@
 <!-- footer start -->
-<div class="bottom section-padding">
+{{-- <div class="bottom section-padding">
     <div class="container">
         <div class="row">
             <div class="col-xl-4">
@@ -17,7 +17,6 @@
                         <li><a href="{{route('index')}}">Home</a></li>
                         <li><a href="{{route('about')}}">About</a></li>
                         <li><a href="{{route('login')}}">Account</a></li>
-                        {{-- <li><a href="#">Our Partner</a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -27,8 +26,6 @@
                     <ul>
                         <li><a href="{{route('contact')}}">Contact</a></li>
                         <li><a href="{{route('faq')}}">FAQ</a></li>
-                        {{-- <li><a href="#">Blog</a></li> --}}
-                        {{-- <li><a href="#">Helpdesk</a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -36,7 +33,6 @@
                 <div class="bottom-widget">
                     <h4 class="widget-title">Top Currencies</h4>
                     <div class="row">
-                    {{-- Todo: currencies itration --}}
                         <div class="col-xl-6">
                             <ul>
                                 <li><a href="#">ETH to BTC</a></li>
@@ -58,23 +54,23 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="footer">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="copyright">
-                    <p>© Copyright 2019 <a href="#">Tradee</a> I All Rights Reserved</p>
+                    <p>© Copyright 2019 <a href="{{route('index')}}"><strong>{{ucfirst(strtolower(config('app.name')))}}</strong></a> I All Rights Reserved</p>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="footer-social">
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="{{route('privacy')}}">privacy</a></li>
+                        <li><a href="{{route('terms')}}">terms & conditions</i></a></li>
+                        {{-- <li><a href="#">faq</i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li> --}}
                     </ul>
                 </div>
             </div>

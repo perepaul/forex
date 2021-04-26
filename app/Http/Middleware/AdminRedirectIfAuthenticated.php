@@ -19,12 +19,11 @@ class AdminRedirectIfAuthenticated
     public function handle(Request $request, Closure $next,...$guards)
     {
 
-        $guards = empty($guards) ? [null] : $guards;
-        foreach($guards as $guard) {
+        $guard='admin';
             if(Auth::guard($guard)->check()){
-                return redirect($guard.'/');
+                return redirect()->route('admin.index');
             }
-        }
+
         return $next($request);
     }
 }

@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 use Laravel\Fortify\Fortify;
 use Illuminate\Support\Facades\Auth;
 use App\Actions\Fortify\CreateNewUser;
+use App\Http\Responses\LogoutResponse;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Cache\RateLimiting\Limit;
-use App\Http\Controllers\AdminController;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use Illuminate\Support\Facades\RateLimiter;
@@ -20,9 +20,11 @@ use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Actions\AttemptToAuthenticate;
 use App\Actions\Fortify\UpdateUserProfileInformation;
 use App\Http\Responses\LoginResponse as CustomLoginResponse;
+use App\Http\Responses\LogoutResponse as CustomLogoutResponse;
 use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 use App\Http\Responses\RegisterResponse as CustomRegisterResponse;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\AuthenticatedSessionController as CustomAuthenticatedSessionController;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -61,6 +63,8 @@ class FortifyServiceProvider extends ServiceProvider
     {
         // $this->app->singleton(RegisterResponse::class,CustomRegisterResponse::class);
         // $this->app->singleton(LoginResponse::class,CustomLoginResponse::class);
+        $this->app->singleton(LogoutResponse::class,CustomLogoutResponse::class);
+        $this->app->singleton(AuthenticatedSessionController::class,CustomAuthenticatedSessionController::class);
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
