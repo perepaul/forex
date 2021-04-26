@@ -89,7 +89,7 @@
                                 </li>
                                 <li>
                                     <i class="fa fa-circle"></i>
-                                    <p>Your country, Province/State, City.</p>
+                                    <p>Your country, province/Sstate, city and address.</p>
                                 </li>
                             </ul>
                             <p>We do not collect passwords or any other sensitive information.</p>

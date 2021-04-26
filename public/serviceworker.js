@@ -14,7 +14,7 @@ var filesToCache = [
     'https://code.jquery.com/jquery-3.6.0.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
-    'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
+    // 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
 ];
 
 // Cache on install
