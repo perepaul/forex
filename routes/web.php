@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+dd(public_path());
 
 Route::namespace('User')->group(function(){
     Route::get('/',[PageController::class,'index'])->name('index');
