@@ -51,13 +51,40 @@ self.addEventListener('activate', event => {
 
 // Serve from Cache
 self.addEventListener("fetch", event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                return response || fetch(event.request);
-            })
-            .catch(() => {
-                return caches.match('offline');
-            })
-    )
+    event.respondWith(fromCache(event.request));
+    event.waitUntil(update(event.request).then(refresh));
 });
+
+function fromCache(request) {
+    return cashes.match(request)
+        .then(
+            response => {
+                return response || fetch(request);
+            })
+        .catch(() => {
+            return caches.match('offline')
+        })
+}
+
+function update(request) {
+    return caches.match(request).then(function (cache) {
+        return fetch(request).then(function (response) {
+            return cache.put(request, response.clone()).then(function () {
+                return response;
+            });
+        });
+    });
+}
+
+function refresh(response) {
+    return self.clients.matchAll().then(function (clients) {
+        clients.forEach(function (client) {
+            var message = {
+                type: 'refresh',
+                url: response.url,
+                eTag: response.headers.get('ETag')
+            };
+            client.postMessage(JSON.stringify(message));
+        });
+    });
+}
