@@ -6,6 +6,8 @@ var filesToCache = [
     '/privacy',
     '/terms',
     '/offline',
+    '/login',
+    'register',
     '/css/user/app.css',
     '/js/user/app.js',
     '/images/icons/icon-72x72.png',

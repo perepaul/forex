@@ -23,8 +23,8 @@
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">
-                    I agree to the <a href="#" class="text-primary">User
-                        Agreement</a> and <a href="#" class="text-primary">Privacy Policy</a>.
+                    I agree to the <a href="{{route('terms')}}" class="text-primary">User
+                        Agreement</a> and <a href="{{route('privacy')}}" class="text-primary">Privacy Policy</a>.
                 </label>
             </div>
         </div>

@@ -48,6 +48,7 @@
     </div>
 
     @livewireScripts
+    @include('partials.alerts')
 
     <script src="{{asset('js/admin/vendors.min.js')}}"></script>
 
@@ -85,7 +86,6 @@
         })
 
     </script>
-    @include('partials.alerts')
 
     @stack('js')
 

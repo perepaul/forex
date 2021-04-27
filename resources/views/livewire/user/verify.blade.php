@@ -1,4 +1,5 @@
 <div>
+    <x-loader :targets="'data.country,data.state,data.city,submit'"/>
     <div class="content-body">
         <div class="container">
             <div class="col-md-6 col-sm-12 m-auto">
@@ -72,7 +73,7 @@
 
                             <div class="form-group mt-3">
                                 <label for="">Address</label>
-                                <input type="text" class="form-control" wire:model='data.address'>
+                                <input type="text" class="form-control" wire:model.lazy='data.address'>
                                 @error('data.address')
                                     <span class="error">{{ $message }}</span>
                                 @enderror
@@ -80,7 +81,7 @@
 
                             <div class="form-group mt-3">
                                 <label for="">Zip Code</label>
-                                <input type="text" class="form-control" wire:model='data.zip_code'>
+                                <input type="text" class="form-control" wire:model.lazy='data.zip_code'>
                                 @error('data.zip_code')
                                     <span class="error">{{ $message }}</span>
                                 @enderror

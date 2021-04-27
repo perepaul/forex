@@ -15191,5 +15191,31 @@ label.error {
     color: red;
 }
 
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 999999999;
+    opacity:0.2;
+
+}
+
+.loader div{
+    display: block;
+    color:white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    left: 50%;
+    opacity: 1;
+    font-size:18px;
+}
+
+
+
 
 /*# sourceMappingURL=style.css.map */
