@@ -60,15 +60,19 @@
         }
     }
 
-    document.getElementById('copy').onclick = (event) => {
-        try {
-            document.getElementById('copy-text').select();
-            document.execCommand('copy')
-            successMessage('Copied wallet address to clipboard', 'success')
-        } catch (err) {
-            errorMessage(['An error occured, copy manually'], 'error')
-        }
+    var copy = document.getElementById('copy');
+    if(typeof(copy) != 'undefined' && copy != null)
+    {
+        document.getElementById('copy').onclick = (event) => {
+            try {
+                document.getElementById('copy-text').select();
+                document.execCommand('copy')
+                successMessage('Copied wallet address to clipboard', 'success')
+            } catch (err) {
+                errorMessage(['An error occured, copy manually'], 'error')
+            }
 
+        }
     }
 
     if(typeof(window.livewire) != 'undefined' && typeof($) != 'undefined')
