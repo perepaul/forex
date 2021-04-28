@@ -18,9 +18,9 @@ var filesToCache = [
     '/images/icons/icon-192x192.png',
     '/images/icons/icon-384x384.png',
     '/images/icons/icon-512x512.png',
-    // 'https://code.jquery.com/jquery-3.6.0.min.js',
-    // 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
-    // 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
+    'https://code.jquery.com/jquery-3.6.0.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
 ];
 
 // Cache on install
