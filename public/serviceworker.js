@@ -1,13 +1,13 @@
 var staticCacheName = "pwa-v" + new Date().getTime();
+var CACHE = 'cache-update-and-refresh';
 var filesToCache = [
-    '/',
-    '/about',
-    '/faq',
-    '/privacy',
-    '/terms',
-    '/offline',
-    '/login',
-    'register',
+    // '/about',
+    // '/faq',
+    // '/privacy',
+    // '/terms',
+    // '/offline',
+    // '/login',
+    // '/register',
     '/css/user/app.css',
     '/js/user/app.js',
     '/images/icons/icon-72x72.png',
@@ -18,10 +18,9 @@ var filesToCache = [
     '/images/icons/icon-192x192.png',
     '/images/icons/icon-384x384.png',
     '/images/icons/icon-512x512.png',
-    'https://code.jquery.com/jquery-3.6.0.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
-    // 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
+    // 'https://code.jquery.com/jquery-3.6.0.min.js',
+    // 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
+    // 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
 ];
 
 // Cache on install
@@ -51,40 +50,13 @@ self.addEventListener('activate', event => {
 
 // Serve from Cache
 self.addEventListener("fetch", event => {
-    event.respondWith(fromCache(event.request));
-    event.waitUntil(update(event.request).then(refresh));
-});
-
-function fromCache(request) {
-    return cashes.match(request)
-        .then(
-            response => {
-                return response || fetch(request);
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => {
+                return response || fetch(event.request);
             })
-        .catch(() => {
-            return caches.match('offline')
-        })
-}
-
-function update(request) {
-    return caches.match(request).then(function (cache) {
-        return fetch(request).then(function (response) {
-            return cache.put(request, response.clone()).then(function () {
-                return response;
-            });
-        });
-    });
-}
-
-function refresh(response) {
-    return self.clients.matchAll().then(function (clients) {
-        clients.forEach(function (client) {
-            var message = {
-                type: 'refresh',
-                url: response.url,
-                eTag: response.headers.get('ETag')
-            };
-            client.postMessage(JSON.stringify(message));
-        });
-    });
-}
+            .catch(() => {
+                return caches.match('offline');
+            })
+    )
+});

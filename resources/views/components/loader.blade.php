@@ -1,7 +1,7 @@
 <div wire:loading.delay wire:target='{{$targets}}'>
     <div class="loader">
         <div>
-            Loading... please wait.
+            Loading...
         </div>
     </div>
 </div>
