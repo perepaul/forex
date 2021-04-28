@@ -19,13 +19,71 @@ import './6perfect-scrollbar-init';
 
 
 //  Preloader
-$(window).on("load", function() {
-    $('#preloader').fadeOut(500);
-    $('#main-wrapper').addClass('show');
-});
 
-$(function() {
-    if($('.trade-balance','.position-value').length){
+window.onload = (event) => {
+    fadeOut(document.getElementById('preloader'),400);
+    fadeIn(document.getElementById('main-wrapper'),400);
+}
+// $(window).on("load", function () {
+//     $('#preloader').fadeOut(500);
+//     $('#main-wrapper').addClass('show');
+// });
+
+function fadeIn(elem, ms) {
+    if (!elem)
+        return;
+
+    elem.style.opacity = 0;
+    elem.style.filter = "alpha(opacity=0)";
+    // elem.style.display = "inline-block";
+    elem.style.visibility = "visible";
+
+    if (ms) {
+        var opacity = 0;
+        var timer = setInterval(function () {
+            opacity += 50 / ms;
+            if (opacity >= 1) {
+                clearInterval(timer);
+                opacity = 1;
+            }
+            elem.style.opacity = opacity;
+            elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+        }, 50);
+    }
+    else {
+        elem.style.opacity = 1;
+        elem.style.filter = "alpha(opacity=1)";
+    }
+}
+
+function fadeOut(elem, ms) {
+    if (!elem)
+        return;
+
+    if (ms) {
+        var opacity = 1;
+        var timer = setInterval(function () {
+            opacity -= 50 / ms;
+            if (opacity <= 0) {
+                clearInterval(timer);
+                opacity = 0;
+                elem.style.display = "none";
+                elem.style.visibility = "hidden";
+            }
+            elem.style.opacity = opacity;
+            elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+        }, 50);
+    }
+    else {
+        elem.style.opacity = 0;
+        elem.style.filter = "alpha(opacity=0)";
+        elem.style.display = "none";
+        elem.style.visibility = "hidden";
+    }
+}
+
+$(function () {
+    if ($('.trade-balance', '.position-value').length) {
         const ps1 = new PerfectScrollbar('.trade-balance');
         const ps2 = new PerfectScrollbar('.position-value');
         // const ps3 = new PerfectScrollbar('.transaction-table');
@@ -34,7 +92,7 @@ $(function() {
 
 
 //frontend charts
-(function($) {
+(function ($) {
     var data = [
         [1327359600000, 30.95],
         [1327446000000, 31.34],
@@ -447,7 +505,7 @@ $(function() {
 
 })(jQuery);
 
-(function($) {
+(function ($) {
     var data = [
         [1327359600000, 30.95],
         [1327446000000, 31.34],
@@ -790,43 +848,43 @@ $(function() {
 //end frontend charts
 
 //dashboard charts
-(function($) {
+(function ($) {
     var balance_chart = $('#balance-chart')
     var info = balance_chart.data('info')
     var names = balance_chart.data('names')
 
     if (balance_chart.length) {
-    var options = {
-        series: info,
-        chart: {
-            height: 220,
-            type: 'donut',
-        },
-        dataLabels: {
-            enabled: false
-        },
-        labels: names,
-        fill: {
-            colors: ['#F7931A', '#2CA07A', '#A6DF00', '#FF6600']
-        },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    show: false
+        var options = {
+            series: info,
+            chart: {
+                height: 220,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            labels: names,
+            fill: {
+                colors: ['#F7931A', '#2CA07A', '#A6DF00', '#FF6600']
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        show: false
+                    }
                 }
+            }],
+            legend: {
+                show: false,
+                position: 'right',
+                offsetY: 0,
+                height: 150,
             }
-        }],
-        legend: {
-            show: false,
-            position: 'right',
-            offsetY: 0,
-            height: 150,
-        }
-    };
+        };
         var chart = new ApexCharts(document.querySelector("#balance-chart"), options);
         chart.render();
     }
@@ -839,8 +897,8 @@ $(function() {
 
 // ////
 
-(function($) {
-    $('#report-select').on('change', function() {
+(function ($) {
+    $('#report-select').on('change', function () {
         drawChart();
     });
 
@@ -914,19 +972,19 @@ $(function() {
 
 
 
-(function($) {
+(function ($) {
 
     "use strict"
 
     //to keep the current page active
-    $(function() {
+    $(function () {
         for (var nk = window.location,
-                o = $(".settings-menu a, .menu a").filter(function() {
-                    return this.href == nk;
-                })
+            o = $(".settings-menu a, .menu a").filter(function () {
+                return this.href == nk;
+            })
                 .addClass("active")
                 .parent()
-                .addClass("active");;) {
+                .addClass("active"); ;) {
             // console.log(o)
             if (!o.is("li")) break;
             o = o.parent()
@@ -946,7 +1004,7 @@ $(function() {
 
 
 
-(function() {
+(function () {
     let onpageLoad = localStorage.getItem("theme") || "";
     let element = document.body;
     if (onpageLoad) element.classList.add(onpageLoad);
@@ -967,7 +1025,7 @@ $(function() {
         }
     }
 
-    $(document).on('click', '.dark-light-toggle', function(e) {
+    $(document).on('click', '.dark-light-toggle', function (e) {
         themeToggle();
     })
 })();
