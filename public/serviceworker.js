@@ -50,16 +50,16 @@ self.addEventListener('activate', event => {
 
 // Serve from Cache
 self.addEventListener("fetch", event => {
-    caches.match(event.request)
-        .then(response => {
-            return response || fetch(event.request);
-        })
-        .catch(() => {
-            return caches.match('offline');
-        })
-    // event.respondWith(
-    //     fetch(event.request).catch(() => caches.match('offline'))
-    // )
+    // caches.match(event.request)
+    //     .then(response => {
+    //         return response || fetch(event.request);
+    //     })
+    //     .catch(() => {
+    //         return caches.match('offline');
+    //     })
+    event.respondWith(
+        fetch(event.request).catch(() => caches.match('offline'))
+    )
 });
 
 function fromCache(request) {
