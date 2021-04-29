@@ -17,13 +17,13 @@ class EnsureUserIsVerified
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->user()->isActive()) {
+        if (auth('web')->user()->isActive()) {
             return $next($request);
         } else if ($request->url() == route('verify') || $request->url() == route('profile')) {
             return $next($request);
-        } elseif ($request->user()->isPending()) {
+        } elseif (auth('web')->user()->isPending()) {
             return redirect()->route('profile');
-        } elseif ($request->user()->isInActive()) {
+        } elseif (auth('web')->user()->isInActive()) {
             return redirect()->route('verify');
         }
     }
