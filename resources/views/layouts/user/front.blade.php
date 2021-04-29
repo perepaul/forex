@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{favicon()}}">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{{ mix('css/user/app.css') }}">
+    @stack('css')
     @livewireStyles
     @laravelPWA
 </head>

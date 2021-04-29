@@ -6,4 +6,5 @@ return [
     'ethereum_qr' => 'images/btc_qr.svg',
     'ethereum_wallet_address' => '0i9jdjfidmfpoedfidfidfi0oijdfo',
     'deposit_image'=>'assets/deposits',
+    'address' => env('ADDRESS','some random address')
 ];
