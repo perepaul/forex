@@ -5,9 +5,11 @@
 @section('content')
     <div class="content-body pt-3">
         <div class="container">
+            @if(auth('web')->user()->isPending())
             <div class="alert alert-info" role="alert">
                 We've received your information, we will validate them and get back to you via email.
-              </div>
+            </div>
+            @endif
             <div class="row">
                 <x-user.todo></x-user.todo>
                 {{-- <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -108,7 +110,7 @@
                                 <p>Your account is unverified. Get verified to enable funding, trading, and withdrawal.</p>
                             @endif
                             @if (!auth('web')->user()->status)
-                                <a href="{{route('verify')}}" class="btn btn-primary"> Get Verified</a>
+                                <a href="{{ route('verify') }}" class="btn btn-primary"> Get Verified</a>
                             @endif
                         </div>
                     </div>
@@ -124,7 +126,7 @@
                                 <a href="#" class="btn btn-primary">Upgrade</a>
                             @else
                                 <p>You are currently not subscribed to any plan. Subscribe now and get bonuses.</p>
-                                <a href="{{route('subscribe')}}" class="btn btn-primary">Subscribe</a>
+                                <a href="{{ route('subscribe') }}" class="btn btn-primary">Subscribe</a>
                             @endif
                         </div>
                     </div>
