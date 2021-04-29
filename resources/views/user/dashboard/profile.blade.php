@@ -76,7 +76,7 @@
                                     <div class="user-info">
                                         <span>Plan</span>
                                         <h4>
-                                            {!! auth('web')->user()->plan->name ?? '<a href="" class="btn btn-secondary">Subscribe</a>' !!}
+                                            {!! auth('web')->user()->plan->name ?? '<a href="'.route('subscribe').'" class="btn btn-secondary">Subscribe</a>' !!}
                                         </h4>
                                     </div>
                                 </div>
@@ -93,23 +93,21 @@
                         </div>
                         <div class="card-body">
                             <h5>Account Status :
-                                @if (auth('web')->user()->status && auth('web')->user()->plan)
+                                @if (auth('web')->user()->isActive())
                                     <span class="text-success">Active <i class="icofont-check"></i></span>
-                                @elseif(auth()->user()->status)
-                                    <span class="text-warning">Active <i class="icofont-warning"></i></span>
+                                @elseif(auth('web')->user()->isPending())
+                                    <span class="text-warning">Pending <i class="icofont-warning"></i></span>
                                 @else
-                                    <span class="text-danger">Pending <i class="icofont-warning"></i></span>
+                                    <span class="text-danger">Inactive <i class="icofont-warning"></i></span>
                                 @endif
                             </h5>
-                            @if (auth('web')->user()->status && auth('web')->user()->plan)
+                            @if (auth('web')->user()->isActive())
                                 <p>Your account is verified. you can start funding, trading, and withdrawal.</p>
-                            @elseif (auth('web')->user()->status)
-                                <p>Your account is verified, but you need to subscribe to a plan to enable funding, trading,
-                                    and withdrawal.</p>
+                            @elseif (auth('web')->user()->isPending())
+                                <p>Your account's verification pending, after verification, funding, trading,
+                                    and withdrawal, will be activated.</p>
                             @else
-                                <p>Your account is unverified. Get verified to enable funding, trading, and withdrawal.</p>
-                            @endif
-                            @if (!auth('web')->user()->status)
+                                <p>Your account is Inactive. Get verified to enable funding, trading, and withdrawal.</p>
                                 <a href="{{ route('verify') }}" class="btn btn-primary"> Get Verified</a>
                             @endif
                         </div>
