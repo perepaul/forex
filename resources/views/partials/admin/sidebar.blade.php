@@ -17,6 +17,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('admin.verify') }}">
+                    <i class="icon-Check"><span class="path1"></span><span class="path2"></span></i>
+                    <span>User Verification</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{ route('admin.trades') }}">
                     <i class="icon-Credit-card"><span class="path1"></span><span class="path2"></span><span
                             class="path3"></span></i>

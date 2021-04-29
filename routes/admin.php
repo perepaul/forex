@@ -14,6 +14,7 @@ Route::as('admin.')->namespace('Admin')->group(function(){
     Route::get('/', [PageController::class,'index'])->name('index');
 
     Route::get('users',[PageController::class,'users'])->name('users');
+    Route::get('verify',[PageController::class,'verify'])->name('verify');
     Route::get('trades',[PageController::class,'trades'])->name('trades');
     Route::get('deposits',[PageController::class,'deposits'])->name('deposits');
     Route::get('withdrawals',[PageController::class,'withdrawals'])->name('withdrawals');

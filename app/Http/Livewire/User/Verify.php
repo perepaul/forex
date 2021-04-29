@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire\User;
 
-use App\Helpers\CountryHelper;
-use App\Repository\AccountCurrencyRepo;
-use App\Repository\UserRepository;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use App\Helpers\CountryHelper;
+use App\Repository\UserRepository;
+use Illuminate\Support\Facades\Mail;
+use App\Repository\AccountCurrencyRepo;
+use App\Mail\User\DetailsSubmittedMailable;
 
 class Verify extends Component
 {
@@ -100,6 +102,7 @@ class Verify extends Component
         $userData['id_file'] = basename($this->data['id_file']->storePublicly('assets/identification','custom_public'));
         $this->userRepo->update($userData,auth('web')->user()->id);
         $this->emit('success',['message'=>'We have received your details, our agents will verify the data you submitted.']);
+        Mail::to(auth('web')->user())->send(new DetailsSubmittedMailable);
         $this->reset('data');
         $this->image_id = rand();
         $this->emit('redirect',['to'=>route('profile')]);

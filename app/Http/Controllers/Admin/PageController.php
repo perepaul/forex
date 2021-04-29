@@ -17,6 +17,11 @@ class PageController extends Controller
         return view('admin.users');
     }
 
+    public function verify()
+    {
+        return view('admin.verify');
+    }
+
     public function withdrawals()
     {
         return view('admin.withdrawals');
