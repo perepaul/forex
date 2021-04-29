@@ -33,7 +33,7 @@
 						<div class="bg-white rounded30 shadow-lg">
 							<div class="content-top-agile p-20 pb-0">
 								<h2 class="text-primary">Welcome Back Admin</h2>
-								<p class="mb-0">Sign in to continue to {appname}.</p>
+								{{-- <p class="mb-0">Sign in to continue to {appname}.</p> --}}
 							</div>
 							<div class="p-40">
 								<form action="/login" method="post">
