@@ -50,18 +50,6 @@ self.addEventListener('activate', event => {
 
 // Serve from Cache
 self.addEventListener("fetch", event => {
-    // event.respondWith(
-    //     caches.match(event.request).then(function(response) {
-    //       return response || fetch(event.request).then(response => {
-    //           return response;
-    //       }).catch(()=>caches.match('offline'))
-    //     }).catch(()=>caches.match('offline'))
-    //   );
-
-    //   self.console.log('here is the wait call');
-    //   event.waitUntil(
-    //       update(event.request)
-    //   )
 
     // Let the browser do its default thing
   // for non-GET requests.
@@ -87,19 +75,3 @@ self.addEventListener("fetch", event => {
 
 });
 
-function update(request) {
-    self.console.log(request);
-    if(request.method !== 'GET'){
-        return;
-    }
-    return caches.match(request).then(cache =>{
-        fetch(request).then(response => {
-            if(response.status === 200)
-            {
-                cache.put(request,response.clone()).then(res => {
-                    return res;
-                })
-            }
-        })
-    })
-}

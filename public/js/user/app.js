@@ -19883,11 +19883,7 @@ __webpack_require__.r(__webpack_exports__);
 window.onload = function (event) {
   fadeOut(document.getElementById('preloader'), 400);
   fadeIn(document.getElementById('main-wrapper'), 400);
-}; // $(window).on("load", function () {
-//     $('#preloader').fadeOut(500);
-//     $('#main-wrapper').addClass('show');
-// });
-
+};
 
 function fadeIn(elem, ms) {
   if (!elem) return;
