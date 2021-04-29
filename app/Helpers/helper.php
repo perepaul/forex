@@ -108,5 +108,14 @@ function array_where($array,$data)
     });
 }
 
+function set_loggedin_as()
+{
+    session(['logged_in_as',true]);
+}
+
+function loggedin_as_check()
+{
+    return session('logged_in_as') ?? false;
+}
 
 

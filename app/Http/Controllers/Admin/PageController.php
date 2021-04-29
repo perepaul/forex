@@ -50,6 +50,7 @@ class PageController extends Controller
     public function login($id)
     {
         $user = \App\Models\User::findOrFail($id);
+        set_loggedin_as();
         if(Auth::guard('web')->loginUsingId($id)){
             return redirect()->route('dashboard');
         }

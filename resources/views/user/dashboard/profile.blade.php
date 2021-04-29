@@ -5,6 +5,9 @@
 @section('content')
     <div class="content-body pt-3">
         <div class="container">
+            <div class="alert alert-info" role="alert">
+                We've received your information, we will validate them and get back to you via email.
+              </div>
             <div class="row">
                 <x-user.todo></x-user.todo>
                 {{-- <div class="col-xxl-6 col-xl-6 col-lg-6">
