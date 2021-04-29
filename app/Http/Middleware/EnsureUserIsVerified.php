@@ -19,7 +19,10 @@ class EnsureUserIsVerified
     {
         if ($request->user()->isActive()) {
             return $next($request);
-        }else if($request->url() == route('verify')){
+        }
+        elseif($request->user()->isPending()){
+            return redirect()->route('profile');
+        }else if($request->url() == route('verify') || $request->url() == route('profile')){
             return $next($request);
         }else{
             return redirect()->route('verify');
