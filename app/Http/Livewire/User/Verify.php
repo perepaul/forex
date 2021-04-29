@@ -37,7 +37,7 @@ class Verify extends Component
             'data.currency_id'=>'required|numeric|integer',
             'data.address' => 'required',
             'data.zip_code' => 'bail|required|numeric|min:5',
-            'data.id_file' => 'required|file|mimes:jpeg,jpg,png|max:512'
+            'data.id_file' => 'required|file|mimes:jpeg,jpg,png|max:1024'
         ];
     }
 
