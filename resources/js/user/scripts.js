@@ -18,16 +18,11 @@ import PerfectScrollbar from './4perfect-scrollbar';
 import './6perfect-scrollbar-init';
 
 
-//  Preloader
 
 window.onload = (event) => {
     fadeOut(document.getElementById('preloader'),400);
     fadeIn(document.getElementById('main-wrapper'),400);
 }
-// $(window).on("load", function () {
-//     $('#preloader').fadeOut(500);
-//     $('#main-wrapper').addClass('show');
-// });
 
 function fadeIn(elem, ms) {
     if (!elem)

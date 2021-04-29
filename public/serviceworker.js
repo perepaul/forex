@@ -27,7 +27,7 @@ var filesToCache = [
 self.addEventListener("install", event => {
     this.skipWaiting();
     event.waitUntil(
-        caches.open(staticCacheName)
+        caches.open(CACHE)
             .then(cache => {
                 return cache.addAll(filesToCache);
             })
@@ -36,32 +36,70 @@ self.addEventListener("install", event => {
 
 // Clear cache on activate
 self.addEventListener('activate', event => {
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames
-                    .filter(cacheName => (cacheName.startsWith("pwa-")))
-                    .filter(cacheName => (cacheName !== staticCacheName))
-                    .map(cacheName => caches.delete(cacheName))
-            );
-        })
-    );
+    // event.waitUntil(
+    //     caches.keys().then(cacheNames => {
+    //         return Promise.all(
+    //             cacheNames
+    //                 .filter(cacheName => (cacheName.startsWith("pwa-")))
+    //                 .filter(cacheName => (cacheName !== staticCacheName))
+    //                 .map(cacheName => caches.delete(cacheName))
+    //         );
+    //     })
+    // );
 });
 
 // Serve from Cache
 self.addEventListener("fetch", event => {
-    // caches.match(event.request)
-    //     .then(response => {
-    //         return response || fetch(event.request);
-    //     })
-    //     .catch(() => {
-    //         return caches.match('offline');
-    //     })
-    event.respondWith(
-        fetch(event.request).catch(() => caches.match('offline'))
-    )
+    // event.respondWith(
+    //     caches.match(event.request).then(function(response) {
+    //       return response || fetch(event.request).then(response => {
+    //           return response;
+    //       }).catch(()=>caches.match('offline'))
+    //     }).catch(()=>caches.match('offline'))
+    //   );
+
+    //   self.console.log('here is the wait call');
+    //   event.waitUntil(
+    //       update(event.request)
+    //   )
+
+    // Let the browser do its default thing
+  // for non-GET requests.
+  if (event.request.method != 'GET') return;
+
+  // Prevent the default, and handle the request ourselves.
+  event.respondWith(async function() {
+    // Try to get the response from a cache.
+    const cache = await caches.open(CACHE);
+    const cachedResponse = await caches.match(event.request);
+
+    if (cachedResponse) {
+      // If we found a match in the cache, return it, but also
+      // update the entry in the cache in the background.
+      event.waitUntil(cache.add(event.request));
+      return cachedResponse;
+    }
+
+    // If we didn't find a match in the cache, use the network.
+    return fetch(event.request).catch(()=>caches.match('offline'))
+  }());
+
+
 });
 
-function fromCache(request) {
-
+function update(request) {
+    self.console.log(request);
+    if(request.method !== 'GET'){
+        return;
+    }
+    return caches.match(request).then(cache =>{
+        fetch(request).then(response => {
+            if(response.status === 200)
+            {
+                cache.put(request,response.clone()).then(res => {
+                    return res;
+                })
+            }
+        })
+    })
 }

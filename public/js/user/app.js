@@ -19878,7 +19878,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // import './9pric-btc';
 
- //  Preloader
+
 
 window.onload = function (event) {
   fadeOut(document.getElementById('preloader'), 400);
