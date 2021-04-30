@@ -33,6 +33,8 @@ class Verify extends Component
         $user->status = 1;
         $user->save();
         Mail::to($user)->send(new VerifiedMailable($user));
+        $this->emit('success',['message'=>'User Verified!']);
+
     }
 
     public function decline($id)
@@ -41,6 +43,7 @@ class Verify extends Component
         $user->status = 0;
         $user->save();
         Mail::to($user)->send(new VerifiedMailable($user));
+        $this->emit('success',['message'=>'User Declined!']);
     }
     public function render()
     {

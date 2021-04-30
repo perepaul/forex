@@ -74,7 +74,7 @@
                                                                     class="fa fa-edit text-info"></i> Verify</a>
                                                             <a class="dropdown-item" href="#" wire:click.prevent='decline({{$user->id}})'><i
                                                                     class="fa fa-trash text-danger"></i> Decline</a>
-                                                            <a class="dropdown-item" href="#"><i class="fa fa-bitcoin"></i>
+                                                            <a class="dropdown-item" target="_blank" rel="noopener" href="{{asset('assets/identification/'.$user->id_file)}}"><i class="fa fa-bitcoin"></i>
                                                                 View</a>
                                                         </div>
                                                     </div>

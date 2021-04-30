@@ -28,6 +28,6 @@ class DetailsSubmittedMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.user.submitted');
+        return $this->subject('Details Submitted for verification')->markdown('emails.user.submitted');
     }
 }
