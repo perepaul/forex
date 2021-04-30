@@ -7,49 +7,44 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="terms_condition-content">
+                        <h3 class="mb-5">Frequently Asked Questions </h3>
                         <div class="terms_condition-text">
-                            <h3>Frequently Asked Questions </h3>
-                            <p>Tradix is an instant cryptocurrency exchange that allows you to exchange crypto
-                                fast and buy it with a bank card. The service provides the best crypto-to-crypto
-                                rates and supports over 140 cryptocurrencies available for exchange
-                            </p>
-                        </div>
-
-
-                        <div class="terms_condition-text">
-                            <h3>How does Tradix work? </h3>
+                            <h5>Do you have a demo account for testing?</h5>
                             <p>
-                                Tradix’s trading algorithm is integrated into the largest cryptocurrency exchange
-                                platforms, including Binance, Poloniex, Bittrex, etc. In the span of milliseconds,
-                                Tradix makes bids and asks on the platforms, then selects and suggests the best
-                                available rate and displays the estimated rate on our site. The rates remain
-                                approximate until the transaction is actually made on the blockchain, which is why
-                                the exchange rate at the time of a transaction may differ slightly from the
-                                estimated rate that you see when you begin a transaction. To learn more about the
-                                process, see this <a href="#">article</a>
+                                Yes, we hava a demo package. Your bonus wallet will be credited as soon as you subscribe to
+                                a plan. please note that the demo balance and profits are non-withdrawable, they are for
+                                educational purposes only!
                             </p>
                         </div>
 
 
                         <div class="terms_condition-text">
-                            <h3>Why should I trust you? </h3>
-                            <p>Tradix is one of the most prominent instant cryptocurrency exchanges that has
-                                gained the trust of more than 2M users from all over the world. The service provides
-                                safe and fast transactions without revealing users identities. We provide the best
-                                possible rates by comparing a wide range of reliable trading platforms and work with
-                                a list of 140+ cryptocurrencies that is constantly increasing.</p>
+                            <h5>How long does it take for deposit to reflect on my account? </h5>
+                            <p>
+                                It takes about 30mins to 1Hour depending on the deposit option you choose, but can take upd
+                                to 24 hours with some deposit options.
+                            </p>
+                        </div>
+
+
+                        <div class="terms_condition-text">
+                            <h5>Why should I trust you? </h5>
+                            <p>
+                                You can trust us, because we are licensed by international finacial regulatory bodies, and
+                                we use
+                            </p>
                             <ul>
                                 <li>
                                     <i class="fa fa-circle"></i>
-                                    <p>No deposit storage. </p>
+                                    <p>Https protocol to secure your connection to our servers </p>
                                 </li>
                                 <li>
                                     <i class="fa fa-circle"></i>
-                                    <p>Instant exchange. </p>
+                                    <p>We handle your money with high security </p>
                                 </li>
                                 <li>
                                     <i class="fa fa-circle"></i>
-                                    <p>Each account is protected with 2-factor authentication and an HTTPS protocol.
+                                    <p>Each account has the option for two factor authentication for maximum security
                                     </p>
                                 </li>
                                 <li>
@@ -60,82 +55,41 @@
                         </div>
 
                         <div class="terms_condition-text">
-                            <h3>Does Tradix fix rates? </h3>
-                            <p>Tradix mobile app does! Mobile app users will no longer be affected by the risks
-                                associated with crypto market fluctuations. Soon, the fixed-rate exchanges will also
-                                be implemented on the web version. To lock the current exchange rate, the user needs
-                                to click on the lock icon, which will result in them getting the exact same amount
-                                of crypto as is displayed on the screen. The rate is fixed for 15 minutes, which
-                                should be more than enough to carry out the exchange.
-
-
+                            <h5>How can i deposit funds into my account?</h5>
+                            <p>
+                                We have a variety of options. Login to your account, click on wallet, then deposits, there
+                                you will see multiple options that you can use.
                             </p>
-                            <p> Alternatively, Tradix offers our lowest fee of 0.25% for all crypto-to-crypto
-                                exchanges made at a floating rate.</p>
                         </div>
 
                         <div class="terms_condition-text">
-                            <h3>No warranties : </h3>
-                            <p>Elaenia is provided “as is” without any representations or warranties. Elaenia.com
-                                makes no representations or warranties in relation to this website or the
-                                information and materials provided on this website.</p>
-                            <p>Elaenia.com does not warrant that:</p>
-
-                            <ul>
-                                <li>
-                                    <i class="fa fa-circle"></i>
-                                    <p>The website will be constantly available, or available at all moving forward.
-                                    </p>
-                                </li>
-                                <li>
-                                    <i class="fa fa-circle"></i>
-                                    <p>The information on this website is complete, true, or non-misleading.</p>
-                                </li>
-                            </ul>
+                            <h5>What are the additional fees?</h5>
+                            <p>
+                                There are no additional fees.
+                            </p>
+                        </div>
+                        <div class="terms_condition-text">
+                            <h5>What trading strategies should I use?</h5>
+                            <p>
+                                Currency traders make decisions using both technical factors and economic fundamentals.
+                                Technical traders use charts, trend lines, support and resistance levels, and numerous
+                                patterns and mathematical analysis to identify trading opportunities, whereas
+                                fundamentalists predict price movements by interpreting a wide variety of economic
+                                information, including news, government-issued indicators and reports, and even rumors. The
+                                most dramatic price movements, however, occur when unexpected events happen. The event can
+                                range from a Central Bank raising domestic interest rates to the outcome of a political
+                                election or even an act of war. Nonetheless, more often it is the expectation of an event
+                                that drives the market rather than the event itself.
+                            </p>
                         </div>
 
                         <div class="terms_condition-text">
-                            <h3>Privacy : </h3>
-                            <p>For details about our privacy policy, please refer to the privacy policy section.</p>
+                            <h5>I still have more questions?</h5>
+                            <p>
+                                Please refer to our live chat agents, they will answer your questions or <a href="{{route('contact')}}"> click here to send a message to our support team.</a>
+                            </p>
                         </div>
 
-                        <div class="terms_condition-text">
-                            <h3>Unenforceable provisions : </h3>
-                            <p>If any provision of this website disclaimer is, or is found to be, unenforceable
-                                under applicable law, that will not affect the enforceability of the other
-                                provisions of this website disclaimer.</p>
-                        </div>
-
-                        <div class="terms_condition-text">
-                            <h3>Links : </h3>
-                            <p>Responsibility for the content of external links (to web pages of third parties) lies
-                                solely with the operators of the linked pages.</p>
-                        </div>
-
-                        <div class="terms_condition-text">
-                            <h3>Modifications: </h3>
-                            <p>Elaenia.com may revise these terms of use for its website at any time without notice.
-                                By using this web site you are agreeing to be bound by the then current version of
-                                these terms of service.</p>
-                        </div>
-
-                        <div class="terms_condition-text">
-                            <h3>Breaches of these terms and conditions: </h3>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-circle"></i>
-                                    <p>Elaenia.com reserves the rights under these terms and conditions to take
-                                        action if you breach these terms and conditions in any way. </p>
-                                </li>
-                                <li>
-                                    <i class="fa fa-circle"></i>
-                                    <p>Elaenia.com may take such action as seems appropriate to deal with the
-                                        breach, including suspending your access to the website, suspending your
-                                        earnings made trough Elaenia.com,prohibiting you from accessing the
-                                        website, or bringing court proceedings against you.</p>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
