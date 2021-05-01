@@ -4,5 +4,5 @@
 {{$question}}
 
 
-From: {{$Sender_name}}
+From: {{$Sender_name}}, {{$email}}
 @endcomponent

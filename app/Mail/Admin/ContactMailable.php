@@ -33,6 +33,6 @@ class ContactMailable extends Mailable
      */
     public function build()
     {
-        return $this->from($this->email,$this->Sender_name)->markdown('emails.admin.contact')->subject($this->subjectInfo);
+        return $this->markdown('emails.admin.contact')->subject($this->subjectInfo);
     }
 }

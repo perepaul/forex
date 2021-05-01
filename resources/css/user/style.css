@@ -12402,9 +12402,11 @@ strong {
 
 .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    background: #b8621c;
+    background: #fff;
     padding: 27px 0px;
 }
+
+
 
 .footer .copyright {
     position: relative;
@@ -12413,11 +12415,11 @@ strong {
 .footer .copyright p {
     margin: 0;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
 
 .footer .copyright p a {
-    color: #fff;
+    color: #000;
     font-weight: 700;
 }
 
@@ -12430,7 +12432,7 @@ strong {
 }
 
 .footer .footer-social li a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #000;
     padding: 0px 10px;
 }
 
@@ -12593,7 +12595,7 @@ strong {
     color: #fff;
 }
 
-.dark-theme .header {
+.dark-theme .header, .dark-theme .footer {
     background-color: #1d0042;
 }
 
@@ -15214,6 +15216,8 @@ label.error {
     opacity: 1;
     font-size:18px;
 }
+
+
 
 
 

@@ -1,8 +1,8 @@
-<div class="header landing bg-primary">
+<div class="header landing">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="navigation">
+                <div class="navigation header-footer-bg">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="brand-logo">
                             <a href="{{route('index')}}">

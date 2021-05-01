@@ -56,7 +56,7 @@
     </div>
 </div> --}}
 
-<div class="footer">
+<div class="footer header-footer-bg">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -67,8 +67,8 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="footer-social">
                     <ul>
-                        <li><a href="{{route('privacy')}}">privacy</a></li>
-                        <li><a href="{{route('terms')}}">terms & conditions</i></a></li>
+                        <li><a href="{{route('privacy')}}">Privacy</a></li>
+                        <li><a href="{{route('terms')}}">Terms & Conditions</i></a></li>
                         {{-- <li><a href="#">faq</i></a></li>
                         <li><a href="#"><i class="fab fa-youtube"></i></a></li> --}}
                     </ul>
