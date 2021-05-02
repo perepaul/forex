@@ -12416,11 +12416,11 @@ strong {
 .footer .copyright p {
     margin: 0;
     font-size: 14px;
-    color: #000;
+    color: #fff;
 }
 
 .footer .copyright p a {
-    color: #000;
+    color: #fff;
     font-weight: 700;
 }
 
@@ -12433,7 +12433,7 @@ strong {
 }
 
 .footer .footer-social li a {
-    color: #000;
+    color: #fff;
     padding: 0px 5px;
 }
 

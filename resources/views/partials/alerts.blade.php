@@ -18,10 +18,10 @@
 
     window.paceOptions = {
         ajax: {
-			trackMethods: ['GET','POST'],
-			trackWebSockets: true,
-			ignoreURLs: []
-		}
+            trackMethods: ['GET', 'POST'],
+            trackWebSockets: true,
+            ignoreURLs: []
+        }
     }
 
     if (typeof(iziToast) != 'undefined') {
@@ -69,8 +69,7 @@
     }
 
     var copy = document.getElementById('copy');
-    if(typeof(copy) != 'undefined' && copy != null)
-    {
+    if (typeof(copy) != 'undefined' && copy != null) {
         document.getElementById('copy').onclick = (event) => {
             try {
                 document.getElementById('copy-text').select();
@@ -83,8 +82,7 @@
         }
     }
 
-    if(typeof(window.livewire) != 'undefined' && typeof($) != 'undefined')
-    {
+    if (typeof(window.livewire) != 'undefined' && typeof($) != 'undefined') {
         window.livewire.on('toggle-modal', e => {
             $('#' + e.id).modal('toggle');
         })
@@ -113,6 +111,21 @@
                 warnMessage(e.warns[warn]);
             }
         })
+
+        window.livewire.on('fileChosen', e => {
+            try {
+                files = document.getElementById(e.element).files;
+                for (let file of files) {
+                    let reader = new FileReader();
+                    reader.onloadend = () => {
+                        livewire.emit('storeImageData',reader.result)
+                    }
+                    reader.readAsDataURL(file);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        });
     }
 
 </script>
@@ -123,6 +136,7 @@
         @foreach ($errors->all() as $error)
             errorMessage('{{ $error }}')
         @endforeach
+
     </script>
 
 @elseif(session()->has('message'))

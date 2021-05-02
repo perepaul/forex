@@ -89,7 +89,7 @@
                             <div class="form-group mt-3">
                                 <label for="">Means of Identification</label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="{{$image_id}}" wire:model='data.id_file'>
+                                    <input type="file" accept="image/*" class="custom-file-input" id="{{$image_id}}" wire:model='data.id_file'>
                                     {{-- <label class="custom-file-label" for="customFile">Choose file</label> --}}
                                     @error('data.id_file')
                                         <span class="error">{{ $message }}</span>
