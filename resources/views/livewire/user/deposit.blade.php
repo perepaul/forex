@@ -1,4 +1,5 @@
 <div>
+    <x-loader :targets="'method,deposit'" />
     <div>
         <div class="content-body">
             <div class="container">

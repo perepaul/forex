@@ -16,6 +16,14 @@
         // alert('not matched')
     }
 
+    window.paceOptions = {
+        ajax: {
+			trackMethods: ['GET','POST'],
+			trackWebSockets: true,
+			ignoreURLs: []
+		}
+    }
+
     if (typeof(iziToast) != 'undefined') {
         iziToast.settings({
             timeout: 10000,

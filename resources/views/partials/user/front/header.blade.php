@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="navigation header-footer-bg">
+                <div class="navigation">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="brand-logo">
                             <a href="{{route('index')}}">
@@ -13,7 +13,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
                             <ul class="navbar-nav">

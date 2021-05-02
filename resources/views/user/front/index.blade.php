@@ -4,7 +4,7 @@
 @section('page')
 
 
-    <div class="intro bg-primary">
+    <div class="intro">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-xl-6 col-lg-6 col-12">
