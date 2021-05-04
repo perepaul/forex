@@ -102,10 +102,10 @@ function currency_iso()
     return optional($currency)->iso;
 }
 
-function array_where($array, $data)
+function array_where($array, $data,$check = 'iso2')
 {
-    return Arr::where($array, function ($value, $key) use ($data) {
-        return $value['iso2'] == $data;
+    return Arr::where($array, function ($value, $key) use ($data,$check) {
+        return $value[$check] == $data;
     });
 }
 
@@ -119,3 +119,38 @@ function loggedin_as_check()
     return session('logged_in_as') ?? false;
 }
 
+function profile_picture($path = null)
+{
+    if($path && is_dir($path)) return asset($path);
+    if($user = auth('web')->user()){
+        if($user->gender == 'male'){
+            return male_profile($user->avatar);
+        }elseif($user->gender == 'female'){
+            return female_profile($user->avatar);
+        }
+    }
+    return default_profile();
+}
+
+function male_profile($filename)
+{
+    $file = 'male.png';
+    if($filename){
+        $file = $filename;
+    }
+    return asset('images/profile/'.$file);
+}
+
+function female_profile($filename)
+{
+    $file = 'female.png';
+    if($filename){
+        $file = $filename;
+    }
+    return asset('images/profile/'.$file);
+}
+
+function default_profile()
+{
+    return asset('images/profile/default.png');
+}

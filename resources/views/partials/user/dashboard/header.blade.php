@@ -78,13 +78,13 @@
 
                                 <div class="profile_log dropdown ml-2">
                                     <div class="user" data-toggle="dropdown">
-                                        <span class="thumb"><img src="images/profile/2.png" alt=""></span>
+                                        <span class="thumb"><img class="rounded-circle" src="{{profile_picture()}}" alt=""></span>
                                         <span class="arrow"><i class="icofont-angle-down"></i></span>
                                     </div>
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <div class="user-email">
                                             <div class="user">
-                                                <span class="thumb"><img src="images/profile/2.png" alt=""></span>
+                                                <span class="thumb"><img class="rounded-circle" src="{{profile_picture()}}" alt=""></span>
                                                 <div class="user-info">
                                                     <h5>{{auth('web')->user()->name}}</h5>
                                                     <span>{{auth('web')->user()->email}}</span>

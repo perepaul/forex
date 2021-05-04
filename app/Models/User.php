@@ -96,4 +96,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsTo(Plan::class);
     }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 }
