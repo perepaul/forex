@@ -13,6 +13,7 @@
         <form action="/email/verification-notification" method="POST">
             @csrf
             <button type="submit" class="btn btn-primary btn-block">Resend <i class="fa fa-envelope"></i></button>
+            <a class="d-block mt-3" href="{{url()->current()}}">I have verified</a>
         </form>
     </div>
 @endsection
