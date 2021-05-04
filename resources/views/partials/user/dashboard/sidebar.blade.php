@@ -34,7 +34,6 @@
         </ul>
 
         <p class="copyright">
-            &#169; <a href="#">Qkit</a>
         </p>
     </div>
     <form id="logout-form" action="{{ route('logout') }}" method="post">
