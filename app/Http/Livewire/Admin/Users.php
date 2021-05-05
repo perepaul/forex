@@ -73,7 +73,13 @@ class Users extends Component
     public function delete($id)
     {
         try {
-            $this->user->delete($id);
+            $user = $this->user->find($id);
+            $user->withdrawals()->delete();
+            $user->deposits()->delete();
+            $user->trades()->delete();
+            if($user->avatar) @unlink(public_path('images/profile/'.$user->avatar));
+            if($user->id_file) @unlink(public_path('images/profile/'.$user->id_file));
+            $user->delete();
             $this->emit('success', ['message' => 'User Deleted successfully']);
         } catch (Throwable $e) {
             Log::error($e);

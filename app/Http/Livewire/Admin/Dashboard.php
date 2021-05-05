@@ -40,12 +40,12 @@ class Dashboard extends Component
 
     public function getWithdrawalsProperty()
     {
-        return $this->withdrawalRepo->getModel()->where('status',1)->get();
+        return $this->withdrawalRepo->all();
     }
 
     public function getDepositsProperty()
     {
-        return $this->depositRepo->getModel()->where('status',1)->get();
+        return $this->depositRepo->all();
     }
     public function render()
     {

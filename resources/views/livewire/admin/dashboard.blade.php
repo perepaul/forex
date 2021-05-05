@@ -161,15 +161,15 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @forelse ($this->deposits as $d)
+                                                    @forelse ($this->deposits as $k => $d)
                                                         @if ($loop->index > 4)
                                                         @break;
                                                     @endif
                                                     <tr>
-                                                        <td>{{ $this->d->user->name }}</td>
+                                                        <td>{{ $d->user->name }}</td>
                                                         <td>{{ format_money($d->amount, $d->user->currency->symbol) }}
                                                         </td>
-                                                        <td>{{ $this->d->created_at->format('d M, Y') }}}/td>
+                                                        <td>{{ $d->created_at->format('d M, Y') }}}/td>
                                                     </tr>
                                                     @empty
                                                         <tr>

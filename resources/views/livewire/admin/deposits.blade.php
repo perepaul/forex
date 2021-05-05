@@ -57,7 +57,7 @@
                                             <th>Date</th>
                                             <th>Amount</th>
                                             <th>Status</th>
-                                            <th>Country</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -78,15 +78,15 @@
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#" wire:click='approve({{$deposit->id}})'><i class="fa fa-check"></i> Approve</a>
                                                         <a class="dropdown-item" href="#" wire:click='decline({{$deposit->id}})'><i class="fa fa-times"></i> Decline</a>
-                                                        {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+                                                        <a class="dropdown-item" target="_blank" rel="noopener" href="{{asset('assets/deposits/'.$deposit->image)}}"><i class="fa fa-eye"></i> View</a>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         @empty
                                         <tr>
-                                            <td>
-                                                here to render
+                                            <td colspan="6" class="text-center">
+                                                No data found!
                                             </td>
                                         </tr>
                                         @endforelse
