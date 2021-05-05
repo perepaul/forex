@@ -9,8 +9,7 @@
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-                                <li class="breadcrumb-item" aria-current="page">Tables</li>
-                                <li class="breadcrumb-item active" aria-current="page">Basic Tables</li>
+                                <li class="breadcrumb-item active" aria-current="page">users</li>
                             </ol>
                         </nav>
                     </div>
@@ -28,7 +27,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Responsive Hover Table</h4>
+                            <h4 class="box-title">Users</h4>
                             <div class="box-controls pull-right">
                                 <div class="lookup lookup-circle lookup-right">
                                     <input type="text" wire:model="search" class="border">
@@ -90,7 +89,7 @@
                                             </tr>
                                         @empty
                                             <tr>
-                                                <td>Lolz</td>
+                                                <td>No data found!</td>
                                             </tr>
                                         @endforelse
 
