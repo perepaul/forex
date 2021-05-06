@@ -28,6 +28,9 @@
     @livewireScripts
     @include('partials.alerts')
     <script src="{{ mix('js/user/app.js') }}"></script>
+    <!--Start of Tawk.to Script-->
+    <x-live-chat/>
+    <!--End of Tawk.to Script-->
     @stack('js')
 </body>
 
