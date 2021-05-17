@@ -96,9 +96,9 @@
 
                                                 <tr>
                                                     <td>{{ $trade->user->name }}</td>
-                                                    <td>{{ format_money($trade->amount, $trade->user->currency->symbol) }}
+                                                    <td>{{ format_money($trade->amount, optional($trade->user->currency)->symbol) }}
                                                     </td>
-                                                    <td>{{ format_money($trade->profit, $trade->user->currency->symbol) }}
+                                                    <td>{{ format_money($trade->profit, optional($trade->user->currency)->symbol) }}
                                                     </td>
                                                     <td>{{ $trade->created_at->format('d M, Y') }}</td>
                                                 </tr>
@@ -167,7 +167,7 @@
                                                     @endif
                                                     <tr>
                                                         <td>{{ $d->user->name }}</td>
-                                                        <td>{{ format_money($d->amount, $d->user->currency->symbol) }}
+                                                        <td>{{ format_money($d->amount, optional($d->user->currency)->symbol) }}
                                                         </td>
                                                         <td>{{ $d->created_at->format('d M, Y') }}}/td>
                                                     </tr>
@@ -208,7 +208,7 @@
                                                         @endif
                                                     <tr>
                                                         <td>{{ $withdrawal->user->name }}</td>
-                                                        <td>{{ format_money($withdrawal->amount, $withdrawal->user->currency->symbol) }}
+                                                        <td>{{ format_money($withdrawal->amount, optional($withdrawal->user->currency)->symbol) }}
                                                         </td>
                                                         <td>{{ $withdrawal->created_at->format('d M, Y') }}</td>
                                                     </tr>
