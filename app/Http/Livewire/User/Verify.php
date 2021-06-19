@@ -33,7 +33,7 @@ class Verify extends Component
         return [
             'data.country'=>'required',
             'data.state' => 'required',
-            'data.city' =>'required',
+            'data.city' =>'sometimes|required',
             'data.currency_id'=>'required|numeric|integer',
             'data.address' => 'required',
             'data.zip_code' => 'bail|required|string|min:5',
