@@ -1,5 +1,5 @@
 <div>
-    <x-loader :targets="'data.country,data.state,data.city,submit'"/>
+    <x-loader :targets="'data.country,data.state,data.city,submit,data.id_file'"/>
     <div class="content-body">
         <div class="container">
             <div class="col-md-6 col-sm-12 m-auto">
