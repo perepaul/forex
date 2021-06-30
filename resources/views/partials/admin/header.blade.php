@@ -7,8 +7,8 @@
 		<a href="{{route('admin.index')}}" class="logo">
 		  <!-- logo-->
 		  <div class="logo-lg">
-			  <span class="light-logo"><img src="{{logo()}}" alt="logo" width="80"></span>
-			  <span class="dark-logo"><img src="{{logo()}}" alt="logo" width="80"></span>
+			  <span class="light-logo"><img src="{{logo()}}" alt="logo" ></span>
+			  <span class="dark-logo"><img src="{{logo()}}" alt="logo" ></span>
 		  </div>
 		</a>
 	</div>

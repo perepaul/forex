@@ -6,8 +6,8 @@
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="brand-logo">
                             <a href="{{route('index')}}">
-                                <img src="{{logo()}}" alt="" class="logo-primary" width="80">
-                                <img src="{{logo()}}" alt="" class="logo-white" width="80">
+                                <img src="{{logo()}}" alt="" width="80" class="logo-primary">
+                                <img src="{{logo()}}" alt="" width="80" class="logo-white" >
                             </a>
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
