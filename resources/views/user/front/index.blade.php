@@ -59,7 +59,7 @@
                 </div> --}}
             </div>
         </div>
-        <div class="shape"></div>
+        {{-- <div class="shape"></div> --}}
     </div>
 
     <x-user.signal-marquee> </x-user.signal-marquee>
