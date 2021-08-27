@@ -22,7 +22,7 @@ class Deposit extends Component
     {
         return [
             'method' => 'required',
-            'image' => 'required|mimes:jpeg,jpg,png,pdf|max:1024',
+            'image' => 'required|mimes:jpeg,jpg,png,pdf|max:10024',
             'amount'=> 'required|numeric|integer|min:20'
         ];
     }

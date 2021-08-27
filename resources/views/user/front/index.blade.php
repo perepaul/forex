@@ -19,9 +19,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-12 d-none d-lg-block">
+                <div class="col-xl-6 col-lg-6 col-12 p-5">
+                <img src="{{asset('images/header-image-blue.png')}}" alt="" class="img-responsive">
+                </div>
+
+                {{--<div class="col-xl-4 col-lg-6 col-12 d-none d-lg-block">
                     <div class="intro-form-exchange">
-                        {{-- <form method="post" name="myform" class="currency_validate trade-form row g-3">
+                         <form method="post" name="myform" class="currency_validate trade-form row g-3">
                             <div class="col-12">
                                 <label class="form-label">Send</label>
                                 <div class="input-group">
@@ -50,14 +54,14 @@
                                 Buy Now
                             </button>
 
-                        </form> --}}
-                        <x-user.signal-marquee></x-user.signal-marquee>
+                        </form>
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
         <div class="shape"></div>
     </div>
+    <x-user.signal-marquee></x-user.signal-marquee>
 
     <div class="getstart section-padding">
         <div class="container">
@@ -125,7 +129,7 @@
                     <h4 class="mb-1">Support 24/7</h4>
                     <p>A team of professionals speaking your mother tongue are always here to support you.</p>
                 </div>
-                
+
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@ class SmsHelper
     {
         $MessageBird = new Client(config('messagebird.key'));
         $Message = new Message();
-        $Message->originator = 'PIPLOTS';
+        $Message->originator = 'QUALITYPIPS';
         $Message->recipients = $to;
         $Message->body = $body;
 

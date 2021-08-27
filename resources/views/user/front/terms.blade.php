@@ -37,11 +37,11 @@
                             <h1>Terms & Conditions</h1>
                             <p>
                                 This Agreement is entered into by and these Terms & Conditions (hereinafter referred to as
-                                the “Agreement”) shall regulate the relationship between Piplots LLC, with company No.
+                                the “Agreement”) shall regulate the relationship between Derivtrading.live LLC, with company No.
                                 14870 IBC 2016, and registered at: {{ config('constants.address') }}
                                 (hereinafter referred to as the “Company”), and the user (a natural or legal entity)
                                 (hereinafter referred to as the “Client”) of <a
-                                    href="https:://piplosts.com">https:://piplosts.com</a> (hereinafter referred as the
+                                    href="https:://derivtrading.live">https:://derivtrading.live</a> (hereinafter referred as the
                                 “Website”).
                             </p>
                             <ul id="terms">
