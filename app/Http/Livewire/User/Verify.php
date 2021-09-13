@@ -95,11 +95,13 @@ class Verify extends Component
     public function submit()
     {
         $data = $this->validate();
+        $filename  = str_replace(' ','-',now()->toDateTimeString().rand().'.'.$this->data['id_file']->extension());
+        file_put_contents(public_path("assets/identification/{$filename}"),$this->data['id_file']->get());
         $userData = $data['data'];
         $userData['state'] = $this->getStateName();
         $userData['country'] = $this->getCountryName();
         $userData['status'] = 2;
-        $userData['id_file'] = basename($this->data['id_file']->storePublicly('assets/identification','custom_public'));
+        $userData['id_file'] = $filename;
         $this->userRepo->update($userData,auth('web')->user()->id);
         $this->emit('success',['message'=>'We have received your details, our agents will verify the data you submitted.']);
         Mail::to(auth('web')->user())->send(new DetailsSubmittedMailable);
