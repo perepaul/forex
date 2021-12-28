@@ -3,8 +3,8 @@
 return [
     'name' => 'Piplots',
     'manifest' => [
-        'name' => env('APP_NAME', 'Piplots'),
-        'short_name' => 'Piplots',
+        'name' => env('APP_NAME', 'qualitypips'),
+        'short_name' => 'qualitypips',
         'start_url' => '/login',
         'background_color' => '#ffffff',
         'theme_color' => '#FFD700',

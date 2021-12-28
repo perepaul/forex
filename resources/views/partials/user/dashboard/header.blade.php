@@ -6,7 +6,7 @@
                             <div class="header-left">
                                 <div class="brand-logo">
                                     <a href="{{route('dashboard')}}">
-                                        <img src="{{logo()}}" alt="" width="80">
+                                        <img src="{{logo()}}" alt="" width="90">
                                     </a>
                                 </div>
                                 {{-- <div class="search">

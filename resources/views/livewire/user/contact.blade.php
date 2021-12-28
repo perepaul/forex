@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-md-4 col-sm-12">
+            {{-- <div class="col-xl-4 col-md-4 col-sm-12">
                 <div class="info-list">
                     <h4 class="mb-3">Address</h4>
                     <ul>
@@ -19,7 +19,7 @@
                         <li><i class="fa fa-envelope"></i> {{config('constants.contact_email')}}</li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-xl-8 col-md-8 col-sm-12">
                 <form method="post" name="myform" class="contact_validate" wire:submit.prevent='send'>
                     <div class="row">

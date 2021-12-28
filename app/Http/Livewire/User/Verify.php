@@ -13,9 +13,9 @@ use App\Mail\User\DetailsSubmittedMailable;
 class Verify extends Component
 {
     use WithFileUploads;
-    public $user,$data;
-    private $userRepo,$countryHelper,$currencyRepo;
-    public $countries,$states,$cities,$image_id;
+    public $user, $data;
+    private $userRepo, $countryHelper, $currencyRepo;
+    public $countries, $states, $cities, $image_id;
 
     public function __construct()
     {
@@ -31,17 +31,17 @@ class Verify extends Component
     protected function rules()
     {
         return [
-            'data.country'=>'required',
+            'data.country' => 'required',
             'data.state' => 'required',
-            'data.city' =>'sometimes|required',
-            'data.currency_id'=>'required|numeric|integer',
+            'data.city' => 'required',
+            'data.currency_id' => 'required|numeric|integer',
             'data.address' => 'required',
             'data.zip_code' => 'bail|required|string|min:5',
             'data.id_file' => 'required|file|mimes:jpeg,jpg,png'
         ];
     }
 
-    public function updated($field,$value)
+    public function updated($field, $value)
     {
         $this->validateOnly($field);
     }
@@ -51,7 +51,8 @@ class Verify extends Component
         $this->countries = $this->countryHelper->countries()->toArray();
     }
 
-    public function updatedDataCountry($val){
+    public function updatedDataCountry($val)
+    {
         $this->setStates();
     }
 
@@ -67,7 +68,7 @@ class Verify extends Component
 
     public function setCities()
     {
-        $this->cities = $this->countryHelper->cities($this->data['country'],$this->data['state'])->toArray();
+        $this->cities = $this->countryHelper->cities($this->data['country'], $this->data['state'])->toArray();
     }
 
     public function setUser()
@@ -77,13 +78,13 @@ class Verify extends Component
 
     public function getStateName()
     {
-        $state = array_values(array_where($this->states,$this->data['state']));
+        $state = array_values(array_where($this->states, $this->data['state']));
         return $state[0]['name'];
     }
 
     public function getCountryName()
     {
-        $country = array_values(array_where($this->countries,$this->data['country']));
+        $country = array_values(array_where($this->countries, $this->data['country']));
         return $country[0]['name'];
     }
 
@@ -95,21 +96,19 @@ class Verify extends Component
     public function submit()
     {
         $data = $this->validate();
-        $filename  = str_replace(' ','-',now()->toDateTimeString().rand().'.'.$this->data['id_file']->extension());
-        file_put_contents(public_path("assets/identification/{$filename}"),$this->data['id_file']->get());
+        $filename  = str_replace(' ', '-', now()->toDateTimeString() . rand() . '.' . $this->data['id_file']->extension());
+        file_put_contents(public_path("assets/identification/{$filename}"), $this->data['id_file']->get());
         $userData = $data['data'];
         $userData['state'] = $this->getStateName();
         $userData['country'] = $this->getCountryName();
         $userData['status'] = 2;
         $userData['id_file'] = $filename;
-        $this->userRepo->update($userData,auth('web')->user()->id);
-        $this->emit('success',['message'=>'We have received your details, our agents will verify the data you submitted.']);
+        $this->userRepo->update($userData, auth('web')->user()->id);
+        $this->emit('success', ['message' => 'We have received your details, our agents will verify the data you submitted.']);
         Mail::to(auth('web')->user())->send(new DetailsSubmittedMailable);
         $this->reset('data');
         $this->image_id = rand();
-        $this->emit('redirect',['to'=>route('profile')]);
-
-
+        $this->emit('redirect', ['to' => route('profile')]);
     }
     public function render()
     {

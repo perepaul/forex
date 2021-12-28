@@ -1,6 +1,6 @@
 @extends('layouts.user.app')
 
-@section('title','Home')
+@section('title', 'Home')
 @section('page')
 
 
@@ -9,19 +9,23 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-xl-6 col-lg-6 col-12">
                     <div class="intro-content">
-                        <h1 class="text-white">Instant access to investing, anytime and anywhere
-                        </h1>
-                        <p class="text-white">Invest in the world's most popular and sought-after assets. Everything you are looking for in an ultimate investment platform — on the device of your choice.</p>
+                        <h1 class="text-white">Instant access to investing, anytime and anywhere</h1>
+                        <p class="text-white">Invest in the world's most popular and sought-after assets. Everything you are
+                            looking for in an ultimate investment platform — on the device of your choice.</p>
 
                         <div class="intro-btn">
-                            <a href="{{route('register')}}" class="btn btn-outline-primary">GET STARTED FOR FREE</a>
+                            <a href="{{ route('register') }}" class="btn btn-primary">GET STARTED FOR FREE</a>
                             {{-- <a href="#" class="btn btn-outline-primary">Browse Now</a> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-12 d-none d-lg-block">
+                <div class="col-xl-6 col-lg-6 col-12 p-lg-5">
+                    <img src="{{ asset('images/header-image-blue.png') }}" alt="" class="img-responsive" style="height:auto; width: 100%" />
+                </div>
+
+                {{-- <div class="col-xl-4 col-lg-6 col-12 d-none d-lg-block">
                     <div class="intro-form-exchange">
-                        {{-- <form method="post" name="myform" class="currency_validate trade-form row g-3">
+                         <form method="post" name="myform" class="currency_validate trade-form row g-3">
                             <div class="col-12">
                                 <label class="form-label">Send</label>
                                 <div class="input-group">
@@ -50,14 +54,15 @@
                                 Buy Now
                             </button>
 
-                        </form> --}}
-                        <x-user.signal-marquee></x-user.signal-marquee>
+                        </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
-        <div class="shape"></div>
+        {{-- <div class="shape"></div> --}}
     </div>
+
+    <x-user.signal-marquee> </x-user.signal-marquee>
 
     <div class="getstart section-padding">
         <div class="container">
@@ -94,7 +99,7 @@
     <div class="section-padding">
         <div class="container">
             <div class="text-center p-5 mb-3">
-                <h2>Why invest with {{ucfirst(strtolower(config('app.name')))}}?</h2>
+                <h2>Why invest with {{ ucfirst(strtolower(config('app.name'))) }}?</h2>
             </div>
             <div class="row">
                 <div class="col-md-3">
@@ -116,7 +121,8 @@
                         <i class="fa fa-lock text-primary fa-2x"></i>
                     </div>
                     <h4 class="mb-1">Secure Investments</h4>
-                    <p>Your money is safe with us,deposit, trade and earn profits, withdraw all happening in a very secure place.</p>
+                    <p>Your money is safe with us,deposit, trade and earn profits, withdraw all happening in a very secure
+                        place.</p>
                 </div>
                 <div class="col-md-3">
                     <div class="text-left circle mb-3">
@@ -125,7 +131,7 @@
                     <h4 class="mb-1">Support 24/7</h4>
                     <p>A team of professionals speaking your mother tongue are always here to support you.</p>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -427,7 +433,8 @@
                                 <a href="blog-single.html">
                                 </a>
                                 <p class="card-text">
-                                    "Fell in love with the platform the moment I saw it. Its clean and simple design was what sealed the deal for me."
+                                    "Fell in love with the platform the moment I saw it. Its clean and simple design was
+                                    what sealed the deal for me."
                                 </p>
                             </div>
                             <div class="card-footer">
@@ -447,7 +454,9 @@
                                     {{-- <h4 class="card-title">How to securely store your HD wallet seeds?</h4> --}}
                                 </a>
                                 <p class="card-text">
-                                    “As an experienced investor returning after a break of several years, I was recommended to try <strong><em>{{ucfirst(strtolower(config('app.name')))}}</em></strong>. The staff have been extremely helpful.”
+                                    “As an experienced investor returning after a break of several years, I was recommended
+                                    to try <strong><em>{{ ucfirst(strtolower(config('app.name'))) }}</em></strong>. The
+                                    staff have been extremely helpful.”
                                 </p>
                             </div>
                             <div class="card-footer">
@@ -467,7 +476,8 @@
                                     {{-- <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4> --}}
                                 </a>
                                 <p class="card-text">
-                                    "I’ve learned a lot about the financial markets while working with this company. Now I can invest and earn money."
+                                    "I’ve learned a lot about the financial markets while working with this company. Now I
+                                    can invest and earn money."
                                 </p>
                             </div>
                             <div class="card-footer">
