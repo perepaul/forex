@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'bitcoin_qr' => 'images/btc.jpeg',
+    'bitcoin_qr' => env('BTC_QR', '/btc_qr.png'),
     'bitcoin_wallet_address' => env('BTC_ADDRESS', '32LHqKThS4Jw2eSH5kBBeYw5ihuh88trUZ'),
-    'ethereum_qr' => 'images/eth.png',
+    'ethereum_qr' => env('ETHEREUM_QR', '/ethereum_qr.png'),
     'ethereum_wallet_address' => env('ETH_ADDRESS', '0xE1Fd78a627DFD6b49A7e92a596FEa80c7Ca21dE1'),
     'deposit_image' => 'assets/deposits',
     'address' => env('ADDRESS', 'some random address'),

@@ -4,542 +4,420 @@
 @section('page')
 
 
-    <div class="intro">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-xl-6 col-lg-6 col-12">
-                    <div class="intro-content">
-                        <h1 class="text-white">Instant access to investing, anytime and anywhere</h1>
-                        <p class="text-white">Invest in the world's most popular and sought-after assets. Everything you are
-                            looking for in an ultimate investment platform — on the device of your choice.</p>
+<div class="intro">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-xl-6 col-lg-6 col-12">
+                <div class="intro-content">
+                    <h1 class="text-white">Instant access to investing, anytime and anywhere</h1>
+                    <p class="text-white">Invest in the world's most popular and sought-after assets. Everything you are
+                        looking for in an ultimate investment platform — on the device of your choice.</p>
 
-                        <div class="intro-btn">
-                            <a href="{{ route('register') }}" class="btn btn-primary">GET STARTED FOR FREE</a>
-                            {{-- <a href="#" class="btn btn-outline-primary">Browse Now</a> --}}
-                        </div>
+                    <div class="intro-btn">
+                        <a href="{{ route('register') }}" class="btn btn-primary">GET STARTED FOR FREE</a>
+                        {{-- <a href="#" class="btn btn-outline-primary">Browse Now</a> --}}
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-12 p-lg-5">
-                    <img src="{{ asset('images/header-image-blue.png') }}" alt="" class="img-responsive" style="height:auto; width: 100%" />
-                </div>
-
-                {{-- <div class="col-xl-4 col-lg-6 col-12 d-none d-lg-block">
-                    <div class="intro-form-exchange">
-                         <form method="post" name="myform" class="currency_validate trade-form row g-3">
-                            <div class="col-12">
-                                <label class="form-label">Send</label>
-                                <div class="input-group">
-                                    <select class="form-control" name="method">
-                                        <option value="bank">USD</option>
-                                        <option value="master">Euro</option>
-                                    </select>
-                                    <input type="text" name="currency_amount" class="form-control" placeholder="0.0214 BTC">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label class="form-label">Receive</label>
-                                <div class="input-group">
-                                    <select class="form-control" name="method">
-                                        <option value="bank">BTC</option>
-                                        <option value="master">ETH</option>
-                                    </select>
-                                    <input type="text" name="currency_amount" class="form-control" placeholder="0.0214 BTC">
-                                </div>
-                            </div>
-
-                            <p class="mb-0">1 USD ~ 0.000088 BTC <a href="#">Expected rate <br>No extra
-                                    fees</a></p>
-                            <button type="button" class="btn btn-primary ">
-                                Buy Now
-                            </button>
-
-                        </form>
-                    </div>
-                </div> --}}
+            </div>
+            <div class="col-xl-6 col-lg-6 col-12 p-lg-5">
+                <img src="{{ asset('images/header-image-blue.png') }}" alt="" class="img-responsive" style="height:auto; width: 100%" />
             </div>
         </div>
-        {{-- <div class="shape"></div> --}}
     </div>
+    {{-- <div class="shape"></div> --}}
+</div>
 
-    <x-user.signal-marquee> </x-user.signal-marquee>
+<x-user.signal-marquee> </x-user.signal-marquee>
 
-    <div class="getstart section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <div class="section-title">
-                        <h2>Get started in a few minutes</h2>
-                    </div>
+<div class="getstart section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section-title">
+                    <h2>Get started in a few minutes</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                    <div class="getstart-content">
-                        <span><i class="fas fa-user-circle"></i></span>
-                        <h3>Create an account</h3>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="getstart-content">
+                    <span><i class="fas fa-user-circle"></i></span>
+                    <h3>Create an account</h3>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                    <div class="getstart-content">
-                        <span><i class="fas fa-check"></i></span>
-                        <h3>Get Verified</h3>
-                    </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="getstart-content">
+                    <span><i class="fas fa-check"></i></span>
+                    <h3>Get Verified</h3>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                    <div class="getstart-content">
-                        <span><i class="fas fa-exchange-alt"></i></span>
-                        <h3>Start Trading & Earning</h3>
-                    </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="getstart-content">
+                    <span><i class="fas fa-exchange-alt"></i></span>
+                    <h3>Start Trading & Earning</h3>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="section-padding">
-        <div class="container">
-            <div class="text-center p-5 mb-3">
-                <h2>Why invest with {{ ucfirst(strtolower(config('app.name'))) }}?</h2>
+<div class="section-padding">
+    <div class="container">
+        <div class="text-center p-5 mb-3">
+            <h2>Why invest with {{ ucfirst(strtolower(config('app.name'))) }}?</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-left mb-3">
+                    <i class="fa fa-trophy text-primary fa-2x"></i>
+                </div>
+                <h4 class="mb-1">Award-winning platform</h4>
+                <p>Award-winning software recognized by the industry's most respected experts.</p>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="text-left mb-3">
-                        <i class="fa fa-trophy text-primary fa-2x"></i>
-                    </div>
-                    <h4 class="mb-1">Award-winning platform</h4>
-                    <p>Award-winning software recognized by the industry's most respected experts.</p>
+            <div class="col-md-3">
+                <div class="text-left mb-3">
+                    <i class="fa fa-cog text-primary fa-2x"></i>
                 </div>
-                <div class="col-md-3">
-                    <div class="text-left mb-3">
-                        <i class="fa fa-cog text-primary fa-2x"></i>
-                    </div>
-                    <h4 class="mb-1">Affordable plans</h4>
-                    <p>Our plans are designed and structured so that everyone can invest and earn with us.</p>
+                <h4 class="mb-1">Affordable plans</h4>
+                <p>Our plans are designed and structured so that everyone can invest and earn with us.</p>
+            </div>
+            <div class="col-md-3">
+                <div class="text-left mb-3">
+                    <i class="fa fa-lock text-primary fa-2x"></i>
                 </div>
-                <div class="col-md-3">
-                    <div class="text-left mb-3">
-                        <i class="fa fa-lock text-primary fa-2x"></i>
-                    </div>
-                    <h4 class="mb-1">Secure Investments</h4>
-                    <p>Your money is safe with us,deposit, trade and earn profits, withdraw all happening in a very secure
-                        place.</p>
+                <h4 class="mb-1">Secure Investments</h4>
+                <p>Your money is safe with us,deposit, trade and earn profits, withdraw all happening in a very secure
+                    place.</p>
+            </div>
+            <div class="col-md-3">
+                <div class="text-left circle mb-3">
+                    <i class="fa fa-comment-dots text-primary fa-2x"></i>
                 </div>
-                <div class="col-md-3">
-                    <div class="text-left circle mb-3">
-                        <i class="fa fa-comment-dots text-primary fa-2x"></i>
-                    </div>
-                    <h4 class="mb-1">Support 24/7</h4>
-                    <p>A team of professionals speaking your mother tongue are always here to support you.</p>
-                </div>
+                <h4 class="mb-1">Support 24/7</h4>
+                <p>A team of professionals speaking your mother tongue are always here to support you.</p>
+            </div>
 
-            </div>
         </div>
     </div>
-
-    {{-- <div class="price-grid section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                    <div class="price-widget bg-btc">
-                        <a href="price-details.html">
-                            <div class="price-content">
-                                <div class="icon-title">
-                                    <i class="cc BTC"></i>
-                                    <span>Bitcoin</span>
-                                </div>
-                                <h5>$ 11,785.10</h5>
-                            </div>
-                            <div id="chart"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                    <div class="price-widget bg-eth">
-                        <a href="price-details.html">
-                            <div class="price-content">
-                                <div class="icon-title">
-                                    <i class="cc ETH"></i>
-                                    <span>Ethereum</span>
-                                </div>
-                                <h5>$ 11,785.10</h5>
-                            </div>
-                            <div id="chart2"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                    <div class="price-widget bg-usdt">
-                        <a href="price-details.html">
-                            <div class="price-content">
-                                <div class="icon-title">
-                                    <i class="cc USDT"></i>
-                                    <span>Tether</span>
-                                </div>
-                                <h5>$ 11,785.10</h5>
-                            </div>
-                            <div id="chart3"></div>
-                        </a>
-                    </div>
-                </div>
-                <!-- <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                    <div class="price-widget bg-dark">
-                        <a href="price-details.html">
-                            <div class="price-content">
-                                <div class="icon-title">
-                                    <i class="cc XRP"></i>
-                                    <span>Ripple</span>
-                                </div>
-                                <h5>$ 11,785.10</h5>
-                            </div>
-                            <div id="chart4"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                    <div class="price-widget bg-dark">
-                        <a href="price-details.html">
-                            <div class="price-content">
-                                <div class="icon-title">
-                                    <i class="cc LTC"></i>
-                                    <span>Litecoin</span>
-                                </div>
-                                <h5>$ 11,785.10</h5>
-                            </div>
-                            <div id="chart5"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                    <div class="price-widget bg-dark">
-                        <a href="price-details.html">
-                            <div class="price-content">
-                                <div class="icon-title">
-                                    <i class="cc ADA"></i>
-                                    <span>Cardano</span>
-                                </div>
-                                <h5>$ 11,785.10</h5>
-                            </div>
-                            <div id="chart6"></div>
-                        </a>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- <div class="portfolio section-padding bg-gradient-primary">
-        <div class="container">
-            <div class="row py-lg-5 justify-content-center">
-                <div class="col-xl-7">
-                    <div class="section-title text-center">
-                        <h2 class="text-white">Create your cryptocurrency portfolio today</h2>
-                        <p class="text-white">Tradee has a variety of features that make it the best place to start trading
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-between">
-                <div class="col-xl-4 col-lg-6">
-                    <div class="portfolio_list">
-                        <div class="media">
-                            <span class="port-icon"> <i class="fas fa-user-circle"></i></span>
-                            <div class="media-body">
-                                <h4>Manage your portfolio</h4>
-                                <p>Buy and sell popular digital currencies, keep track of them in the one place.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <span class="port-icon"> <i class="fas fa-shopping-bag"></i></span>
-                            <div class="media-body">
-                                <h4>Recurring buys</h4>
-                                <p>Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="portfolio_img">
-                        <img src="images/portfolio.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="portfolio_list">
-                        <div class="media">
-                            <span class="port-icon"> <i class="fas fa-shield-virus"></i></span>
-                            <div class="media-body">
-                                <h4>Vault protection</h4>
-                                <p>For added security, store your funds in a vault with time delayed withdrawals.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <span class="port-icon"> <i class="fas fa-mobile"></i></span>
-                            <div class="media-body">
-                                <h4>Mobile apps</h4>
-                                <p>Stay on top of the markets with the Tradee app for <a href="#">Android</a> or
-                                    <a href="#">iOS</a>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="trade-app section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="section-title text-center">
-                        <h2>Trade. Anywhere</h2>
-                        <p> All of our products are ready to go, easy to use and offer great value to any kind of business
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="card trade-app-content">
-                        <div class="card-body">
-                            <span><i class="fas fa-mobile"></i></span>
-                            <h4 class="card-title">Mobile</h4>
-                            <p>All the power of Tradee's cryptocurrency exchange, in the palm of your hand. Download the
-                                Tradee mobile crypto trading app today</p>
-
-                            <a href="#"> Know More </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="card trade-app-content">
-                        <div class="card-body">
-                            <span><i class="fas fa-desktop"></i></span>
-                            <h4 class="card-title">Desktop</h4>
-                            <p>Powerful crypto trading platform for those who mean business. The Tradee crypto trading
-                                experience, tailor-made for your Windows or MacOS device.</p>
-
-                            <a href="#"> Know More </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="card trade-app-content">
-                        <div class="card-body">
-                            <span><i class="fas fa-database"></i></span>
-                            <h4 class="card-title">API</h4>
-                            <p>The Tradee API is designed to provide an easy and efficient way to integrate your trading
-                                application into our platform.</p>
-
-                            <a href="#"> Know More </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-    <div class="brand section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="pb-5 text-center">
-                        <h3>Trusted by over <strong>10,000 users</strong></h3>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-auto">
-                            <div class="trusted-logo">
-                                <a href="#"><img class="img-fluid" src="images/brand/1.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="trusted-logo">
-                                <a href="#"><img class="img-fluid" src="images/brand/2.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="trusted-logo">
-                                <a href="#"><img class="img-fluid" src="images/brand/3.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="trusted-logo">
-                                <a href="#"><img class="img-fluid" src="images/brand/4.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="trusted-logo">
-                                <a href="#"><img class="img-fluid" src="images/brand/5.svg" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
 
-
-
-
-    <div class="appss section-padding">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-xl-7 col-lg-6 col-md-6">
-                    <div class="appss-content">
-                        <h2>Trade anytime, anywhere, with any device</h2>
-                        <ul>
-                            <li><i class="la la-check"></i> Your information is synchronized to all your devices</li>
-                            <li><i class="la la-check"></i> Night Trader? we've got you covered with night mode 😄</li>
-                            <li><i class="la la-check"></i> Available on all devices</li>
-                            <li><i class="la la-check"></i> Deposit and enjoy bonuses</li>
-                            <li><i class="la la-check"></i> Trade and earn profits with relative ease 👍</li>
-                        </ul>
-                        {{-- <div class="mt-4">
-                            <a href="#" class="btn btn-primary my-1 waves-effect">
-                                <img src="images/android.svg" alt="">
-                            </a>
-                            <a href="#" class="btn btn-primary my-1 waves-effect">
-                                <img src="images/apple.svg" alt="">
-                            </a>
+<div class="demo">
+    <div class="container">
+        <div class="row">
+            @foreach ($plans as $plan)
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable {{$loop->even ? 'green':''}}">
+                    <div class="pricingTable-header">
+                        <h3 class="title">{{$plan->name}}</h3>
+                        {{-- <div class="price-value">
+                            <span class="amount">$10.00</span>
+                            <span class="duration">Per Month</span>
                         </div> --}}
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="appss-img">
-                        <img class="img-fluid" src="images/app.png" alt="">
-                    </div>
+                    <ul class="pricing-content">
+                        @foreach ($plan->features as $feature)
+                        <li>{{ $feature->value }}</li>
+                        {{-- <li class="disable">15 Subdomains</li> --}}
+                        @endforeach
+                    </ul>
                 </div>
             </div>
+            @endforeach
+
         </div>
     </div>
+</div>
 
-    <div class="blog bg-light section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="section-title text-center">
-                        <h2>Our Clients Says</h2>
-                    </div>
+<div class="brand section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="pb-5 text-center">
+                    <h3>Trusted by over <strong>10,000 users</strong></h3>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="blog-grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <a href="blog-single.html">
-                                </a>
-                                <p class="card-text">
-                                    "Fell in love with the platform the moment I saw it. Its clean and simple design was
-                                    what sealed the deal for me."
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="meta-info">
-                                    <a href="#" class="author"><img src="images/avatar/5.jpg" alt=""> Admin</a>
-                                    <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
-                                </div>
-                            </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="images/brand/1.svg" alt=""></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="blog-grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <a href="blog-single.html">
-                                    {{-- <h4 class="card-title">How to securely store your HD wallet seeds?</h4> --}}
-                                </a>
-                                <p class="card-text">
-                                    “As an experienced investor returning after a break of several years, I was recommended
-                                    to try <strong><em>{{ ucfirst(strtolower(config('app.name'))) }}</em></strong>. The
-                                    staff have been extremely helpful.”
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="meta-info">
-                                    <a href="#" class="author"><img src="images/avatar/6.jpg" alt=""> Tim</a>
-                                    <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
-                                </div>
-                            </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="images/brand/2.svg" alt=""></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="blog-grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <a href="blog-single.html">
-                                    {{-- <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4> --}}
-                                </a>
-                                <p class="card-text">
-                                    "I’ve learned a lot about the financial markets while working with this company. Now I
-                                    can invest and earn money."
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="meta-info">
-                                    <a href="#" class="author"><img src="images/avatar/7.jpg" alt=""> Jessica</a>
-                                    <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
-                                </div>
-                            </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="images/brand/3.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="images/brand/4.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="images/brand/5.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    {{-- <div class="get-touch section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="section-title">
-                        <h2>Get in touch. Stay in touch.</h2>
+
+
+
+
+<div class="appss section-padding">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-7 col-lg-6 col-md-6">
+                <div class="appss-content">
+                    <h2>Trade anytime, anywhere, with any device</h2>
+                    <ul>
+                        <li><i class="la la-check"></i> Your information is synchronized to all your devices</li>
+                        <li><i class="la la-check"></i> Night Trader? we've got you covered with night mode 😄</li>
+                        <li><i class="la la-check"></i> Available on all devices</li>
+                        <li><i class="la la-check"></i> Deposit and enjoy bonuses</li>
+                        <li><i class="la la-check"></i> Trade and earn profits with relative ease 👍</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="appss-img">
+                    <img class="img-fluid" src="images/app.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog bg-light section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="section-title text-center">
+                    <h2>Our Clients Says</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="blog-grid">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="blog-single.html">
+                            </a>
+                            <p class="card-text">
+                                "Fell in love with the platform the moment I saw it. Its clean and simple design was
+                                what sealed the deal for me."
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <a href="#" class="author"><img src="images/avatar/5.jpg" alt=""> Admin</a>
+                                <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                    <div class="get-touch-content">
-                        <span><i class="fas fa-headset"></i></span>
-                        <h4>24 / 7 Support</h4>
-                        <p>Got a problem? Just get in touch. Our support team is available 24/7.
-                        </p>
-
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="blog-grid">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="blog-single.html">
+                                {{-- <h4 class="card-title">How to securely store your HD wallet seeds?</h4> --}}
+                            </a>
+                            <p class="card-text">
+                                “As an experienced investor returning after a break of several years, I was recommended
+                                to try <strong><em>{{ ucfirst(strtolower(config('app.name'))) }}</em></strong>. The
+                                staff have been extremely helpful.”
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <a href="#" class="author"><img src="images/avatar/6.jpg" alt=""> Tim</a>
+                                <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                    <div class="get-touch-content">
-                        <span><i class="fas fa-blog"></i></span>
-                        <h4>Tradee Blog</h4>
-                        <p>News and updates from the world’s leading cryptocurrency exchange.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                    <div class="get-touch-content">
-                        <span><i class="fas fa-briefcase"></i></span>
-                        <h4>Careers</h4>
-                        <p>Help build the future of technology. Start your new career at Tradee.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                    <div class="get-touch-content">
-                        <span><i class="fas fa-users"></i></span>
-                        <h4>Community</h4>
-                        <p>Tradee is global. Join the discussion in our worldwide communities.
-                        </p>
-
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="blog-grid">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="blog-single.html">
+                                {{-- <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4> --}}
+                            </a>
+                            <p class="card-text">
+                                "I’ve learned a lot about the financial markets while working with this company. Now I
+                                can invest and earn money."
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <a href="#" class="author"><img src="images/avatar/7.jpg" alt=""> Jessica</a>
+                                <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
+</div>
 @endsection
+
+@push('css')
+<style>
+    .pricingTable {
+        background: repeating-linear-gradient(#fff, #fff 25px, #f9f9f9 25px, #f9f9f9 50px);
+        font-family: 'Outfit', sans-serif;
+        text-align: center;
+        padding: 30px 0 20px;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .pricingTable:before {
+        content: '';
+        background-color: #222;
+        height: 74px;
+        width: 100%;
+        border-bottom: 5px solid #E8173B;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .pricingTable .pricingTable-header {
+        margin: 0 0 20px;
+    }
+
+    .pricingTable .title {
+        color: #fff;
+        background-color: #E8173B;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 25px 35px;
+        margin: 0 0 15px;
+        display: inline-block;
+        clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+    }
+
+    .pricingTable .price-value .amount {
+        color: #E8173B;
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 50px;
+        display: block;
+    }
+
+    .pricingTable .price-value .duration {
+        font-size: 20px;
+        display: block;
+    }
+
+    .pricingTable .pricing-content {
+        padding: 0;
+        margin: 0 0 20px;
+        list-style: none;
+        display: inline-block;
+    }
+
+    .pricingTable .pricing-content li {
+        color: #777;
+        font-size: 16px;
+        text-align: left;
+        line-height: 25px;
+        text-transform: capitalize;
+        padding: 0 0 0 25px;
+        margin: 0 0 15px;
+        position: relative;
+    }
+
+    .pricingTable .pricing-content li:last-child {
+        margin: 0;
+    }
+
+    .pricingTable .pricing-content li:before {
+        content: "\f00c";
+        color: #E8173B;
+        font-family: "Font Awesome 5 free";
+        font-size: 14px;
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .pricingTable .pricing-content li.disable:before {
+        content: "\f00d";
+        color: #777;
+    }
+
+    .pricingTable .pricingTable-signup a {
+        color: #fff;
+        background-color: #E8173B;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 45px;
+        text-transform: uppercase;
+        padding: 7px 20px;
+        border-radius: 30px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .pricingTable .pricingTable-signup a:hover {
+        text-shadow: -4px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: -5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .pricingTable.blue:before {
+        border-color: #2282FC;
+    }
+
+    .pricingTable.blue .title,
+    .pricingTable.blue .pricingTable-signup a {
+        background-color: #2282FC;
+    }
+
+    .pricingTable.blue .price-value .amount,
+    .pricingTable.blue .pricing-content li:before {
+        color: #2282FC;
+    }
+
+    .pricingTable.green:before {
+        border-color: #0CBB5B;
+    }
+
+    .pricingTable.green .title,
+    .pricingTable.green .pricingTable-signup a {
+        background-color: #0CBB5B;
+    }
+
+    .pricingTable.green .price-value .amount,
+    .pricingTable.green .pricing-content li:before {
+        color: #0CBB5B;
+    }
+
+    .pricingTable .pricing-content li.disable:before {
+        color: #777;
+    }
+
+    @media only screen and (max-width: 990px) {
+        .pricingTable {
+            margin: 0 0 40px;
+        }
+    }
+</style>
+@endpush

@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Plan;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('user.front.index');
+        $plans = Plan::with('features')->get();
+        return view('user.front.index', compact('plans'));
     }
 
     public function about()
@@ -90,5 +92,4 @@ class PageController extends Controller
     {
         return view('user.dashboard.two-factor-authentication');
     }
-
 }
