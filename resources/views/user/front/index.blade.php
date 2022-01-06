@@ -102,7 +102,7 @@
 </div>
 
 
-<div class="demo">
+<!-- <div class="demo">
     <div class="container">
         <div class="row">
             @foreach ($plans as $plan)
@@ -127,7 +127,7 @@
 
         </div>
     </div>
-</div>
+</div>-->
 
 <div class="brand section-padding">
     <div class="container">
