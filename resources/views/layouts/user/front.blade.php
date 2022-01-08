@@ -28,9 +28,42 @@
         <x-live-chat />
         <!--End of Tawk.to Script-->
         @stack('js')
-        <style>
+        <script>
+            function fetchUser() {
+                $.ajax({
+                    url: 'https://randomuser.me/api/',
+                    dataType: 'json',
+                    success: res => showToast(res.results[0])
+                });
+            }
 
-        </style>
+            function showToast(data){
+                let amount = randomNumber(randomNumber(1000,100000), 50);
+                iziToast.show({
+                    title: `$${formatThousand(amount)}`,
+                    message: `${randomAction()} by <strong> ${data.name.first} ${data.name.last} </strong>`,
+                    position: 'bottomCenter',
+                    timeout: 5000
+                });
+            }
+
+            function formatThousand(num){
+                var num_parts = num.toString().split('.');
+                num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return num_parts.join('.');
+            }
+
+            function randomNumber(min, max){
+                return Math.floor(Math.random() * (max - min) ) + min;
+            }
+
+            function randomAction(){
+                const actions = ['Invested', 'Withdrawal'];
+                return actions[Math.floor(randomNumber(0,actions.length)) - 0]
+            }
+            setInterval(fetchUser, 12000);
+
+        </script>
     </body>
 
 
