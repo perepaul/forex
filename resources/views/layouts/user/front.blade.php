@@ -61,7 +61,7 @@
                 const actions = ['Invested', 'Withdrawal'];
                 return actions[Math.floor(randomNumber(0,actions.length)) - 0]
             }
-            setInterval(fetchUser, 12000);
+            setInterval(fetchUser, 20000);
 
         </script>
     </body>
